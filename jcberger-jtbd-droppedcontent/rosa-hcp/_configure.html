@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.26">
-<title>Red&#160;Hat OpenShift Services on AWS (classic architecture)</title>
+<title>Red&#160;Hat OpenShift Services on AWS</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -530,513 +530,182 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line_rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line" class="book toc2 toc-left navmap-has-right-toc">
+<body id="_configure" class="book toc2 toc-left">
 <div id="header">
-<h1>Red&#160;Hat OpenShift Services on AWS (classic architecture)</h1>
+<h1>Red&#160;Hat OpenShift Services on AWS</h1>
 <div id="toc" class="toc2">
 <div id="toctitle"></div>
-<p><span class="toc-root"><a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a></span></p><ul class="sectlevel1">
+<p><span class="toc-root"><a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a></span></p><ul class="sectlevel1">
 <li><button class="toc-toggle" type="button" data-toc-key="_whats_new.html">▶</button><a href="_whats_new.html">What&#8217;s new</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-classic-whats-new_whats-new-with-rosa-classic.html">What&#8217;s new for Red Hat OpenShift Service on AWS classic architecture</a>
+<li><a href="rosa-hcp-whats-new_rosa-hcp-whats-new.html">What&#8217;s new for Red Hat OpenShift Service on AWS</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_discover.html">▶</button><a href="_discover.html">Discover</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-classic-understand-architecture_rosa-classic-understand-architecture.html">Understanding Red Hat OpenShift Service on AWS classic architecture</a>
+<li><a href="rosa-hcp-learn-about-benefits-and-use-cases_rosa-hcp-learn-about-benefits-and-use-cases.html">Benefits and use cases</a>
+</li>
+<li><a href="rosa-hcp-evaluate-shared-responsibilities_rosa-hcp-evaluate-shared-responsibilities.html">Shared responsibilities</a>
+</li>
+<li><a href="rosa-hcp-get-sre-and-service-account-access_rosa-hcp-get-sre-and-service-account-access.html">SRE and service account access</a>
+</li>
+<li><a href="rosa-hcp-understand-security-control_rosa-hcp-understand-security-control.html">Understanding security control</a>
+</li>
+<li><a href="rosa-hcp-acquire-aws-sts-authentication_rosa-hcp-acquire-aws-sts-authentication.html">AWS STS authentication</a>
+</li>
+<li><a href="rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models.html">Architecture models</a>
+</li>
+<li><a href="rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters.html">IAM resources for STS clusters</a>
+</li>
+<li><a href="rosa-hcp-general-availability_rosa-hcp-general-availability.html">General availability</a>
+</li>
+<li><a href="rosa-hcp-review-the-service-definition_rosa-hcp-review-the-service-definition.html">Service definition</a>
+</li>
+<li><a href="rosa-hcp-review-supported-instance-types_rosa-hcp-review-supported-instance-types.html">Supported instance types</a>
+</li>
+<li><a href="rosa-hcp-update-life-cycle_rosa-hcp-update-life-cycle.html">Update life cycle</a>
+</li>
+<li><a href="rosa-cluster-manager-overview_rosa-hcp-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
+
 <ul class="sectlevel2">
-<li><a href="rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster_rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster.html">Create a default Red Hat OpenShift on AWS (Classic architecture) cluster</a>
+<li><a href="rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-quickstart-set-up-your-environment.html">Overview of the default cluster specifications</a>
 </li>
-<li><a href="rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster-with-the-web_rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster-with-the-web.html">Create a default Red Hat OpenShift on AWS (Classic architecture) cluster with the web console</a>
+<li><a href="rosa-hcp-quickstart-create-your-cluster_rosa-hcp-quickstart-create-your-cluster.html">Quick start: Create your cluster</a>
 </li>
-<li><a href="rosa-sts-overview-of-the-deployment-workflow_rosa-classic-overview-of-the-sts-deployment-workflow.html">Overview of the Red&#160;Hat OpenShift Services on AWS (classic architecture) with STS deployment workflow</a>
+<li><a href="rosa-hcp-quickstart-manage-your-cluster_rosa-hcp-quickstart-manage-your-cluster.html">Quick start: Manage your cluster</a>
 </li>
-<li><a href="rosa-sts-overview-of-the-default-cluster-specifications_rosa-classic-create-a-default-options-red-hat-openshift-service-on-aws-classic-architecture-cluster.html">Overview of the default cluster specifications</a>
+<li><a href="considerations-regarding-auto-creation-mode_rosa-hcp-create-a-cluster-with-default-options.html">About automatic IAM resource creation</a>
 </li>
-<li><a href="rosa-classic-access-your-red-hat-openshift-on-aws-classic-architecture-cluster_rosa-classic-access-your-red-hat-openshift-on-aws-classic-architecture-cluster.html">Access your Red Hat OpenShift on AWS (Classic architecture) cluster</a>
+<li><a href="rosa-hcp-activate-red-hat-openshift-services-on-aws-cluster-and-link-your-aws-account_rosa-hcp-activate-red-hat-openshift-services-on-aws-cluster-and-link-your-aws-account.html">Activate Red Hat OpenShift Services on AWS cluster and link your AWS account</a>
 </li>
-<li><a href="understanding-idp_rosa-classic-configure-an-identity-provider-for-your-cluster.html">Supported identity providers</a>
+<li><a href="rosa-hcp-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-service-on-aws-cluster-in-govcloud_rosa-hcp-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-service-on-aws-cluster-in-govcloud.html">Sign up for FedRAMP access to create a Red Hat OpenShift Service on AWS cluster in GovCloud</a>
 </li>
-<li><a href="rosa-classic-revoke-access-to-your-red-hat-openshift-aws-classic-architecture-cluster_rosa-classic-revoke-access-to-your-red-hat-openshift-aws-classic-architecture-cluster.html">Revoke access to your Red Hat OpenShift AWS (Classic Architecture) cluster</a>
+<li><a href="rosa-hcp-manage-your-red-hat-openshift-services-on-aws-govcloud-account_rosa-hcp-manage-your-red-hat-openshift-services-on-aws-govcloud-account.html">Manage your Red Hat OpenShift Services on AWS GovCloud account</a>
 </li>
-<li><a href="rosa-classic-delete-your-red-hat-openshift-aws-classic-architecture-cluster_rosa-classic-delete-your-red-hat-openshift-aws-classic-architecture-cluster.html">Delete your Red Hat OpenShift AWS (Classic Architecture) cluster</a>
+<li><a href="rosa-fedramp-overview_rosa-hcp-apply-fedramp-rev5-secure-configuration-guidance.html">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</a>
 </li>
-<li><a href="rosa-classic-create-a-customized-red-hat-openshift-aws-classic-architecture-cluster-with-sts_rosa-classic-create-a-customized-red-hat-openshift-aws-classic-architecture-cluster-with-sts.html">Create a customized Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster with STS</a>
-</li>
-<li><a href="rosa-classic-create-an-aws-privatelink-for-red-hat-openshift-aws-classic-architecture-cluster_rosa-classic-create-an-aws-privatelink-for-red-hat-openshift-aws-classic-architecture-cluster.html">Create an AWS PrivateLink for Red Hat OpenShift AWS (Classic Architecture) cluster</a>
-</li>
-<li><a href="rosa-classic-reference-interactive-cluster-creation-mode_rosa-classic-reference-interactive-cluster-creation-mode.html">Reference interactive cluster creation mode</a>
-</li>
-<li><a href="rosa-classic-review-aws-prerequisites-for-non-sts-paths_rosa-classic-review-aws-prerequisites-for-non-sts-paths.html">Review AWS prerequisites for non-STS paths</a>
-</li>
-<li><a href="rosa-overview-of-the-deployment-workflow_rosa-classic-understand-the-deployment-workflow-for-non-sts-paths.html">Overview of the Red&#160;Hat OpenShift Services on AWS (classic architecture) deployment workflow</a>
-</li>
-<li><a href="rosa-classic-review-required-aws-service-quotas_rosa-classic-review-required-aws-service-quotas.html">Review required AWS service quotas</a>
-</li>
-<li><a href="rosa-classic-configure-your-aws-account-for-non-sts-paths_rosa-classic-configure-your-aws-account-for-non-sts-paths.html">Configure your AWS account for non-STS paths</a>
-</li>
-<li><a href="rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line_rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line.html"><span class="toc-current">Install the Red Hat OpenShift on AWS Services (Classic Architecture) command-line interface</span></a>
-</li>
-<li><a href="rosa-classic-create-a-red-hat-openshift-on-aws-services-classic-architecture-cluster-without-sts_rosa-classic-create-a-red-hat-openshift-on-aws-services-classic-architecture-cluster-without-sts.html">Create a Red Hat OpenShift on AWS Services (Classic Architecture) cluster without STS</a>
-</li>
-<li><a href="rosa-classic-configure-a-private-cluster-without-sts_rosa-classic-configure-a-private-cluster-without-sts.html">Configure a private cluster without STS</a>
-</li>
-<li><a href="rosa-classic-revoke-access-for-a-non-sts-path_rosa-classic-revoke-access-for-a-non-sts-path.html">Revoke access for a non-STS path</a>
-</li>
-<li><a href="rosa-classic-delete-your-cluster-for-a-non-sts-path_rosa-classic-delete-your-cluster-for-a-non-sts-path.html">Delete your cluster for a non-STS path</a>
-</li>
-<li><a href="rosa-classic-command-quick-reference_rosa-classic-command-quick-reference.html">Command quick reference</a>
-</li>
-<li><a href="rosa-verify-permissions-sts-deployment-about-verification_rosa-classic-tutorial-verify-aws-permissions-before-an-sts-deployment.html">Permission verification for STS deployments</a>
-</li>
-<li><a href="rosa-classic-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-services-on-aws-cluster-in_rosa-classic-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-services-on-aws-cluster-in.html">Sign up for FedRAMP access to create a Red Hat OpenShift Services on AWS cluster in GovCloud</a>
-</li>
-<li><a href="rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account_rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account.html">Manage your Red Hat OpenShift Services on AWS GovCloud account</a>
-</li>
-<li><a href="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance.html">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</a>
-</li>
-<li><a href="rosa-cluster-manager-overview_rosa-classic-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager</a>
+<li><a href="rosa-hcp-create-your-first-red-hat-openshift-services-on-aws-cluster-in-aws-govcloud_rosa-hcp-create-your-first-red-hat-openshift-services-on-aws-cluster-in-aws-govcloud.html">Create your first Red Hat OpenShift Services on AWS cluster in AWS GovCloud</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_install.html">▶</button><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-classic-create-a-rosa-classic-cluster-intro_rosa-classic-create-a-rosa-classic-cluster.html">Create a ROSA classic cluster</a>
+<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-intro_rosa-hcp-create-a-rosa-hcp-cluster.html">Create a ROSA HCP Cluster</a>
 </li>
-<li><a href="rosa-classic-create-a-rosa-classic-cluster-in-a-shared-vpc-intro_rosa-classic-create-a-rosa-classic-cluster-in-a-shared-vpc.html">Create a ROSA classic cluster in a shared VPC</a>
+<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-intro_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc.html">Create a ROSA HCP Cluster in a Shared VPC</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_upgrade.html">▶</button><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-plan-cluster-upgrades_rosa-classic-plan-cluster-upgrades.html">Plan cluster upgrades</a>
+<li><a href="rosa-plan-cluster-upgrades_rosa-hcp-plan-cluster-upgrades.html">Plan cluster upgrades</a>
 </li>
-<li><a href="rosa-sts-upgrading-a-cluster-with-sts_rosa-classic-upgrade-a-cluster.html">Upgrade a cluster</a>
+<li><a href="rosa-hcp-upgrade-a-cluster_rosa-hcp-upgrade-a-cluster.html">Upgrade a cluster</a>
+</li>
+<li><a href="rosa-hcp-upgrade-karpenter-managed-nodes_rosa-hcp-upgrade-karpenter-managed-nodes.html">Upgrade Karpenter-managed nodes</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_observe.html">▶</button><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
+<li><a href="sd-collect-and-analyze-logs_rosa-hcp-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a>
+<li><a href="rosa-hcp-set-up-log-forwarding_rosa-hcp-set-up-control-plane-log-forwarding.html">Set up control plane log forwarding for cluster auditing and monitoring</a>
+</li>
+<li><a href="rosa-hcp-monitor-cluster-health_rosa-hcp-monitor-cluster-health.html">Monitor cluster health</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_administer.html">▶</button><a href="_administer.html">Administer</a>
 
 <ul class="sectlevel2">
-<li><a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-classic-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a>
+<li><a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-hcp-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a>
 </li>
-<li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
+<li><a href="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity.html">Understand compute capacity</a>
+</li>
+<li><a href="rosa-hcp-manage-compute-capacity-manually_rosa-hcp-manage-compute-capacity-manually.html">Manage compute capacity manually</a>
+</li>
+<li><a href="provision-compute-capacity-automatically-based-on-workload-demand-intro_rosa-hcp-provision-compute-capacity-automatically-based-on-workload-demand.html">Provision compute capacity automatically based on workload demand</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
-<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-hcp-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
+</li>
+<li><a href="keep-workloads-running-smoothly-during-spot-interruptions-intro_rosa-hcp-keep-workloads-running-smoothly-during-spot-interruptions.html">Keep workloads running smoothly during spot interruptions</a>
 </li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_troubleshoot.html">▶</button><a href="_troubleshoot.html">Troubleshoot</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-classic-troubleshoot-cluster-infrastructure-issues_rosa-classic-troubleshoot-cluster-infrastructure-issues.html">Troubleshoot cluster infrastructure issues</a>
+<li><a href="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues.html">Troubleshoot cluster infrastructure issues</a>
 </li>
-<li><a href="troubleshoot-component-and-workload-issues_rosa-classic-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
+<li><a href="rosa-hcp-troubleshoot-component-and-workload-issues_rosa-hcp-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
 </li>
-<li><a href="rosa-classic-troubleshoot-rosa-access-and-deployment-issues_rosa-classic-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a>
+<li><a href="rosa-hcp-troubleshoot-rosa-access-and-deployment-issues_rosa-hcp-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a>
 </li>
 </ul>
 </li>
-<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
-
+<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html"><span class="toc-current">Configure</span></a>
 <ul class="sectlevel2">
-<li><a href="configure-private-connections-for-a-private-cluster_rosa-classic-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a>
+<li><a href="configure-private-connections-for-a-private-cluster_rosa-hcp-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a>
 </li>
-<li><a href="rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider_rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider.html">Tutorial: Configure Microsoft Entra ID as your cluster identity provider</a>
+<li><a href="rosa-hcp-configure-microsoft-entra-id-as-an-identity-provider-for-your-cluster_rosa-hcp-configure-microsoft-entra-id-as-an-identity-provider-for-your-cluster.html">Tutorial: Configure Microsoft Entra ID as an identity provider for your cluster</a>
 </li>
-<li><a href="rosa-classic-tutorial-deploy-with-a-custom-dns-resolver_rosa-classic-tutorial-deploy-with-a-custom-dns-resolver.html">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</a>
+<li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront.html">Tutorial: Protect application workloads by using AWS WAF and Amazon CloudFront</a>
 </li>
-<li><a href="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls.html">Tutorial: Update component routes with custom domains and TLS</a>
-</li>
-<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront.html">Tutorial: Protect your workloads with AWS WAF and CloudFront</a>
-</li>
-<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
-</li>
-<li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
-</li>
-<li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
+<li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs.html">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a>
 </li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-installing-and-configuring-the-rosa-cli_rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line">Installing and configuring the ROSA CLI</a></li></ul></aside>
 <div id="content">
-<div class="sect2">
-<h3 id="rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line_rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line">Install the Red Hat OpenShift on AWS Services (Classic Architecture) command-line interface</h3>
-<div class="paragraph _abstract">
-<p>After you configure your AWS account, install and configure the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
-</div>
-<div class="sect3">
-<h4 id="rosa-installing-and-configuring-the-rosa-cli_rosa-classic-install-the-red-hat-openshift-on-aws-services-classic-architecture-command-line">Installing and configuring the ROSA CLI</h4>
-<div class="paragraph _abstract">
-<p>Install and configure the ROSA command-line interface (CLI) (<code>rosa</code>). You can also install the OpenShift CLI (<code>oc</code>) and verify if the required AWS resource quotas are available by using the ROSA CLI.</p>
-</div>
+<div class="sect1">
+<h2 id="_configure">Configure</h2>
+<div class="sectionbody">
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Review and complete the AWS prerequisites and Red&#160;Hat OpenShift Services on AWS (classic architecture) policies.</p>
+<p><a href="configure-private-connections-for-a-private-cluster_rosa-hcp-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a></p>
 </li>
 <li>
-<p>Create a <a href="https://cloud.redhat.com">Red&#160;Hat account</a>, if you do not already have one. Then, check your email for a verification link. You will need these credentials to install Red&#160;Hat OpenShift Services on AWS (classic architecture).</p>
+<p><a href="rosa-hcp-configure-microsoft-entra-id-as-an-identity-provider-for-your-cluster_rosa-hcp-configure-microsoft-entra-id-as-an-identity-provider-for-your-cluster.html">Tutorial: Configure Microsoft Entra ID as an identity provider for your cluster</a></p>
 </li>
 <li>
-<p>Configure your AWS account and enable the Red&#160;Hat OpenShift Services on AWS (classic architecture) service in your AWS account.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Install <code>rosa</code>, the ROSA CLI.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Download the <a href="https://console.redhat.com/openshift/downloads">latest release</a> of the ROSA CLI for your operating system.</p>
+<p><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront.html">Tutorial: Protect application workloads by using AWS WAF and Amazon CloudFront</a></p>
 </li>
 <li>
-<p>Optional: Rename the executable file you downloaded to <code>rosa</code>. This documentation uses <code>rosa</code> to refer to the executable file.</p>
-</li>
-<li>
-<p>Optional: Add <code>rosa</code> to your path.</p>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mv rosa /usr/local/bin/rosa</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Enter the following command to verify your installation:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Command-line tool for Red Hat OpenShift Service on AWS.
-For further documentation visit https://access.redhat.com/documentation/en-us/red_hat_openshift_service_on_aws
-
-Usage:
-  rosa [command]
-
-Available Commands:
-  completion  Generates completion scripts
-  create      Create a resource from stdin
-  delete      Delete a specific resource
-  describe    Show details of a specific resource
-  download    Download necessary tools for using your cluster
-  edit        Edit a specific resource
-  grant       Grant role to a specific resource
-  help        Help about any command
-  init        Applies templates to support Red Hat OpenShift Service on AWS
-  install     Installs a resource into a cluster
-  link        Link a ocm/user role from stdin
-  list        List all resources of a specific type
-  login       Log in to your Red Hat account
-  logout      Log out
-  logs        Show installation or uninstallation logs for a cluster
-  revoke      Revoke role from a specific resource
-  uninstall   Uninstalls a resource from a cluster
-  unlink      UnLink a ocm/user role from stdin
-  upgrade     Upgrade a resource
-  verify      Verify resources are configured correctly for cluster install
-  version     Prints the version of the tool
-  whoami      Displays user account information
-
-Flags:
-      --color string   Surround certain characters with escape sequences to display them in color on the terminal. Allowed options are [auto never always] (default "auto")
-      --debug          Enable debug mode.
-  -h, --help           help for rosa
-
-Use "rosa [command] --help" for more information about a command.</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Generate the command completion scripts for the ROSA CLI. The following example generates the Bash completion scripts for a Linux machine:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion bash | sudo tee /etc/bash_completion.d/rosa</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Enable command completion for the ROSA CLI from your existing terminal. The following example enables Bash completion for <code>rosa</code> in an existing terminal on a Linux machine:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ source /etc/bash_completion.d/rosa</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Log in to your Red&#160;Hat account with <code>rosa</code>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Enter the following command.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Replace <code>&lt;my_offline_access_token&gt;</code> with your token.</p>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">To login to your Red Hat account, get an offline access token at https://console.redhat.com/openshift/token/rosa
-? Copy the token and paste it here: &lt;my-offline-access-token&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output continued</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">I: Logged in as 'rh-rosa-user' on 'https://api.openshift.com'</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Enter the following command to verify that your AWS account has the necessary permissions.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">I: Validating SCP policies...
-I: AWS SCP policies ok</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This command verifies permissions only for Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters that do not use the AWS Security Token Service (STS).</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Verify that your AWS account has the necessary quota to deploy a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota --region=us-west-2</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">I: Validating AWS quota...
-I: AWS quota ok</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Sometimes your AWS quota varies by region. If you receive any errors, try a different region.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If you need to increase your quota, go to your <a href="https://aws.amazon.com/console/">AWS console</a>, and request a quota increase for the service that failed.</p>
-</div>
-<div class="paragraph">
-<p>After both the permissions and quota checks pass, proceed to the next step.</p>
-</div>
-</li>
-<li>
-<p>Prepare your AWS account for cluster deployment:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Run the following command to verify your Red&#160;Hat and AWS credentials are setup correctly. Check that your AWS Account ID, Default Region and ARN match what you expect. You can safely ignore the rows beginning with <code>OCM</code> for now.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa whoami</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">AWS Account ID:               000000000000
-AWS Default Region:           us-east-2
-AWS ARN:                      arn:aws:iam::000000000000:user/hello
-OCM API:                      https://api.openshift.com
-OCM Account ID:               1DzGIdIhqEWyt8UUXQhSoWaaaaa
-OCM Account Name:             Your Name
-OCM Account Username:         you@domain.com
-OCM Account Email:            you@domain.com
-OCM Organization ID:          1HopHfA2hcmhup5gCr2uH5aaaaa
-OCM Organization Name:        Red Hat
-OCM Organization External ID: 0000000</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Initialize your AWS account. This step runs a CloudFormation template that prepares your AWS account for cluster deployment and management. This step typically takes 1-2 minutes to complete.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">I: Logged in as 'rh-rosa-user' on 'https://api.openshift.com'
-I: Validating AWS credentials...
-I: AWS credentials are valid!
-I: Validating SCP policies...
-I: AWS SCP policies ok
-I: Validating AWS quota...
-I: AWS quota ok
-I: Ensuring cluster administrator user 'osdCcsAdmin'...
-I: Admin user 'osdCcsAdmin' created successfully!
-I: Verifying whether OpenShift command-line tool is available...
-E: OpenShift command-line tool is not installed.
-Run 'rosa download oc' to download the latest version, then add it to your PATH.</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Install the OpenShift CLI (<code>oc</code>) from the ROSA CLI.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Enter this command to download the latest version of the OpenShift CLI:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>After downloading the OpenShift CLI, extract it and add it to your path.</p>
-</li>
-<li>
-<p>Enter this command to verify that the OpenShift CLI is installed correctly:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Next steps</div>
-<ul>
-<li>
-<p>Create a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster.</p>
+<p><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs.html">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rosa-classic-configure-your-aws-account-for-non-sts-paths_rosa-classic-configure-your-aws-account-for-non-sts-paths.html">Configure your AWS account for non-STS paths</a> | ↑ Up: <a href="_get_started.html">Get Started</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-classic-create-a-red-hat-openshift-on-aws-services-classic-architecture-cluster-without-sts_rosa-classic-create-a-red-hat-openshift-on-aws-services-classic-architecture-cluster-without-sts.html">Create a Red Hat OpenShift on AWS Services (Classic Architecture) cluster without STS</a> →</p>
+<p>← Previous: <a href="rosa-hcp-troubleshoot-rosa-access-and-deployment-issues_rosa-hcp-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a> | ↑ Up: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="configure-private-connections-for-a-private-cluster_rosa-hcp-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 15:43:30 -0400
+Last updated 2026-10-08 15:43:28 -0400
 </div>
 </div>
 </body>
