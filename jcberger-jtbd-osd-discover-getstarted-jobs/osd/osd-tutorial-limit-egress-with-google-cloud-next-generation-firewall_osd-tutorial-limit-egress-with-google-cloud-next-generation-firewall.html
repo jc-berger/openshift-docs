@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="osd-upgrade-a-cluster_upgrade-a-cluster" class="book toc2 toc-left navmap-has-right-toc">
+<body id="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Openshift Dedicated</h1>
 <div id="toc" class="toc2">
@@ -618,10 +618,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_upgrade.html">▶</button><a href="_upgrade.html">Upgrade</a>
+
 <ul class="sectlevel2">
 <li><a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a>
 </li>
-<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html"><span class="toc-current">Upgrade a cluster</span></a>
+<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html">Upgrade a cluster</a>
 </li>
 </ul>
 </li>
@@ -658,7 +659,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a>
 </li>
@@ -666,7 +666,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates_osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates.html">Tutorial: Update component routes with custom domains and TLS certificates</a>
 </li>
-<li><a href="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall.html">Tutorial: Limit egress with Google Cloud Next Generation Firewall</a>
+<li><a href="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall.html"><span class="toc-current">Tutorial: Limit egress with Google Cloud Next Generation Firewall</span></a>
 </li>
 <li><a href="osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud_osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud.html">Tutorial: Retrofit Bring Your Own (BYO) firewall rules for OpenShift Dedicated on Google Cloud</a>
 </li>
@@ -675,35 +675,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</a></li><li class="level-4"><a href="#upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-setup-environ_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Setting up your environment</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-create-subnets_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating the VPC and subnets</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-deploy-policy_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Deploying a global firewall policy</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-create-a-cloud-router_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating a Cloud Router and Cloud network address translation</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-create-private-dns_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating private Domain Name System records for private Google access</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-create-firewall-rules_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating the firewall rules</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-create-osd-gcp-cluster_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cluster creation</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-delete-osd-gcp-cluster_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cluster deletion</a></li><li class="level-4"><a href="#cloud-experts-osd-limit-egress-ngfw-clean-resources_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cleaning up resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="osd-upgrade-a-cluster_upgrade-a-cluster">Upgrade a cluster</h3>
+<h3 id="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Tutorial: Limit egress with Google Cloud Next Generation Firewall</h3>
 <div class="paragraph _abstract">
-<p>You can schedule automatic or manual upgrade policies to update the version of your Openshift Dedicated clusters. Red Hat Site Reliability Engineers (SREs) monitor upgrade progress and remedy any issues encountered.</p>
+<p>Implement egress restrictions for Openshift Dedicated on Google Cloud by using Next Generation Firewall (NGFW), which allows fully qualified domain name (FQDN)-based firewall rules required for Openshift Dedicated external endpoints.</p>
 </div>
-<div class="sect3">
-<h4 id="upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</h4>
-<div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to schedule recurring, automatic upgrades for z-stream patch versions for your Openshift Dedicated cluster. Recurring upgrades keep your cluster secure and up to date without manual effort.</p>
-</div>
-<div class="paragraph">
-<p>Upgrades occur on a weekly cadence. Based on upstream changes, there might be times when no updates are released. Therefore, no upgrade occurs for that week.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
-</li>
-<li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator.</p>
-</li>
-<li>
-<p>To schedule recurring upgrades, select <strong>Recurring updates</strong>.</p>
-</li>
-<li>
-<p>Provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>. OpenShift Cluster Manager does not start scheduled y-stream updates for minor versions without receiving an administrator&#8217;s acknowledgment.</p>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -712,27 +690,144 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
+<p>This content is authored by Red&#160;Hat experts but has not yet been tested on every supported configuration.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-setup-environ_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Setting up your environment</h4>
+<div class="paragraph _abstract">
+<p>Set environment variables so each command in this tutorial uses the same values for Openshift Dedicated on Google Cloud with your firewall rules.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have the Google Cloud command-line interface (CLI) (<code>gcloud</code>) installed.</p>
 </li>
 <li>
-<p>Specify the day of the week and the time you want your cluster to upgrade.</p>
+<p>You are logged into the Google Cloud CLI and have selected the Google Cloud project where you plan to deploy Openshift Dedicated.</p>
 </li>
 <li>
-<p>Click <strong>Save</strong>.</p>
+<p>You have the minimum necessary permissions in Google Cloud, including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Compute Network Admin</code></p>
 </li>
 <li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
+<p><code>Domain Name System (DNS) Administrator</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>To edit an existing recurring upgrade policy, edit the preferred day or start time from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
+<p>You enabled the required Google Cloud services:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>networksecurity.googleapis.com</code></p>
 </li>
 <li>
-<p>To cancel a recurring upgrade policy, switch the upgrade method to individual from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
+<p><code>networkservices.googleapis.com</code></p>
+</li>
+<li>
+<p><code>servicenetworking.googleapis.com</code></p>
+<div class="paragraph">
+<p>You can enable these services by running the following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud services enable networksecurity.googleapis.com
+$ gcloud services enable networkservices.googleapis.com
+$ gcloud services enable servicenetworking.googleapis.com</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run this command to set the environment variables:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export project_id=$(gcloud config list --format="value(core.project)")
+$ export region=us-east1
+$ export prefix=osd-ngfw
+$ export service_cidr="172.30.0.0/16"
+$ export machine_cidr="10.0.0.0/22"
+$ export pod_cidr="10.128.0.0/14"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example sets the region to <code>us-east1</code> and the name prefix to <code>osd-ngfw</code>. The service and pod networks use the default Classless Inter-Domain Routing (CIDR) ranges in the export list. You add subnet ranges later in this tutorial. The machine CIDR must fit inside those subnet ranges. Change the exports to match your project.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-create-subnets_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating the VPC and subnets</h4>
+<div class="paragraph _abstract">
+<p>Create the Virtual Private Cloud (VPC) and subnets required for deploying Google Cloud Next Generation Firewall (NGFW) with Openshift Dedicated.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the VPC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks create ${prefix}-vpc --subnet-mode=custom</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the worker subnets by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets create ${prefix}-worker \
+    --range=10.0.2.0/23 \
+    --network=${prefix}-vpc \
+    --region=${region} \
+    --enable-private-ip-google-access</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the control plane subnets by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets create ${prefix}-control-plane \
+    --range=10.0.0.0/25 \
+    --network=${prefix}-vpc \
+    --region=${region} \
+    --enable-private-ip-google-access</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the Private Service Connect (PSC) subnets by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets create ${prefix}-psc \
+    --network=${prefix}-vpc \
+    --region=${region} \
+    --stack-type=IPV4_ONLY \
+    --range=10.0.0.128/29 \
+    --purpose=PRIVATE_SERVICE_CONNECT</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These examples use the subnet ranges of 10.0.2.0/23 for the worker subnet, 10.0.0.0/25 for the control plane subnet, and 10.0.0.128/29 for the PSC subnet. Modify the parameters to meet your needs. Ensure the parameter values are contained within the machine CIDR you set earlier in this tutorial.</p>
+</div>
 </li>
 </ol>
 </div>
@@ -740,36 +835,269 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Verification</div>
 <ul>
 <li>
-<p>On the <strong>Upgrade settings</strong> tab, the <strong>Upgrade status</strong> box indicates that an upgrade is scheduled. The date and time of the next scheduled update is listed.</p>
+<p>Verify the VPC and subnets were created by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets list --network=${prefix}-vpc</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output shows the three subnets you created with their internet protocol (IP) ranges and regions.</p>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</h4>
+<h4 id="cloud-experts-osd-limit-egress-ngfw-deploy-policy_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Deploying a global firewall policy</h4>
 <div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to manually upgrade your Openshift Dedicated cluster one time, either immediately or at a scheduled future date and time. Individual upgrades give you full control over the update process by letting you choose the exact target version and timing.</p>
+<p>Create a global network firewall policy. Attach it to your VPC so you can control traffic that leaves your Openshift Dedicated cluster.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
+<p>Run this command to create a global network firewall policy:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies create \
+    ${prefix} \
+    --description "OpenShift Dedicated Egress Firewall" \
+    --global</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator. You can also update your cluster from the <strong>Overview</strong> tab by clicking <strong>Update</strong> next to the cluster version under the <strong>Details</strong> heading.</p>
+<p>Run this command to attach the new policy to the VPC you created earlier:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies associations create \
+      --name ${prefix}-vpc-association \
+      --firewall-policy ${prefix} \
+      --network ${prefix}-vpc \
+      --global-firewall-policy</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Run this command to check that the policy exists and is attached to your VPC:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies describe ${prefix} --global</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output lists the policy and its link to your VPC.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-create-a-cloud-router_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating a Cloud Router and Cloud network address translation</h4>
+<div class="paragraph _abstract">
+<p>Create a Cloud Router and Cloud network address translation (NAT). Private VMs can use the internet while their private IP addresses stay hidden.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Reserve an IP address for Cloud NAT by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute addresses create ${prefix}-${region}-cloudnatip \
+    --region=${region}</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>To schedule an individual upgrade, select <strong>Individual updates</strong>.</p>
+<p>Create a Cloud Router by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute routers create ${prefix}-router \
+    --region=${region} \
+    --network=${prefix}-vpc</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Click <strong>Update</strong> in the <strong>Update Status</strong> box.</p>
+<p>Create a Cloud NAT by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute routers nats create ${prefix}-cloudnat-${region} \
+    --router=${prefix}-router --router-region ${region} \
+    --nat-all-subnet-ip-ranges \
+    --nat-external-ip-pool=${prefix}-${region}-cloudnatip</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Check that the Cloud Router and NAT gateway exist by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute routers describe ${prefix}-router --region=${region}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output lists the router and the NAT gateway you created.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-create-private-dns_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating private Domain Name System records for private Google access</h4>
+<div class="paragraph _abstract">
+<p>Create a private Domain Name System (DNS) zone to route Google application programming interface (API) traffic through the internal network of Google for faster and more secure connections.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a private DNS zone for the googleapis.com domain by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns managed-zones create ${prefix}-googleapis \
+    --visibility=private \
+    --networks=https://www.googleapis.com/compute/v1/projects/${project_id}/global/networks/${prefix}-vpc \
+    --description="Private Google Access" \
+    --dns-name=googleapis.com</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Select the version you want to upgrade your cluster to. Recommended cluster upgrades appear in the UI. To learn more about each available upgrade version, click <strong>View release notes</strong>.</p>
+<p>Begin a record set transaction by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets transaction start \
+    --zone=${prefix}-googleapis</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>If you select an update version that requires approval, provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>.</p>
+<p>Stage the DNS records for Google APIs under the googleapis.com domain by running the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets transaction add --name="*.googleapis.com." \
+    --type=CNAME restricted.googleapis.com. \
+    --zone=${prefix}-googleapis \
+    --ttl=300</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets transaction add 199.36.153.4 199.36.153.5 199.36.153.6 199.36.153.7 \
+    --name=restricted.googleapis.com. \
+    --type=A \
+    --zone=${prefix}-googleapis \
+    --ttl=300</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the staged record set transaction you started above by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets transaction execute \
+    --zone=$prefix-googleapis</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the private DNS zone and records were created by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets list --zone=${prefix}-googleapis</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output shows the DNS zone with CNAME and A records for googleapis.com.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-create-firewall-rules_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Creating the firewall rules</h4>
+<div class="paragraph _abstract">
+<p>Create firewall rules for egress to private IP ranges and to the Openshift Dedicated domains listed in this procedure. Egress to other external destinations does not match these rules and is not permitted.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a blanket allow rule for private IP (Request for Comments (RFC) 1918) address space by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies rules create 500 \
+    --description "Allow egress to private IP ranges" \
+    --action=allow \
+    --firewall-policy=${prefix} \
+    --global-firewall-policy \
+    --direction=EGRESS \
+    --layer4-configs all \
+    --dest-ip-ranges=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create an allow rule for HTTPS (tcp/443) domains required for Openshift Dedicated by running the following command:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you receive an error "Cannot have rules with the same priorities", the rule already exists. You can verify it with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ gcloud compute network-firewall-policies rules describe 500 --firewall-policy=${prefix} --global-firewall-policy
+$ gcloud compute network-firewall-policies rules describe 600 --firewall-policy=${prefix} --global-firewall-policy</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To re-create the rules, first delete them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ gcloud compute network-firewall-policies rules delete 500 --firewall-policy=${prefix} --global-firewall-policy
+$ gcloud compute network-firewall-policies rules delete 600 --firewall-policy=${prefix} --global-firewall-policy</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies rules create 600 \
+    --description "Allow egress to OpenShift Dedicated required domains (tcp/443)" \
+    --action=allow \
+    --firewall-policy=${prefix} \
+    --global-firewall-policy \
+    --direction=EGRESS \
+    --layer4-configs tcp:443 \
+    --dest-fqdns accounts.google.com,pull.q1w2.quay.rhcloud.com,http-inputs-osdsecuritylogs.splunkcloud.com,nosnch.in,api.deadmanssnitch.com,events.pagerduty.com,api.pagerduty.com,api.openshift.com,mirror.openshift.com,observatorium.api.openshift.com,observatorium-mst.api.openshift.com,console.redhat.com,infogw.api.openshift.com,api.access.redhat.com,cert-api.access.redhat.com,catalog.redhat.com,sso.redhat.com,registry.connect.redhat.com,registry.access.redhat.com,cdn01.quay.io,cdn02.quay.io,cdn03.quay.io,cdn04.quay.io,cdn05.quay.io,cdn06.quay.io,cdn.quay.io,quay.io,registry.redhat.io,quayio-production-s3.s3.amazonaws.com</code></pre>
+</div>
+</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -778,79 +1106,179 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
+<p>The firewall blocks any traffic if you did not create any matching rules. To allow access to other resources, such as internal networks or other external endpoints, create additional rules with a priority of less than 1000. For more information on how to create firewall rules, see the <em>Additional resources</em>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-<li>
-<p>Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>To schedule your upgrade:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click <strong>Upgrade now</strong> to upgrade within the next hour.</p>
-</li>
-<li>
-<p>Click <strong>Schedule a different time</strong> and specify the date and time that you want the cluster to upgrade.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>Review the upgrade policy and click <strong>Confirm upgrade</strong>.</p>
-</li>
-<li>
-<p>A confirmation appears when the cluster upgrade has been scheduled. Click <strong>Close</strong>.</p>
-</li>
-<li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
 </li>
 </ol>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>From the <strong>Overview</strong> tab, next to the cluster version, the UI notates that the upgrade has been scheduled.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click <strong>View details</strong> to view the upgrade details. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>View Details</strong> pop-up.</p>
-</li>
-<li>
-<p>The same upgrade details are available on the <strong>Upgrade settings</strong> tab under the <strong>Upgrade status</strong> box. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>Upgrade status</strong> box.</p>
-</li>
-</ul>
 </div>
-</li>
-</ul>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-create-osd-gcp-cluster_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cluster creation</h4>
+<div class="paragraph _abstract">
+<p>Your Openshift Dedicated cluster on Google Cloud uses the VPC, subnets, and firewall rules from this tutorial.</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>If a Common Vulnerabilities and Exposures (CVE) or other critical issue to Openshift Dedicated is found, all clusters are upgraded within 48 hours of the fix being released. You are notified when the fix is available and informed that the cluster will be automatically upgraded at your latest preferred start time before the 48 hour window closes. You can also upgrade manually at any time before the recurring upgrade starts.</p>
+<p>For detailed instructions on creating a cluster, see <a href="https://docs.redhat.com/en/documentation/openshift_dedicated/4/html/openshift_dedicated_clusters_on_google_cloud/osd-creating-a-cluster-on-gcp-with-workload-identity-federation">Creating a cluster on Google Cloud</a>.</p>
 </div>
-</td>
-</tr>
-</table>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-delete-osd-gcp-cluster_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cluster deletion</h4>
+<div class="paragraph _abstract">
+<p>When you delete your cluster on Google Cloud, also clean up the network setup from this guide to prevent ongoing charges.</p>
+</div>
+<div class="paragraph">
+<p>For detailed instructions on deleting a cluster, see <a href="https://docs.redhat.com/en/documentation/openshift_dedicated/4/html/openshift_dedicated_clusters_on_google_cloud/osd-deleting-a-cluster">Deleting an OpenShift Dedicated cluster on Google Cloud</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-experts-osd-limit-egress-ngfw-clean-resources_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall">Cleaning up resources</h4>
+<div class="paragraph _abstract">
+<p>Delete the Google Cloud networking infrastructure after deleting your cluster to prevent ongoing charges. The cluster deletion does not automatically remove virtual private cloud (VPC) networks, subnets, firewall policies, or domain name system (DNS) zones.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Authenticate by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud init</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Log in to your Google Cloud account by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud auth application-default login</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Log in to the OpenShift Cluster Manager CLI tool by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ocm login --use-auth-code</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now clean up the resources you created as part of this tutorial. To respect resource dependencies, delete them in the reverse order of their creation.</p>
+</div>
+</li>
+<li>
+<p>Delete the association of the firewall policy with the VPC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies associations delete \
+      --name network-${prefix}-vpc \
+      --firewall-policy=${prefix} \
+      --global-firewall-policy \
+      --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the global network firewall policy by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute network-firewall-policies delete ${prefix} --global --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>List and delete all user-defined DNS records from the Private DNS zone:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns record-sets list \
+    --project=${project_id} \
+    --zone=${prefix}-googleapis \
+    --filter="type!=NS AND type!=SOA" \
+    --format="value(name,type)" | while read name type; do
+  gcloud dns record-sets delete "$name" \
+    --project=${project_id} \
+    --zone=${prefix}-googleapis \
+    --type="$type"
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the Private DNS Zone by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud dns managed-zones delete ${prefix}-googleapis --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the Cloud NAT gateway:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute routers nats delete ${prefix}-cloudnat-${region} \
+    --router=${prefix}-router \
+    --router-region=${region} \
+    --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the Cloud Router by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute routers delete ${prefix}-router --region=${region} --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the reserved IP address by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute addresses delete ${prefix}-${region}-cloudnatip --region=${region} --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the worker subnet by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets delete ${prefix}-worker --region=${region} --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the control plane subnet by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets delete ${prefix}-control-plane --region=${region} --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the Private Service Connect (PSC) subnet by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks subnets delete ${prefix}-psc --region=${region} --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the VPC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ gcloud compute networks delete ${prefix}-vpc --project=${project_id}</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="_observe.html">Observe</a> →</p>
+<p>← Previous: <a href="osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates_osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates.html">Tutorial: Update component routes with custom domains and TLS certificates</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud_osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud.html">Tutorial: Retrofit Bring Your Own (BYO) firewall rules for OpenShift Dedicated on Google Cloud</a> →</p>
 </div>
 </div>
 <div id="footer">

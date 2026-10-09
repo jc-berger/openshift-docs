@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="osd-upgrade-a-cluster_upgrade-a-cluster" class="book toc2 toc-left navmap-has-right-toc">
+<body id="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Openshift Dedicated</h1>
 <div id="toc" class="toc2">
@@ -618,10 +618,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_upgrade.html">▶</button><a href="_upgrade.html">Upgrade</a>
+
 <ul class="sectlevel2">
 <li><a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a>
 </li>
-<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html"><span class="toc-current">Upgrade a cluster</span></a>
+<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html">Upgrade a cluster</a>
 </li>
 </ul>
 </li>
@@ -658,9 +659,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
-<li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a>
+<li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html"><span class="toc-current">Configure private connections for AWS</span></a>
 </li>
 <li><a href="osd-configure-a-private-cluster_osd-configure-a-private-cluster.html">Configure a private cluster</a>
 </li>
@@ -675,35 +675,180 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</a></li><li class="level-4"><a href="#upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#enable-aws-access_osd-configure-private-connections-for-aws">AWS cloud infrastructure access</a></li><li class="level-4"><a href="#config-aws-access_osd-configure-private-connections-for-aws">Configure AWS infrastructure access</a></li><li class="level-4"><a href="#aws-vpc_osd-configure-private-connections-for-aws">Configure AWS Virtual Private Cloud peering</a></li><li class="level-4"><a href="#aws-vpn_osd-configure-private-connections-for-aws">Configure an AWS Virtual Private Network</a></li><li class="level-4"><a href="#aws-direct-connect_osd-configure-private-connections-for-aws">Configure AWS Direct Connect</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="osd-upgrade-a-cluster_upgrade-a-cluster">Upgrade a cluster</h3>
+<h3 id="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws">Configure private connections for AWS</h3>
 <div class="paragraph _abstract">
-<p>You can schedule automatic or manual upgrade policies to update the version of your Openshift Dedicated clusters. Red Hat Site Reliability Engineers (SREs) monitor upgrade progress and remedy any issues encountered.</p>
+<p>Configure private connections to your Openshift Dedicated cluster by using Virtual Private Cloud (VPC) peering, Virtual Private Network (VPN), or AWS Direct Connect for secure network communication with your on-premise infrastructure.</p>
 </div>
 <div class="sect3">
-<h4 id="upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</h4>
+<h4 id="enable-aws-access_osd-configure-private-connections-for-aws">AWS cloud infrastructure access</h4>
 <div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to schedule recurring, automatic upgrades for z-stream patch versions for your Openshift Dedicated cluster. Recurring upgrades keep your cluster secure and up to date without manual effort.</p>
+<p>Amazon Web Services (AWS) infrastructure access enables AWS Identity and Access Management (IAM) users to have federated access to the AWS Management Console for your Openshift Dedicated cluster. This allows you to configure VPC peering, VPN, and Direct Connect from the AWS console.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>AWS cloud infrastructure access does not apply to the Customer Cloud Subscription (CCS) infrastructure type that is chosen when you create a cluster because CCS clusters are deployed onto your account.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Upgrades occur on a weekly cadence. Based on upstream changes, there might be times when no updates are released. Therefore, no upgrade occurs for that week.</p>
+<p>AWS access can be granted for customer AWS users, and private cluster access can be implemented to suit the needs of your Openshift Dedicated environment.</p>
+</div>
+<div class="paragraph">
+<p>To get started with configuring AWS infrastructure access for your Openshift Dedicated cluster, create an AWS user and account and provide that user with access to the Openshift Dedicated AWS account.</p>
+</div>
+<div class="paragraph">
+<p>After you have access to the Openshift Dedicated AWS account, use one or more of the following methods to establish a private connection to your cluster:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Configure AWS Virtual Private Cloud (VPC) peering</strong>: Enable VPC peering to route network traffic between two private IP addresses.</p>
+</li>
+<li>
+<p><strong>Configure AWS Virtual Private Network (VPN)</strong>: Establish a VPN to securely connect your private network to your Amazon VPC.</p>
+</li>
+<li>
+<p><strong>Configure AWS Direct Connect</strong>: Establish a dedicated network connection between your private network and an AWS Direct Connect location.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="config-aws-access_osd-configure-private-connections-for-aws">Configure AWS infrastructure access</h4>
+<div class="paragraph _abstract">
+<p>Configure AWS infrastructure access to enable AWS Identity and Access Management (IAM) users to have federated access to the AWS Management Console for your Openshift Dedicated cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>An AWS account with IAM permissions.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
+<p>Log in to your AWS account. If necessary, you can create a new AWS account by following the <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">AWS documentation</a>.</p>
 </li>
 <li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator.</p>
+<p>Create an IAM user with <code>STS:AllowAssumeRole</code> permissions within the AWS account.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the <a href="https://console.aws.amazon.com/iam/home#/home">IAM dashboard</a> of the AWS Management Console.</p>
 </li>
 <li>
-<p>To schedule recurring upgrades, select <strong>Recurring updates</strong>.</p>
+<p>In the <strong>Policies</strong> section, click <strong>Create Policy</strong>.</p>
 </li>
 <li>
-<p>Provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>. OpenShift Cluster Manager does not start scheduled y-stream updates for minor versions without receiving an administrator&#8217;s acknowledgment.</p>
+<p>Select the <strong>JSON</strong> tab and replace the existing text with the following:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": "sts:AssumeRole",
+          "Resource": "*"
+      }
+  ]
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Next:Tags</strong>.</p>
+</li>
+<li>
+<p>Optional: Add tags. Click <strong>Next:Review</strong></p>
+</li>
+<li>
+<p>Provide an appropriate name and description, then click <strong>Create Policy</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Users</strong> section, click <strong>Add user</strong>.</p>
+</li>
+<li>
+<p>Provide an appropriate user name.</p>
+</li>
+<li>
+<p>Select <strong>AWS Management Console access</strong> as the AWS access type.</p>
+</li>
+<li>
+<p>Adjust the password requirements as necessary for your organization, then click <strong>Next:Permissions</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Attach existing policies directly</strong> option. Search for and check the policy created in previous steps.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is not recommended to set a permissions boundary.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Click <strong>Next: Tags</strong>, then click <strong>Next: Review</strong>. Confirm the configuration is correct.</p>
+</li>
+<li>
+<p>Click <strong>Create user</strong>, a success page appears.</p>
+</li>
+<li>
+<p>Gather the IAM user’s Amazon Resource Name (ARN). The ARN has the following format: <code>arn:aws:iam::000111222333:user/username</code>. Click <strong>Close</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a> in your browser and select the cluster you want to allow AWS infrastructure access.</p>
+</li>
+<li>
+<p>Select the <strong>Access control</strong> tab, and scroll to the <strong>AWS Infrastructure Access</strong> section.</p>
+</li>
+<li>
+<p>Paste the <strong>AWS IAM ARN</strong> and select <strong>Network Management</strong> or <strong>Read-only</strong> permissions, then click <strong>Grant role</strong>.</p>
+</li>
+<li>
+<p>Copy the <strong>AWS OSD console URL</strong> to your clipboard.</p>
+</li>
+<li>
+<p>Sign in to your AWS account with your Account ID or alias, IAM user name, and password.</p>
+</li>
+<li>
+<p>In a new browser tab, paste the AWS OSD Console URL that routes to the AWS Switch Role page.</p>
+</li>
+<li>
+<p>Your account number and role are filled in already. Choose a display name if necessary, then click <strong>Switch Role</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-vpc_osd-configure-private-connections-for-aws">Configure AWS Virtual Private Cloud peering</h4>
+<div class="paragraph _abstract">
+<p>Configure an Amazon Web Services (AWS) Virtual Private Cloud (VPC) peering connection to route traffic between two VPCs using private IPv4 or IPv6 addresses.</p>
+</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -712,127 +857,195 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
+<p>Before you attempt to uninstall a cluster, you must remove any VPC peering connections from the cluster&#8217;s VPC. Failure to do so might result in a cluster not completing the uninstall process.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-<li>
-<p>Specify the day of the week and the time you want your cluster to upgrade.</p>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
-</li>
-<li>
-<p>To edit an existing recurring upgrade policy, edit the preferred day or start time from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>To cancel a recurring upgrade policy, switch the upgrade method to individual from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
-</li>
-</ol>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>AWS supports inter-region VPC peering between all commercial regions excluding China. For more information, see <a href="https://aws.amazon.com/vpc/faqs/#Peering_Connections">AWS VPC FAQs</a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
-<div class="title">Verification</div>
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>On the <strong>Upgrade settings</strong> tab, the <strong>Upgrade status</strong> box indicates that an upgrade is scheduled. The date and time of the next scheduled update is listed.</p>
+<p>Gather the following information about the Customer VPC that is required to initiate the peering request:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer AWS account number</p>
+</li>
+<li>
+<p>Customer VPC ID</p>
+</li>
+<li>
+<p>Customer VPC Region</p>
+</li>
+<li>
+<p>Customer VPC Classless Inter-Domain Routing (CIDR)</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</h4>
-<div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to manually upgrade your Openshift Dedicated cluster one time, either immediately or at a scheduled future date and time. Individual upgrades give you full control over the update process by letting you choose the exact target version and timing.</p>
+</li>
+<li>
+<p>The CIDR block of the Openshift Dedicated Cluster VPC does not overlap or match the Customer VPC CIDR block. See the Amazon VPC <a href="https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html">Unsupported VPC peering configurations</a> documentation for details on invalid configurations.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/peering/create-vpc-peering-connection.html#create-vpc-peering-connection-local">Initiate the VPC peering request</a>.</p>
 </li>
 <li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator. You can also update your cluster from the <strong>Overview</strong> tab by clicking <strong>Update</strong> next to the cluster version under the <strong>Details</strong> heading.</p>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/peering/create-vpc-peering-connection.html#accept-vpc-peering-connection">Accept the VPC peering request</a>.</p>
 </li>
 <li>
-<p>To schedule an individual upgrade, select <strong>Individual updates</strong>.</p>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-routing.html">Update your Route tables for the VPC peering connection</a>.</p>
 </li>
-<li>
-<p>Click <strong>Update</strong> in the <strong>Update Status</strong> box.</p>
-</li>
-<li>
-<p>Select the version you want to upgrade your cluster to. Recommended cluster upgrades appear in the UI. To learn more about each available upgrade version, click <strong>View release notes</strong>.</p>
-</li>
-<li>
-<p>If you select an update version that requires approval, provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>.</p>
-<div class="admonitionblock important">
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-vpn_osd-configure-private-connections-for-aws">Configure an AWS Virtual Private Network</h4>
+<div class="paragraph _abstract">
+<p>Configure an AWS Site-to-Site Virtual Private Network (VPN) connection to enable secure communication between your Openshift Dedicated cluster Virtual Private Cloud (VPC) and your remote on-site network.</p>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Important">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
+<p>AWS VPN does not currently provide a managed option to apply Network Address Translation (NAT) to VPN traffic. See the <a href="https://aws.amazon.com/premiumsupport/knowledge-center/configure-nat-for-vpn-traffic/">AWS Knowledge Center</a> for more details.</p>
+</div>
+<div class="paragraph">
+<p>Routing all traffic, for example <code>0.0.0.0/0</code>, through a private connection is not supported. This requires deleting the internet gateway, which disables SRE management traffic.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Hardware VPN gateway device model and software version, for example Cisco Adaptive Security Appliance (ASA) running version 8.3. See the <a href="https://docs.aws.amazon.com/vpc/latest/adminguide/Introduction.html#DevicesTested">AWS documentation</a> to confirm whether your gateway device is supported by AWS.</p>
+</li>
+<li>
+<p>Public, static IP address for the VPN gateway device.</p>
+</li>
+<li>
+<p>Border Gateway Protocol (BGP) or static routing: if BGP, the Autonomous System Number (ASN) is available. If static routing, at least one static route is configured.</p>
+</li>
+<li>
+<p>Optional: Internet Protocol (IP) address and port/protocol of a reachable service to test the VPN connection.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html#vpn-create-cgw">Create a customer gateway</a> to configure the VPN connection.</p>
+</li>
+<li>
+<p>If you do not already have a Virtual Private Gateway attached to the intended VPC, <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html#vpn-create-target-gateway">create and attach</a> a Virtual Private Gateway.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html#vpn-configure-route-tables">Configure routing and enable VPN route propagation</a>.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html#vpn-configure-security-groups">Update your security group</a>.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html#vpn-create-vpn-connection">Establish the Site-to-Site VPN connection</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Note the VPC subnet information, which you must add to your configuration as the remote network.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-direct-connect_osd-configure-private-connections-for-aws">Configure AWS Direct Connect</h4>
+<div class="paragraph _abstract">
+<p>Configure AWS Direct Connect to establish a dedicated network connection between your remote network and your Openshift Dedicated cluster Virtual Private Cloud (VPC).</p>
+</div>
+<div class="paragraph">
+<p>Amazon Web Services (AWS) Direct Connect requires a hosted Virtual Interface (VIF) connected to a Direct Connect Gateway (DXGateway), which is in turn associated to a Virtual Gateway (VGW) or a Transit Gateway. This allows you to access a remote VPC in the same or another account.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
 <li>
-<p>Click <strong>Next</strong>.</p>
+<p>The Classless Inter-Domain Routing (CIDR) range of the Openshift Dedicated VPC does not conflict with any other associated VGWs.</p>
 </li>
 <li>
-<p>To schedule your upgrade:</p>
+<p>Gather the following information:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <strong>Upgrade now</strong> to upgrade within the next hour.</p>
+<p>The Direct Connect Gateway ID.</p>
 </li>
 <li>
-<p>Click <strong>Schedule a different time</strong> and specify the date and time that you want the cluster to upgrade.</p>
+<p>The AWS Account ID associated with the virtual interface.</p>
+</li>
+<li>
+<p>The Border Gateway Protocol (BGP) Autonomous System Number (ASN) assigned for the DXGateway. Optional: the Amazon default ASN may also be used.</p>
 </li>
 </ul>
 </div>
 </li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>Click <strong>Next</strong>.</p>
+<p><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/create-vif.html">Create a VIF</a> or <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/viewvifdetails.html">view your existing VIFs</a> to determine the type of direct connection you need to create.</p>
 </li>
 <li>
-<p>Review the upgrade policy and click <strong>Confirm upgrade</strong>.</p>
+<p>Create your gateway.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the Direct Connect VIF type is <strong>Private</strong>, <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/virtualgateways.html#create-virtual-private-gateway">create a virtual private gateway</a>.</p>
 </li>
 <li>
-<p>A confirmation appears when the cluster upgrade has been scheduled. Click <strong>Close</strong>.</p>
-</li>
-<li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
+<p>If the Direct Connect VIF is <strong>Public</strong>, <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways-intro.html#create-direct-connect-gateway">create a Direct Connect gateway</a>.</p>
 </li>
 </ol>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>From the <strong>Overview</strong> tab, next to the cluster version, the UI notates that the upgrade has been scheduled.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click <strong>View details</strong> to view the upgrade details. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>View Details</strong> pop-up.</p>
 </li>
 <li>
-<p>The same upgrade details are available on the <strong>Upgrade settings</strong> tab under the <strong>Upgrade status</strong> box. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>Upgrade status</strong> box.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
+<p>If you have an existing gateway you want to use, <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/multi-account-associate-vgw.html">create an association proposal</a> and send the proposal to the DXGateway owner for approval.</p>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -841,16 +1054,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If a Common Vulnerabilities and Exposures (CVE) or other critical issue to Openshift Dedicated is found, all clusters are upgraded within 48 hours of the fix being released. You are notified when the fix is available and informed that the cluster will be automatically upgraded at your latest preferred start time before the 48 hour window closes. You can also upgrade manually at any time before the recurring upgrade starts.</p>
+<p>When connecting to an existing DXGateway, you are responsible for the <a href="https://aws.amazon.com/directconnect/pricing/">costs</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="_observe.html">Observe</a> →</p>
+<p>↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="osd-configure-a-private-cluster_osd-configure-a-private-cluster.html">Configure a private cluster</a> →</p>
 </div>
 </div>
 <div id="footer">

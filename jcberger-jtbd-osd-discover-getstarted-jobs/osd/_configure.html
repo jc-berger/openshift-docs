@@ -530,48 +530,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="osd-upgrade-a-cluster_upgrade-a-cluster" class="book toc2 toc-left navmap-has-right-toc">
+<body id="_configure" class="book toc2 toc-left">
 <div id="header">
 <h1>Openshift Dedicated</h1>
 <div id="toc" class="toc2">
@@ -618,10 +578,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_upgrade.html">▶</button><a href="_upgrade.html">Upgrade</a>
+
 <ul class="sectlevel2">
 <li><a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a>
 </li>
-<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html"><span class="toc-current">Upgrade a cluster</span></a>
+<li><a href="osd-upgrade-a-cluster_upgrade-a-cluster.html">Upgrade a cluster</a>
 </li>
 </ul>
 </li>
@@ -657,8 +618,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
-
+<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html"><span class="toc-current">Configure</span></a>
 <ul class="sectlevel2">
 <li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a>
 </li>
@@ -675,182 +635,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</a></li><li class="level-4"><a href="#upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</a></li></ul></aside>
 <div id="content">
-<div class="sect2">
-<h3 id="osd-upgrade-a-cluster_upgrade-a-cluster">Upgrade a cluster</h3>
-<div class="paragraph _abstract">
-<p>You can schedule automatic or manual upgrade policies to update the version of your Openshift Dedicated clusters. Red Hat Site Reliability Engineers (SREs) monitor upgrade progress and remedy any issues encountered.</p>
-</div>
-<div class="sect3">
-<h4 id="upgrade-auto_upgrade-a-cluster">Schedule recurring upgrades for your cluster</h4>
-<div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to schedule recurring, automatic upgrades for z-stream patch versions for your Openshift Dedicated cluster. Recurring upgrades keep your cluster secure and up to date without manual effort.</p>
-</div>
-<div class="paragraph">
-<p>Upgrades occur on a weekly cadence. Based on upstream changes, there might be times when no updates are released. Therefore, no upgrade occurs for that week.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
-</li>
-<li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator.</p>
-</li>
-<li>
-<p>To schedule recurring upgrades, select <strong>Recurring updates</strong>.</p>
-</li>
-<li>
-<p>Provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>. OpenShift Cluster Manager does not start scheduled y-stream updates for minor versions without receiving an administrator&#8217;s acknowledgment.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Specify the day of the week and the time you want your cluster to upgrade.</p>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
-</li>
-<li>
-<p>To edit an existing recurring upgrade policy, edit the preferred day or start time from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>To cancel a recurring upgrade policy, switch the upgrade method to individual from the <strong>Upgrade Settings</strong> tab. Click <strong>Save</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>On the <strong>Upgrade settings</strong> tab, the <strong>Upgrade status</strong> box indicates that an upgrade is scheduled. The date and time of the next scheduled update is listed.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="upgrade-manual_upgrade-a-cluster">Schedule individual upgrades for your cluster</h4>
-<div class="paragraph _abstract">
-<p>You can use OpenShift Cluster Manager to manually upgrade your Openshift Dedicated cluster one time, either immediately or at a scheduled future date and time. Individual upgrades give you full control over the update process by letting you choose the exact target version and timing.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>From <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>, select your cluster from the clusters list.</p>
-</li>
-<li>
-<p>Click the <strong>Upgrade settings</strong> tab to access the upgrade operator. You can also update your cluster from the <strong>Overview</strong> tab by clicking <strong>Update</strong> next to the cluster version under the <strong>Details</strong> heading.</p>
-</li>
-<li>
-<p>To schedule an individual upgrade, select <strong>Individual updates</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Update</strong> in the <strong>Update Status</strong> box.</p>
-</li>
-<li>
-<p>Select the version you want to upgrade your cluster to. Recommended cluster upgrades appear in the UI. To learn more about each available upgrade version, click <strong>View release notes</strong>.</p>
-</li>
-<li>
-<p>If you select an update version that requires approval, provide an administrator&#8217;s acknowledgment and click <strong>Approve and continue</strong>.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Before upgrading a Workload Identity Federation (WIF)-enabled Openshift Dedicated on Google Cloud cluster, you must update the wif-config. For more information, see "Cluster upgrades with Workload Identity Federation (WIF)".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>To schedule your upgrade:</p>
+<div class="sect1">
+<h2 id="_configure">Configure</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Click <strong>Upgrade now</strong> to upgrade within the next hour.</p>
+<p><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a></p>
 </li>
 <li>
-<p>Click <strong>Schedule a different time</strong> and specify the date and time that you want the cluster to upgrade.</p>
+<p><a href="osd-configure-a-private-cluster_osd-configure-a-private-cluster.html">Configure a private cluster</a></p>
+</li>
+<li>
+<p><a href="osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates_osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates.html">Tutorial: Update component routes with custom domains and TLS certificates</a></p>
+</li>
+<li>
+<p><a href="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall.html">Tutorial: Limit egress with Google Cloud Next Generation Firewall</a></p>
+</li>
+<li>
+<p><a href="osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud_osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud.html">Tutorial: Retrofit Bring Your Own (BYO) firewall rules for OpenShift Dedicated on Google Cloud</a></p>
 </li>
 </ul>
-</div>
-</li>
-<li>
-<p>Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>Review the upgrade policy and click <strong>Confirm upgrade</strong>.</p>
-</li>
-<li>
-<p>A confirmation appears when the cluster upgrade has been scheduled. Click <strong>Close</strong>.</p>
-</li>
-<li>
-<p>Optional: Set a grace period for <strong>Node draining</strong> by selecting a designated amount of time from the drop down list. A <strong>1 hour</strong> grace period is set by default.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>From the <strong>Overview</strong> tab, next to the cluster version, the UI notates that the upgrade has been scheduled.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click <strong>View details</strong> to view the upgrade details. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>View Details</strong> pop-up.</p>
-</li>
-<li>
-<p>The same upgrade details are available on the <strong>Upgrade settings</strong> tab under the <strong>Upgrade status</strong> box. If you need to cancel the scheduled upgrade, you can click <strong>Cancel this upgrade</strong> from the <strong>Upgrade status</strong> box.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If a Common Vulnerabilities and Exposures (CVE) or other critical issue to Openshift Dedicated is found, all clusters are upgraded within 48 hours of the fix being released. You are notified when the fix is available and informed that the cluster will be automatically upgraded at your latest preferred start time before the 48 hour window closes. You can also upgrade manually at any time before the recurring upgrade starts.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="osd-plan-cluster-upgrades_plan-cluster-upgrades.html">Plan cluster upgrades</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="_observe.html">Observe</a> →</p>
+<p>← Previous: <a href="osd-troubleshoot-a-google-cloud-cluster-deployment_osd-troubleshoot-a-google-cloud-cluster-deployment.html">Troubleshooting an OpenShift Dedicated on Google Cloud cluster deployment</a> | ↑ Up: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a> →</p>
 </div>
 </div>
 <div id="footer">

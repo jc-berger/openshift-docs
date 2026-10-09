@@ -587,13 +587,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><button class="toc-toggle" type="button" data-toc-key="_discover.html">▶</button><a href="_discover.html">Discover</a>
 
 <ul class="sectlevel2">
-<li><a href="osd-evaluate-managed-platform-features_evaluate-managed-platform-features-and-infrastructure.html">Evaluate managed platform features and infrastructure</a>
+<li><a href="osd-evaluate-managed-platform-features_evaluate-managed-platform-features-and-infrastructure.html">Managed platform features and infrastructure</a>
 </li>
-<li><a href="osd-evaluate-platform-architecture_evaluate-platform-architecture-and-components.html">Evaluate platform architecture and components</a>
+<li><a href="osd-evaluate-platform-architecture_evaluate-platform-architecture-and-components.html">Platform architecture and components</a>
 </li>
-<li><a href="osd-understand-service-definitions_understand-service-definitions.html">Understand service definitions</a>
+<li><a href="osd-understand-service-definitions_understand-service-definitions.html">Service definitions</a>
 </li>
-<li><a href="osd-understand-shared-responsibility-model_understand-the-shared-responsibility-model.html">Understand the shared responsibility model</a>
+<li><a href="osd-understand-shared-responsibility-model_understand-the-shared-responsibility-model.html">Shared responsibility model</a>
 </li>
 </ul>
 </li>
@@ -657,15 +657,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
+
+<ul class="sectlevel2">
+<li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a>
+</li>
+<li><a href="osd-configure-a-private-cluster_osd-configure-a-private-cluster.html">Configure a private cluster</a>
+</li>
+<li><a href="osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates_osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates.html">Tutorial: Update component routes with custom domains and TLS certificates</a>
+</li>
+<li><a href="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall.html">Tutorial: Limit egress with Google Cloud Next Generation Firewall</a>
+</li>
+<li><a href="osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud_osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud.html">Tutorial: Retrofit Bring Your Own (BYO) firewall rules for OpenShift Dedicated on Google Cloud</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#ccs-gcp-understand_osd-prepare-your-workload-identity-federation-environment">Understanding Customer Cloud Subscriptions on Google Cloud</a></li><li class="level-5"><a href="#ccs-gcp-customer-procedure_osd-prepare-your-workload-identity-federation-environment">Prepare your Google Cloud project for Customer Cloud Subscription</a></li><li class="level-5"><a href="#ccs-gcp-customer-procedure-wif_osd-prepare-your-workload-identity-federation-environment">Complete Workload Identity Federation authentication prerequisites</a></li><li class="level-5"><a href="#create-wif-configuration_osd-prepare-your-workload-identity-federation-environment">Create a Workload Identity Federation configuration</a></li><li class="level-4"><a href="#osd-quickstart-create-and-manage-an-openshift-dedicated-cluster-with-workload-identity-federation_osd-quickstart-create-and-manage-an-openshift-dedicated-cluster-with-workload-identity-federation">Quick start: Create and manage an Openshift Dedicated cluster with Workload Identity Federation using the default options</a></li><li class="level-5"><a href="#osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift_osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift">Create an Openshift Dedicated cluster with Workload Identity Federation by using the OpenShift Cluster Manager CLI</a></li><li class="level-6"><a href="#create-wif-cluster-cli_osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift">Create a Workload Identity Federation cluster using the OpenShift Cluster Manager CLI</a></li><li class="level-4"><a href="#_additional_resources_4">Additional resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#ccs-gcp-understand_osd-prepare-your-workload-identity-federation-environment">Understanding Customer Cloud Subscriptions on Google Cloud</a></li><li class="level-5"><a href="#ccs-gcp-customer-procedure_osd-prepare-your-workload-identity-federation-environment">Prepare your Google Cloud project for Customer Cloud Subscription</a></li><li class="level-5"><a href="#ccs-gcp-customer-procedure-wif_osd-prepare-your-workload-identity-federation-environment">Complete Workload Identity Federation authentication prerequisites</a></li><li class="level-5"><a href="#create-wif-configuration_osd-prepare-your-workload-identity-federation-environment">Create a Workload Identity Federation configuration</a></li><li class="level-4"><a href="#osd-quickstart-create-and-manage-an-openshift-dedicated-cluster-with-workload-identity-federation_osd-quickstart-create-and-manage-an-openshift-dedicated-cluster-with-workload-identity-federation">Quick start: Create and manage an Openshift Dedicated cluster with Workload Identity Federation using the default options</a></li><li class="level-5"><a href="#osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift_osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift">Create an Openshift Dedicated cluster with Workload Identity Federation by using the OpenShift Cluster Manager CLI</a></li><li class="level-6"><a href="#create-wif-cluster-cli_osd-create-an-openshift-dedicated-cluster-with-workload-identity-federation-by-using-the-openshift">Create a Workload Identity Federation cluster using the OpenShift Cluster Manager CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="osd-create-a-red-hat-openshift-dedicated-cluster-on-google-cloud-using-the-default-options_osd-create-a-red-hat-openshift-dedicated-cluster-on-google-cloud-using-the-default-options">Create an Openshift Dedicated cluster on Google Cloud using the default options</h3>
 <div class="paragraph _abstract">
 <p>Learn how to create an Openshift Dedicated cluster on Google Cloud using the default options in Openshift Dedicated.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers">Manage workload identity pools and providers</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/iam/docs/roles-overview">Roles and permissions</a></p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="ccs-gcp-understand_osd-prepare-your-workload-identity-federation-environment">Understanding Customer Cloud Subscriptions on Google Cloud</h4>
@@ -2281,52 +2307,6 @@ If this occurs, update the assigned WIF configuration to the required version or
 </div>
 </div>
 </div>
-<div class="sect3 _additional-resources">
-<h4 id="_additional_resources_4">Additional resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#ccs-gcp-customer-requirements_gcp-ccs">Customer requirements</a></p>
-</li>
-<li>
-<p><a href="../applications/quotas/quotas-setting-per-project.html#quotas-setting-per-project">Resource quotas per project</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#gcp-limits_gcp-ccs">Google Cloud account limits</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#ccs-gcp-customer-procedure_gcp-ccs">Required customer procedure</a></p>
-</li>
-<li>
-<p><a href="https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers">Manage workload identity pools and providers</a></p>
-</li>
-<li>
-<p><a href="https://cloud.google.com/iam/docs/roles-overview">Roles and permissions</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/osd-limits-scalability.html#tested-cluster-maximums-sd_osd-limits-scalability">Cluster maximums</a></p>
-</li>
-<li>
-<p><a href="../authentication/sd-configuring-identity-providers.html#sd-configuring-identity-providers">Configuring identity providers</a></p>
-</li>
-<li>
-<p><a href="../authentication/osd-revoking-cluster-privileges.html#osd-revoking-cluster-privileges">Revoking privileges and access to an Openshift Dedicated cluster</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#ocm-cli-create-managed-dns-zone_gcp-ccs">Creating a managed DNS zone</a></p>
-</li>
-<li>
-<p><a href="../ocm/ocm-overview.html#accessing_ocm">Accessing OpenShift Cluster Manager</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#osd-gcp-firewall-rules_gcp-ccs">Create firewall rules for reduced Workload Identity Federation permissions on Google Cloud</a></p>
-</li>
-<li>
-<p><a href="../osd_planning/gcp-ccs.html#osd-gcp-shared-vpc-firewall-rules_gcp-ccs">Configure reduced permissions for a Shared VPC host project on Google Cloud</a></p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
 <p>↑ Up: <a href="_get_started.html">Get Started</a> | ⌂ Home: <a href="navigation.html">Openshift Dedicated</a> | Next: <a href="osd-manage-a-red-hat-openshift-dedicated-on-google-cloud-cluster_osd-manage-a-red-hat-openshift-dedicated-on-google-cloud-cluster.html">Manage an Openshift Dedicated on Google Cloud cluster</a> →</p>
@@ -2334,7 +2314,7 @@ If this occurs, update the assigned WIF configuration to the required version or
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 20:49:07 -0400
+Last updated 2026-10-08 22:05:14 -0400
 </div>
 </div>
 </body>
