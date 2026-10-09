@@ -696,6 +696,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
+
+<ul class="sectlevel2">
+<li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a>
+</li>
+<li><a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -710,7 +719,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Additional resources</div>
 <ul>
 <li>
+<p><a href="../../rosa_architecture/rosa_policy_service_definition/rosa-hcp-service-definition.html#rosa-sdpolicy-red-hat-operator_rosa-hcp-service-definition">Red&#160;Hat Operator Support</a></p>
+</li>
+<li>
+<p><a href="../rosa_policy_service_definition/rosa-hcp-instance-types.html#rosa-hcp-instance-types">Red&#160;Hat OpenShift Services on AWS instance types</a></p>
+</li>
+<li>
 <p><a href="https://docs.aws.amazon.com/general/latest/gr/rosa.html">Red&#160;Hat OpenShift Services on AWS endpoints and quotas</a></p>
+</li>
+<li>
+<p><a href="../../networking/network_security/network-verification.html#network-verification">Network verification</a></p>
+</li>
+<li>
+<p><a href="../rosa_policy_service_definition/rosa-policy-process-security.html#rosa-policy-process-security">Understanding security for Red&#160;Hat OpenShift Services on AWS</a></p>
+</li>
+<li>
+<p><a href="../rosa_policy_service_definition/rosa-hcp-life-cycle.html#rosa-hcp-life-cycle">Red&#160;Hat OpenShift Services on AWS life cycle</a></p>
 </li>
 <li>
 <p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html#instance-type-volume-limits">AWS instance type limits</a></p>
@@ -1644,6 +1668,14 @@ runs on OpenShift 4 and uses Red&#160;Hat CoreOS (RHCOS) as the operating system
 <h4 id="rosa-hcp-general-availability_rosa-hcp-general-availability">General availability</h4>
 <div class="paragraph _abstract">
 <p>Availability and disaster avoidance are extremely important aspects of any application platform. Although Red&#160;Hat OpenShift Services on AWS provides many protections against failures at several levels, customer-deployed applications must be appropriately configured for high availability.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../rosa_architecture/rosa_policy_service_definition/rosa-hcp-service-definition.html#rosa-sdpolicy-node-lifecycle_rosa-hcp-service-definition">Node lifecycle</a></p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="rosa-policy-failure-points_rosa-hcp-general-availability">Potential points of failure</h5>
@@ -4614,6 +4646,23 @@ This instance type offers 72 logical processors on 36 physical cores.</p>
 <div class="paragraph _abstract">
 <p>Learn about the Red&#160;Hat OpenShift Services on AWS update life cycle, including major, minor, and patch version policies, limited support status, installation and deletion policies, and life cycle dates.</p>
 </div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../rosa_architecture/rosa_policy_service_definition/rosa-hcp-service-definition.html#rosa-hcp-service-definition">Red&#160;Hat OpenShift Services on AWS service definition</a></p>
+</li>
+<li>
+<p><a href="../../rosa_architecture/rosa_policy_service_definition/rosa-hcp-life-cycle.html#rosa-limited-support_rosa-hcp-life-cycle">Red&#160;Hat OpenShift Services on AWS limited support status</a></p>
+</li>
+<li>
+<p><a href="../../cli_reference/rosa_cli/rosa-cli-commands.html#rosa-cli-commands"><code>rosa</code> CLI command reference</a></p>
+</li>
+<li>
+<p><a href="../../upgrading/rosa-hcp-upgrading.html#rosa-upgrade-options_rosa-hcp-upgrading">Upgrade options for Red&#160;Hat OpenShift Services on AWS clusters</a></p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="life-cycle-overview_rosa-hcp-update-life-cycle">Overview</h5>
 <div class="paragraph _abstract">
@@ -5058,6 +5107,12 @@ See <em>Upgrade options for Red&#160;Hat OpenShift Services on AWS clusters</em>
 <li>
 <p><a href="https://docs.redhat.com/en/documentation/openshift_cluster_manager/1-latest/html-single/managing_clusters/index">OpenShift Cluster Manager</a></p>
 </li>
+<li>
+<p><a href="../rosa_cluster_admin/rosa-cluster-notifications.html#add-notification-contact_rosa-cluster-notifications">Adding cluster notification contacts</a></p>
+</li>
+<li>
+<p><a href="../authentication/sd-configuring-identity-providers.html#sd-configuring-identity-providers">Configuring identity providers</a></p>
+</li>
 </ul>
 </div>
 <div class="sect4">
@@ -5430,7 +5485,7 @@ clusters.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 21:30:10 -0400
+Last updated 2026-10-09 13:31:43 -0400
 </div>
 </div>
 </body>

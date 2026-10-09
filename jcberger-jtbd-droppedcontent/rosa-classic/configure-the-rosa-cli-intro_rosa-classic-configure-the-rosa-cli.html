@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance" class="book toc2 toc-left navmap-has-right-toc">
+<body id="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS (classic architecture)</h1>
 <div id="toc" class="toc2">
@@ -592,6 +592,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
+
 <ul class="sectlevel2">
 <li><a href="rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster_rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster.html">Create a default Red Hat OpenShift on AWS (Classic architecture) cluster</a>
 </li>
@@ -641,7 +642,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account_rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account.html">Manage your Red Hat OpenShift Services on AWS GovCloud account</a>
 </li>
-<li><a href="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance.html"><span class="toc-current">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</span></a>
+<li><a href="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance.html">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</a>
 </li>
 <li><a href="rosa-cluster-manager-overview_rosa-classic-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager</a>
 </li>
@@ -723,9 +724,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
-
 <ul class="sectlevel2">
-<li><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html">Configure ROSA CLI</a>
+<li><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html"><span class="toc-current">Configure ROSA CLI</span></a>
 </li>
 <li><a href="rosa-cli-reference_rosa-classic-rosa-cli-reference.html">ROSA CLI reference</a>
 </li>
@@ -734,135 +734,34 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-fedramp-accounts-config_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance">Red Hat OpenShift Container Platform FedRAMP Rev5 Secure Configuration Guidance for top-level administrative and privileged accounts</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</a></li><li class="level-5"><a href="#rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the rosa CLI</a></li><li class="level-5"><a href="#rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the rosa CLI</a></li><li class="level-6"><a href="#_authentication_methods">Authentication methods</a></li><li class="level-5"><a href="#rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on authorization code</a></li><li class="level-5"><a href="#rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on device code</a></li><li class="level-5"><a href="#rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with an offline token</a></li><li class="level-5"><a href="#rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the rosa CLI</a></li><li class="level-5"><a href="#rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the rosa CLI</a></li><li class="level-6"><a href="#rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</a></li><li class="level-6"><a href="#rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</a></li><li class="level-5"><a href="#rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the rosa CLI</a></li><li class="level-6"><a href="#rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</a></li><li class="level-6"><a href="#rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</a></li><li class="level-6"><a href="#rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</a></li><li class="level-5"><a href="#rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red Hat OpenShift Services on AWS (classic architecture)</a></li><li class="level-6"><a href="#rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</a></li><li class="level-5"><a href="#rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</a></li><li class="level-5"><a href="#rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the rosa CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</h3>
+<h3 id="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli">Configure ROSA CLI</h3>
 <div class="paragraph _abstract">
-<p>Federal Risk and Authorization Management Program (FedRAMP) Rev5 Secure Configuration Guidance (SCG) gives you complete coverage for all your administrative tasks. Red&#160;Hat OpenShift Services on AWS (classic architecture) completes all the SCG requirements for you, so you can focus on configuring your accounts to your needs.</p>
+<p>Find the exact parameters, command-line interface (CLI) options, application programming interface (API) fields, and schemas required to configure and automate your Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters.</p>
 </div>
-<div class="paragraph">
-<p>To learn more about the about the cloud service offering requirements that Red&#160;Hat OpenShift Services on AWS (classic architecture) has already completed for you, see the following table:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 34. Cloud service offering requirement</caption>
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Requirement</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">OpenShift Container Platform Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-CSO-RSC (Recommended Secure Configuration)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Providers must create, keep, and make available recommendations for securely configuring their cloud services.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delivers comprehensive security configuration documentation covering all top-level administrative and privileged accounts.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-CSO-AUP (Authorization Package)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Providers must include instructions in the FedRAMP authorization package that explain how to obtain and use the SCG.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publishes security configuration guidance on docs.redhat.com with indexed navigation, searchable table of contents, and sequential implementation procedures for all administrative security controls.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-CSO-PUB (Public Availability)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Providers should make the SCG publicly available, enabling agency review before any procurement and implementation decisions.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publishes security configuration guidance on docs.redhat.com, accessible to anyone with a free Red Hat account (no subscription required). Federal procurement officers can review security implementation requirements during vendor evaluation without purchasing a subscription.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-CSO-SDF (Secure Default Settings)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Providers SHOULD set all settings to their recommended secure defaults at service provisioning, reducing customer configuration burden.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deploys clusters with hardened default security configurations.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>In addition to the requirements, you have the option for enhanced capabilities based on your specific needs. To learn more, see the following table:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 35. Enhanced capabilities</caption>
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Recommendation</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Red Hat OpenShift Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-ENH-CMP (Comparison)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comparison Capability: Providers should offer capability to compare all current settings against the recommended settings identified in the SCG.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gives the Compliance Operator for continuous configuration assessment against National Institute of Standards and Technology (NIST) 800-53 security control baselines. Executes automated ComplianceScan resources comparing active cluster settings to FedRAMP Moderate and High profiles.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-ENH-EXP (Export)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Export Capability: Providers should offer capability to export all security settings in machine-readable format, such as: JSON, XML, or CSV.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exposes comprehensive REST APIs for programmatic security configuration management through OAuth 2.0 authentication. Supplies official client libraries supporting Python, Go, Java, and JavaScript development environments.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-ENH-API (Application Programming Interface)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Capability: Providers should offer capability to view and adjust security settings through the API and management console.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enables complete programmatic control over all security policies and configurations.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-ENH-MRG (Machine-Readable Guidance)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Machine-Readable Guidance: Providers should also give the SCG in machine-readable format that automated compliance processes can ingest.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generates machine-parsable compliance assessment artifacts conforming to Open Security Controls Assessment Language (OSCAL) schema standards through the compliance operator.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCG-ENH-VRH (Versioning and Release History)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Versioning and Release History: Providers should give versioning and release history of the SCG as the recommended settings change.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maintains version-controlled documentation tracking security configuration changes across platform releases.</p></td>
-</tr>
-</tbody>
-</table>
 <div class="sect3">
-<h4 id="rosa-fedramp-accounts-config_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance">Red&#160;Hat OpenShift Container Platform FedRAMP Rev5 Secure Configuration Guidance for top-level administrative and privileged accounts</h4>
+<h4 id="rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</h4>
 <div class="paragraph _abstract">
-<p>Red&#160;Hat OpenShift Services on AWS (classic architecture) gives you comprehensive frameworks to find roles, isolation boundaries, and operational functions for top-level administrative or privileged accounts. These frameworks apply within a Red&#160;Hat OpenShift Container Platform Federal Risk and Authorization Management Program (FedRAMP) Rev5 Secure Configuration Guidance (SCG) environment.</p>
+<p>Learn how to install, configure, and update the ROSA command-line interface (CLI) (<code>rosa</code>). You can use the <code>rosa</code> CLI to create, update, manage, and delete Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters and resources.</p>
 </div>
-<div class="paragraph">
-<p>The guidance you receive addresses the SCG-CSO-RSC (Cloud Service Offering - Recommended Secure Configuration) requirement, including both cluster-wide top-level administrative accounts and namespace-scoped privileged accounts. The parameters in both administrative and privilege accounts help you deploy, operate, decommission, and secure access among your configurations.</p>
+<div class="sect4">
+<h5 id="rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Put the ROSA command-line interface (CLI) (<code>rosa</code>) on the computer you use to run cluster commands.</p>
 </div>
-<div class="paragraph">
-<p>For the most up-to-date account features and structural prerequisites, review the official Red&#160;Hat OpenShift documentation page for your active deployment service. Your browser must have JavaScript enabled to access and interact with the documentation portal for <a href="https://docs.redhat.com/en/documentation/openshift_container_platform/4.22">Red Hat OpenShift Container Platform</a>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>To access the cluster for the first time, create a temporary administrative user with the <code>rosa create admin</code> command. The command outputs login credentials to your terminal.</p>
-</li>
+<p>Install and configure the latest AWS CLI (<code>aws</code>).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Copy and store these credentials. The credentials are not automatically saved to the disk.</p>
-</li>
-<li>
-<p>To comply with FedRAMP identity boundaries, use this temporary account primarily to configure enterprise identity providers, then delete the temporary admin user.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>Follow the <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a> documentation to install and configure the AWS CLI for your operating system.</p>
 <div class="paragraph">
-<p>For guidance and context on different actions you can take in your top level administrative account, see the following table:</p>
+<p>Put <code>aws_access_key_id</code>, <code>aws_secret_access_key</code>, and <code>region</code> in the <code>.aws/credentials</code> file. See <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html">AWS Configuration basics</a> in the AWS documentation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -872,373 +771,1066 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In {product-short}, you can perform administrative tasks using either the <code>dedicated-admin</code> or <code>cluster-admin</code> role. Use the <code>dedicated-admin</code> role as your preferred choice because it provides administrative permissions for managing namespaces and workloads without potentially disrupting your cluster operations. Since the <code>cluster-admin</code> role is the highest level of privilege that you could have, the <code>cluster-admin</code> can unintentionally get your cluster into an unsupportable state.</p>
+<p>You can optionally use the <code>AWS_DEFAULT_REGION</code> environment variable to set the default AWS region.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Query the AWS API to verify if the AWS CLI is installed and configured correctly:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws sts get-caller-identity  --output text</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;aws_account_id&gt;    arn:aws:iam::&lt;aws_account_id&gt;:user/&lt;username&gt;  &lt;aws_user_id&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Download the latest version of the ROSA command-line interface (CLI) (<code>rosa</code>) for your operating system from the <a href="https://console.redhat.com/openshift/downloads"><strong>Downloads</strong></a> page on OpenShift Cluster Manager.</p>
+</li>
+<li>
+<p>Extract the <code>rosa</code> binary file from the downloaded archive. The following example extracts the binary from a Linux tar archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar xvf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add <code>rosa</code> to your path. In the following example, the <code>/usr/local/bin</code> directory is included in the path of the user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify if the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: Turn on tab completion for the <code>rosa</code> CLI. Press <code>Tab</code> twice to finish subcommands or see hints:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To enable persistent tab completion for Bash on a Linux host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># rosa completion bash &gt; /etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Bash on a macOS host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/usr/local/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion bash &gt; /usr/local/etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Zsh:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If tab completion is not enabled for your Zsh environment, enable it by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "autoload -U compinit; compinit" &gt;&gt; ~/.zshrc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Zsh and save it to the first directory in your functions path:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion zsh &gt; "${fpath[1]}/_rosa"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for fish:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for fish and save it to your <code>~/.config/fish/completions/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion fish &gt; ~/.config/fish/completions/rosa.fish</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for PowerShell:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for PowerShell and save it to a file named <code>rosa.ps1</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">PS&gt; rosa completion powershell | Out-String | Invoke-Expression</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Source the <code>rosa.ps1</code> file from your PowerShell profile.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about configuring <code>rosa</code> tab completion, see the help menu by running the <code>rosa completion --help</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>You can log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with Red&#160;Hat single sign-on or with an offline authentication token. Red&#160;Hat recommends using the <code>rosa</code> CLI with Red&#160;Hat single sign-on, instead of using an offline authentication token.</p>
+</div>
+<div class="paragraph">
+<p>An offline authentication token is long-lived, stored on your operating system, and cannot be revoked. These factors increase overall security risks and the likelihood of unauthorized access to your account.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, authenticating with the Red&#160;Hat single sign-on method automatically sends your <code>rosa</code> instance a refresh token that is valid for 10 hours. This unique, temporary authorization code enhances security and reduces the risk of unauthorized access.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The method of authenticating using Red&#160;Hat single sign-on does not break any existing automations that rely on offline tokens. Red&#160;Hat recommends using services accounts for automation purposes. If you still need to use offline tokens for automation or other purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_authentication_methods">Authentication methods</h6>
+<div class="paragraph">
+<p>You can use one of the following methods to authenticate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Single sign-on authorization code</strong>: Use this method if your system has a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Single sign-on device code</strong>: Use this method if you are working with containers, remote hosts, or other environments without a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Offline token</strong>: Use this method if you need to use an offline token for automation or other purposes. Red&#160;Hat recommends using service accounts for automation purposes instead.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on authorization code</h5>
+<div class="paragraph _abstract">
+<p>You can log in to your account with the <code>rosa</code> CLI by using a Red&#160;Hat single sign-on authorization code.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a web browser available on your system.</p>
+</li>
+<li>
+<p>You have <code>rosa</code> CLI version 1.2.36 or later installed.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat single sign-on authorization code, run the following command:</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-auth-code</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running this command redirects you to the Red&#160;Hat single sign-on login. Log in with your Red&#160;Hat login or email.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 47. Optional arguments inherited from parent commands+</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on device code</h5>
+<div class="paragraph _abstract">
+<p>If you are working with containers, remote hosts, and other environments without a web browser, you can use a Red&#160;Hat single sign-on device code for secure authentication. To do this, you must use a second device that has a web browser to approve the login.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have ROSA command-line interface (CLI) (<code>rosa</code>) version 1.2.36 or later installed.</p>
+</li>
+<li>
+<p>You have access to a second device with a web browser.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to the <code>rosa</code> CLI with a Red&#160;Hat single sign-on device code, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-device-code</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running this command redirects you to the Red&#160;Hat SSO login and provides a login code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 48. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with an offline token</h5>
+<div class="paragraph _abstract">
+<p>Log in to your Red&#160;Hat account, saving the credentials to the <code>rosa</code> configuration file.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To use offline tokens for automation purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.
+To use service accounts for automation purposes, see the <a href="https://console.redhat.com/iam/service-accounts">Service Accounts</a> page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat recommends using service accounts for automation purposes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat offline token, run the following command:</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 49. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 50. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Log out of <code>rosa</code>. Logging out also removes the <code>rosa</code> configuration file.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Log out of your <code>rosa</code> session by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logout [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 51. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Verify AWS permissions and quotas by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</h6>
+<div class="paragraph">
+<p>Verify that the AWS permissions required to create a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster are configured correctly:</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions [arguments]</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command verifies permissions only for clusters that do not use the AWS Security Token Service (STS).</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 36. Actions and benefits for account provisioning and access setup</caption>
+<caption class="title">Table 52. Optional arguments inherited from parent commands</caption>
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
+<col style="width: 30%;">
+<col style="width: 70%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Action</th>
-<th class="tableblock halign-left valign-top">Benefit</th>
-<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant dedicated-admin privileges</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant administrative access to users by adding them to the <code>dedicated-admins</code> group. This provides elevated permissions for managing user namespaces, assigning security context constraints, and configuring identity providers, while control plane management remains with Red Hat SRE.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm groups add-users dedicated-admins &lt;username&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify dedicated-admin membership</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ensure that administrative users are correctly assigned to the <code>dedicated-admins</code> group.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get groups dedicated-admins -o yaml</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure multifactor authentication (MFA)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enforce MFA through the configured identity provider. OpenID Connect and SAML providers support MFA enforcement at the identity provider layer.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Managed directly at the enterprise Identity Provider (IdP) layer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure cluster role-based access control</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Implement least privilege access by creating custom cluster roles with specific permissions within the scope allowed by dedicated-admin privileges. Define custom cluster roles for namespace-scoped resource management.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create clusterrole &lt;role_name&gt; --verb=&lt;verbs&gt; --resource=&lt;resources&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bind custom roles to users</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ensures your users only have the capabilities that you want them to have.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-cluster-role-to-user &lt;role_name&gt; &lt;username&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure service account</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create service accounts for automated processes and CI/CD pipelines. Service accounts authenticate using tokens rather than user credentials.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Create service account: <code>oc create serviceaccount &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p>
-</li>
-<li>
-<p>Grant permissions: <code>oc adm policy add-role-to-user &lt;role&gt; system:serviceaccount:&lt;namespace&gt;:&lt;service_account_name&gt;</code></p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View assigned projects</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that a privileged namespace administrator has clear visibility into the specific isolated projects they need to manage.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get projects</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign specialized administrative roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign users to specialized administrative roles for specific cluster operations. Common roles include <code>cluster-reader</code> (read-only cluster metadata), <code>registry-admin</code> (internal registry control), and <code>storage-admin</code> (persistent volumes). These roles provide targeted permissions without requiring full dedicated-admin group membership.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Handled through specialized cluster role attachments.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant namespace administrative roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign administrative roles to users for specific namespaces. This grants permissions to view/edit all namespace resources, manage secrets, bind local roles, and configure network policies within that project scope.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-role-to-user admin &lt;username&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant namespace edit roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign edit capabilities to user roles for direct deployment and workload modification permissions without exposing local role binding control.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-role-to-user edit &lt;username&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant namespace view roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign view capabilities for read-only namespace and workload access.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-role-to-user view &lt;username&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create custom namespace roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Define local roles with specific permission sets restricted to particular resources and verbs aligned to narrow organizational requirements.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create role &lt;role_name&gt; --verb=&lt;get,list,watch&gt; --resource=&lt;pods,services&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bind custom roles to namespace users</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bind custom localized roles to users to guarantee that namespace-scoped personnel only have targeted privileges inside that specific boundary.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-role-to-user &lt;role_name&gt; &lt;username&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant service account privileges (Namespace)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure service accounts with localized, privileged permissions for automated application workflows, ensuring minimum access needed for operation.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Create service account: <code>oc create sa &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p>
-</li>
-<li>
-<p>Or grant role: <code>oc adm policy add-role-to-user &lt;role&gt; -z &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extract service account tokens</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use localized automated service tokens safely for external system or pipeline authentication actions.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create token &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For guidance on operating your top level administrative accounts, see the following table:</p>
+<p>Verify that the AWS permissions are configured correctly:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that the AWS permissions are configured correctly in a specific region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions --region=us-west-2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</h6>
+<div class="paragraph">
+<p>Verifies that AWS quotas are configured correctly for your default region.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota [arguments]</code></pre>
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 37. Guidance on operating administrative and privileged accounts</caption>
+<caption class="title">Table 53. Optional arguments inherited from parent commands</caption>
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
+<col style="width: 30%;">
+<col style="width: 70%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Action</th>
-<th class="tableblock halign-left valign-top">Benefit</th>
-<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage certificates</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Replace default API server certificates with custom certificates issued by an organizational certificate authority. Create a secret containing the certificate and key. Update the API server configuration to reference the custom certificate secret. Certificate rotation occurs automatically when you update the secret with a new certificate.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create secret tls &lt;secret_name&gt; --cert=&lt;path/to/cert&gt; --key=&lt;path/to/key&gt; -n openshift-config</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Monitor administrative accounts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review cluster events and administrative activities. Query audit logs for specific user activities. Monitor role binding changes indicating privilege escalation attempts.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get events --all-namespaces</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grant namespace administration tasks</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Allow namespace administrators to handle project-scoped operations: deploying workloads, managing secrets, applying resource quotas, defining network restrictions, and binding local access.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Executed through namespace-scoped <code>oc</code> subcommands.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage resource quotas</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure hard infrastructure resource quotas limiting localized namespace consumption across CPU, memory, storage requests, and PVC limits.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create quota &lt;quota_name&gt; --hard=cpu=10,memory=20Gi,persistentvolumeclaims=5 -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View quota usage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Audit resource allocation to ensure that project bounds are functioning correctly and limits are not exhausted.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc describe quota -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure network policies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create namespace-scoped <code>NetworkPolicy</code> objects to control pod-to-pod traffic within your projects. Implement default-deny policies that block all traffic except explicitly allowed connections. Cluster-wide network security is managed by Red Hat SRE.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create -f &lt;networkpolicy.yaml&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assign security context constraints</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace administrators can assign pre-defined security context constraints (SCCs) to service accounts within their projects. Red Hat SRE manages the global SCC definitions (such as <code>restricted-v2</code> and <code>privileged</code>). Users with dedicated-admin privileges can assign allowed SCCs to their service accounts to grant specific pod security capabilities.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm policy add-scc-to-user &lt;scc_name&gt; -z &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View SCC assignments</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that global or namespace SCC privileges match accurately to the correct infrastructure components and local service accounts.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Global view: <code>oc get scc</code></p>
-</li>
-<li>
-<p>Namespace verification: <code>oc get scc -o yaml | grep -A 5 &lt;service_account_name&gt;</code></p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For guidance on decommissioning your top level administrative accounts, see the following table:</p>
+<p>Verify that the AWS quotas are configured correctly for the default region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that the AWS quotas are configured correctly in a specific region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota --region=us-west-2</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Download and verify the <code>rosa</code> and <code>oc</code> CLI tools by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</h6>
+<div class="paragraph">
+<p>Download the latest compatible version of the <code>rosa</code> CLI.</p>
+</div>
+<div class="paragraph">
+<p>After you download <code>rosa</code> CLI, extract the contents of the archive and add it to your path.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa [arguments]</code></pre>
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 38. Guidance on decommissioning your administrative and privileged accounts</caption>
+<caption class="title">Table 54. Optional arguments inherited from parent commands</caption>
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
+<col style="width: 30%;">
+<col style="width: 70%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Action</th>
-<th class="tableblock halign-left valign-top">Benefit</th>
-<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Remove user access</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Remove administrative or namespace role assignments from departing personnel to prevent residual access.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Remove dedicated-admin privileges: <code>oc adm groups remove-users dedicated-admins &lt;username&gt;</code></p>
-</li>
-<li>
-<p>Remove namespace roles: <code>oc adm policy remove-role-from-user &lt;role&gt; &lt;username&gt; -n &lt;namespace&gt;</code></p>
-</li>
-</ul>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="ulist">
-<ul>
-</ul>
+<div class="sect5">
+<h6 id="rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</h6>
+<div class="paragraph">
+<p>Download the latest compatible version of the OpenShift CLI (<code>oc</code>).</p>
 </div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List role bindings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Run global searches across all cluster and project boundaries to verify the complete, absolute removal of the targeted user&#8217;s permissions.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get rolebindings,clusterrolebindings --all-namespaces -o wide | grep &lt;username&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Remove identity provider entries</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clean up the internal cluster user identity mapping registries thoroughly when you skip roles.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Remove User object: <code>oc delete user &lt;username&gt;</code></p>
-</li>
-<li>
-<p>Or remove Identity link: <code>oc delete identity &lt;identity_provider_name&gt;:&lt;username&gt;</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>After you download <code>oc</code>, you must extract the contents of the archive and add it to your path.</p>
 </div>
-<div class="ulist">
-<ul>
-</ul>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc [arguments]</code></pre>
 </div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 55. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Remove service account access</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Permanently delete namespace-scoped automated service accounts that are no longer required for active operations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc delete serviceaccount &lt;service_account_name&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify service account deletion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Auditing step ensures no unlinked automated keys remain active, which effectively blocks associated pods from authenticating unauthorized API calls.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Monitored by querying namespace resources post-deletion.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer resource ownership</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Audit resources created by the departing administrator to transfer ownership. Review projects, security policies, and configurations requiring ownership reassignment to active administrators.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Managed through resource metadata modification and project reassignment.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For guidance on security related settings, see the following table:</p>
+<p>Download <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</h6>
+<div class="paragraph">
+<p>Verifies that the OpenShift CLI (<code>oc</code>) installed correctly.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc [arguments]</code></pre>
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 39. Guidance on setting security for your administrative and privileged accounts</caption>
+<caption class="title">Table 56. Optional arguments inherited from parent commands</caption>
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
+<col style="width: 30%;">
+<col style="width: 70%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Action</th>
-<th class="tableblock halign-left valign-top">Benefit</th>
-<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Install the Compliance Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Automate configuration auditing and compliance monitoring. The Compliance Operator scans cluster infrastructure against National Institute of Standards and Technology (NIST) 800-53 controls required for FedRAMP. Create <code>ComplianceSuite</code> resources to schedule assessments that detect configuration drift and generate remediation recommendations. Visualize compliance results in the OpenShift console or integrate with Red Hat Advanced Cluster Security (RHACS) dashboard for centralized compliance tracking and correlation with security findings.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Handled through OperatorHub, then create <code>ComplianceSuite</code> resources targeting FedRAMP profiles, <code>ocp4-moderate</code> or <code>ocp4-high</code>. View results in OpenShift console under <code>Compliance</code> or in ACS dashboard.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure image security</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure image signature verification enforcing signed container images for deployment. Create <code>ImageContentSourcePolicy</code> resources defining trusted registries and integrate external vulnerability scanners.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Applied through global cluster-wide security policies.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Set pod security standards</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enforce runtime isolation constraints across namespaces. Restricts pod capabilities regarding host namespaces, root privileges, volume types, and root filesystems to isolate tenant workloads.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Handled through platform admission controllers and namespace labels.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage secrets from literal values</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace administrators create and store sensitive key/value configuration data locally. Secrets are base64 encoded but require cluster-wide etcd encryption to be fully encrypted at rest.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create secret generic &lt;secret_name&gt; --from-literal=key=value -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage secrets from files</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate local secrets using complete files to mount directly into applications as environment variables or secure volume mounts.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create secret generic &lt;secret_name&gt; --from-file=&lt;path/to/file&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pull image secrets</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Safely store and configure private registry authentication tokens by creating dedicated <code>docker-registry</code> credentials within the project.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create secret docker-registry &lt;secret_name&gt; --docker-server=&lt;registry-url&gt; --docker-username=&lt;username&gt; --docker-password=&lt;password&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Link secrets to service accounts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inject private registry pull credentials directly into namespace service accounts to allow automated image validation and pull authentication.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc secrets link &lt;service_account_name&gt; &lt;secret_name&gt; --for=pull -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage monitoring and logging access</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace administrators access localized application logs and metrics within assigned boundaries, preventing cross-namespace data visibility.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc logs &lt;pod-name&gt; -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review installed operators</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inspect local, namespace-scoped operators running within the project from OperatorHub, verifying their management permissions are constrained strictly to that namespace.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get csv -n &lt;namespace&gt;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View Security Context Constraints (SCCs)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review available security context constraints that control pod security capabilities. Red Hat SRE manages SCC definitions. The default <code>restricted-v2</code> SCC applies to pods without explicit SCC specification. The <code>privileged</code> SCC grants host-level access and is restricted to Red Hat-managed infrastructure components. Namespace administrators can assign pre-defined SCCs to their service accounts.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc get scc</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Define network policies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create namespace-scoped <code>NetworkPolicy</code> resources to control pod-to-pod communication and external access within your projects. Implement default-deny policies requiring explicit allow rules for permitted traffic. Cluster-wide network security is managed by Red Hat SRE.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc create -f &lt;networkpolicy.yaml&gt; -n &lt;namespace&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Verify <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red&#160;Hat OpenShift Services on AWS (classic architecture)</h5>
+<div class="paragraph _abstract">
+<p>Use the <code>init</code> command to initialize Red&#160;Hat OpenShift Services on AWS (classic architecture) only if you are using non-STS.</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</h6>
+<div class="paragraph">
+<p>Perform a series of checks to verify that you are ready to deploy a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster.</p>
+</div>
+<div class="paragraph">
+<p>The list of checks includes the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Checks to see that you have logged in (see <code>login</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS credentials are valid</p>
+</li>
+<li>
+<p>Checks that your AWS permissions are valid (see <code>verify permissions</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS quota levels are high enough (see <code>verify quota</code>)</p>
+</li>
+<li>
+<p>Runs a cluster simulation to ensure cluster creation will perform as expected</p>
+</li>
+<li>
+<p>Checks that the <code>osdCcsAdmin</code> user has been created in your AWS account</p>
+</li>
+<li>
+<p>Checks that the OpenShift Container Platform command-line tool is available on your system</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 57. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to verify quota and permissions. This value overrides the <code>AWS_REGION</code> environment variable only when running the <code>init</code> command, but it does not change your AWS CLI configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the stack template that is applied to your AWS account during the <code>init</code> command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it completely replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 58. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Configure your AWS account to allow Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure a new AWS account using pre-existing OpenShift Cluster Manager credentials:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=$OFFLINE_ACCESS_TOKEN</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</h5>
+<div class="paragraph _abstract">
+<p>This example workflow shows how to use a Bash script with the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>Make sure that AWS credentials are available as one of the following options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS profile</p>
+</li>
+<li>
+<p>Environment variables (<code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>)</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Initialize <code>rosa</code> using a Red Hat OpenShift Cluster Manager offline token <a href="https://console.redhat.com/openshift/token/rosa">from Red&#160;Hat</a>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=&lt;token&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create cluster --cluster-name=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add an identity provider (IDP):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create idp --cluster=&lt;cluster_name&gt; --type=&lt;identity_provider&gt; [arguments]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add a <code>dedicated-admin</code> user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa grant user dedicated-admin --user=&lt;idp_user_name&gt; --cluster=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Update the ROSA command-line interface (CLI) (<code>rosa</code>) to the latest version that works with your cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that a new version of the <code>rosa</code> CLI (<code>rosa</code>) is available:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.12
+There is a newer release version '1.2.15', please consider updating: https://mirror.openshift.com/pub/openshift-v4/clients/rosa/latest/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the latest compatible version of the <code>rosa</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command downloads an archive called <code>rosa-*.tar.gz</code> into the current directory. The exact name of the file depends on your operating system and system architecture.</p>
+</div>
+</li>
+<li>
+<p>Extract the contents of the archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar -xzf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install the new version of the <code>rosa</code> CLI by moving the extracted file into your path. In the following example, your path includes the <code>/usr/local/bin</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the new version of the <code>rosa</code> CLI installed successfully.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account_rosa-classic-manage-your-red-hat-openshift-services-on-aws-govcloud-account.html">Manage your Red Hat OpenShift Services on AWS GovCloud account</a> | ↑ Up: <a href="_get_started.html">Get Started</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-cluster-manager-overview_rosa-classic-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager</a> →</p>
+<p>↑ Up: <a href="_reference.html">Reference</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-cli-reference_rosa-classic-rosa-cli-reference.html">ROSA CLI reference</a> →</p>
 </div>
 </div>
 <div id="footer">
