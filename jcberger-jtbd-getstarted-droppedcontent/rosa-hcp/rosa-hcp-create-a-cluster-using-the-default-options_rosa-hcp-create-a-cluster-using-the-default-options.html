@@ -700,6 +700,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
+
+<ul class="sectlevel2">
+<li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a>
+</li>
+<li><a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -753,7 +762,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Default cluster version: Latest</p>
 </li>
 <li>
-<p>Default AWS region for installations using the ROSA CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
+<p>Default AWS region for installations using the <code>rosa</code> CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
 </li>
 <li>
 <p>Default EC2 IMDS endpoints (both v1 and v2) are enabled</p>
@@ -1172,7 +1181,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>Install and configure the latest ROSA CLI.</p>
+<p>Install and configure the latest <code>rosa</code> CLI.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1201,7 +1210,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>Verify that the ROSA CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<p>Verify that the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
@@ -1213,7 +1222,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.47
-Your ROSA CLI is up to date.</code></pre>
+Your &lt;code&gt;rosa&lt;/code&gt; CLI is up to date.</code></pre>
 </div>
 </div>
 </li>
@@ -1221,7 +1230,7 @@ Your ROSA CLI is up to date.</code></pre>
 </div>
 </li>
 <li>
-<p>Log in to the ROSA CLI using an offline access token.</p>
+<p>Log in to the <code>rosa</code> CLI using an offline access token.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1301,7 +1310,7 @@ OCM Organization External ID: &lt;external_org_id&gt;</code></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use the ROSA CLI to download the <code>oc</code> CLI.</p>
+<p>Use the <code>rosa</code> CLI to download the <code>oc</code> CLI.</p>
 <div class="paragraph">
 <p>The following command downloads the latest version of the CLI to the current working directory:</p>
 </div>
@@ -1379,7 +1388,7 @@ $ oc version</code></pre>
 <div class="sect4">
 <h5 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-quickstart-set-up-your-environment">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
-<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the ROSA CLI, or you can manually create the VPC resources in the AWS console.</p>
+<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the <code>rosa</code> CLI, or you can manually create the VPC resources in the AWS console.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1498,7 +1507,7 @@ $ oc version</code></pre>
 <p>You have configured your Red Hat accounts</p>
 </li>
 <li>
-<p>You have installed the ROSA CLI and configured it to the latest version</p>
+<p>You have installed the <code>rosa</code> CLI and configured it to the latest version</p>
 </li>
 </ul>
 </div>
@@ -1907,6 +1916,30 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 <div class="title">Additional resources</div>
 <ul>
 <li>
+<p><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-vpc.html">AWS CloudFormation documentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/rosa/blob/master/cmd/create/network/templates/rosa-quickstart-default-vpc/cloudformation.yaml">Default VPC AWS CloudFormation template</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift-cs/terraform-vpc-example">Terraform VPC repository</a></p>
+</li>
+<li>
+<p><a href="../support/troubleshooting/rosa-troubleshooting-installations-hcp.html#rosa-troubleshooting-installations-hcp">Troubleshooting Red&#160;Hat OpenShift Services on AWS cluster installations</a></p>
+</li>
+<li>
+<p><a href="../support/getting-support.html#getting-support">Getting support for Red&#160;Hat OpenShift Services on AWS</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html">Get Started with Amazon VPC</a></p>
+</li>
+<li>
+<p><a href="https://developer.hashicorp.com/terraform">HashiCorp Terraform documentation</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/deploy/subnet_discovery/">Subnet Auto Discovery</a></p>
+</li>
+<li>
 <p><a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html/introduction_to_rosa/rosa-sts-about-iam-resources">About IAM resources for Red&#160;Hat OpenShift Services on AWS clusters that use STS</a></p>
 </li>
 </ul>
@@ -1943,7 +1976,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 <p>You have the permissions required to install AWS account-wide roles.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, <code>rosa</code>, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -1998,7 +2031,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the ROSA CLI (<code>rosa</code>) create your Operator roles and policies.
+<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the <code>rosa</code> CLI (<code>rosa</code>) create your Operator roles and policies.
 See "Methods of account-wide role creation" for more information. The following example shows what your creation flow might look like.</p>
 </div>
 <div class="listingblock">
@@ -2057,7 +2090,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 </dd>
 <dt class="hdlist1"><code>Role creation mode</code></dt>
 <dd>
-<p>Choose the method to create your AWS roles. By using <code>auto</code>, the ROSA CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
+<p>Choose the method to create your AWS roles. By using <code>auto</code>, the <code>rosa</code> CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
 </dd>
 <dt class="hdlist1"><code>Create the 'ManagedOpenShift-OCM-Role-182' role?</code></dt>
 <dd>
@@ -2458,7 +2491,7 @@ ROLE NAME                                                         ROLE ARN      
 <p>When deletion protection is enabled, attempts to delete the cluster using <code>rosa delete cluster</code> fail immediately before prompting for deletion confirmation. To delete a cluster, disable the protection first by running <code>rosa edit cluster -c &lt;cluster_name&gt; --enable-delete-protection=false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Deletion protection only blocks deletion requests made through the ROSA CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
+<p>Deletion protection only blocks deletion requests made through the <code>rosa</code> CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
 </div>
 </dd>
 </dl>
@@ -2649,6 +2682,38 @@ ROLE NAME                                                         ROLE ARN      
 <div class="paragraph _abstract">
 <p>Use this guide to create a Red&#160;Hat OpenShift Services on AWS cluster with the ROSA command-line interface (CLI) (<code>rosa</code>), grant user access, deploy an application, and manage your cluster.</p>
 </div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-vpc.html">AWS CloudFormation documentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/rosa/blob/master/cmd/create/network/templates/rosa-quickstart-default-vpc/cloudformation.yaml">Default VPC AWS CloudFormation template</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift-cs/terraform-vpc-example">Terraform VPC repository</a></p>
+</li>
+<li>
+<p><a href="../support/troubleshooting/rosa-troubleshooting-installations-hcp.html#rosa-troubleshooting-installations-hcp">Troubleshooting Red&#160;Hat OpenShift Services on AWS cluster installations</a></p>
+</li>
+<li>
+<p><a href="../support/getting-support.html#getting-support">Getting support for Red&#160;Hat OpenShift Services on AWS</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html">Get Started with Amazon VPC</a></p>
+</li>
+<li>
+<p><a href="https://developer.hashicorp.com/terraform">HashiCorp Terraform documentation</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/deploy/subnet_discovery/">Subnet Auto Discovery</a></p>
+</li>
+<li>
+<p><a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html/introduction_to_rosa/rosa-sts-about-iam-resources">About IAM resources for Red&#160;Hat OpenShift Services on AWS clusters that use STS</a></p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="rosa-getting-started-grant-user-access_rosa-hcp-quickstart-manage-your-cluster">Grant user access to a cluster</h5>
 <div class="paragraph _abstract">
@@ -2664,10 +2729,10 @@ ROLE NAME                                                         ROLE ARN      
 <p>You have an AWS account.</p>
 </li>
 <li>
-<p>You installed and configured the latest ROSA CLI on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -2731,7 +2796,7 @@ ROLE NAME                                                         ROLE ARN      
 <p>You installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -2830,7 +2895,7 @@ ROLE NAME                                                         ROLE ARN      
 <p>You installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -3034,10 +3099,10 @@ nodejs-5d9c6c7d9c-kghq2   1/1     Running     0          2m</code></pre>
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You installed and configured the latest ROSA CLI, <code>rosa</code>, on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -3200,10 +3265,10 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You installed and configured the latest ROSA CLI on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -3383,7 +3448,7 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 <p>Default cluster version: Latest</p>
 </li>
 <li>
-<p>Default AWS region for installations using the ROSA CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
+<p>Default AWS region for installations using the <code>rosa</code> CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
 </li>
 <li>
 <p>Default EC2 IMDS endpoints (both v1 and v2) are enabled</p>
@@ -3770,7 +3835,7 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 <p>You have configured your Red Hat accounts</p>
 </li>
 <li>
-<p>You have installed the ROSA CLI and configured it to the latest version</p>
+<p>You have installed the <code>rosa</code> CLI and configured it to the latest version</p>
 </li>
 </ul>
 </div>
@@ -4201,7 +4266,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 <p>You have the permissions required to install AWS account-wide roles.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, <code>rosa</code>, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -4256,7 +4321,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the ROSA CLI (<code>rosa</code>) create your Operator roles and policies.
+<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the <code>rosa</code> CLI (<code>rosa</code>) create your Operator roles and policies.
 See "Methods of account-wide role creation" for more information. The following example shows what your creation flow might look like.</p>
 </div>
 <div class="listingblock">
@@ -4315,7 +4380,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 </dd>
 <dt class="hdlist1"><code>Role creation mode</code></dt>
 <dd>
-<p>Choose the method to create your AWS roles. By using <code>auto</code>, the ROSA CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
+<p>Choose the method to create your AWS roles. By using <code>auto</code>, the <code>rosa</code> CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
 </dd>
 <dt class="hdlist1"><code>Create the 'ManagedOpenShift-OCM-Role-182' role?</code></dt>
 <dd>
@@ -4397,7 +4462,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 <p>You have installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your installation host.</p>
 </li>
 <li>
-<p>You have logged in to your Red&#160;Hat account by using the ROSA CLI.</p>
+<p>You have logged in to your Red&#160;Hat account by using the <code>rosa</code> CLI.</p>
 </li>
 </ul>
 </div>
@@ -4817,7 +4882,7 @@ ROLE NAME                                                         ROLE ARN      
 <p>When deletion protection is enabled, attempts to delete the cluster using <code>rosa delete cluster</code> fail immediately before prompting for deletion confirmation. To delete a cluster, disable the protection first by running <code>rosa edit cluster -c &lt;cluster_name&gt; --enable-delete-protection=false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Deletion protection only blocks deletion requests made through the ROSA CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
+<p>Deletion protection only blocks deletion requests made through the <code>rosa</code> CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
 </div>
 </dd>
 </dl>
@@ -5540,6 +5605,12 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <div class="title">Additional resources</div>
 <ul>
 <li>
+<p><a href="../rosa_hcp/rosa-hcp-sts-creating-a-cluster-quickly.html#rosa-hcp-sts-creating-a-cluster-quickly">Creating Red&#160;Hat OpenShift Services on AWS clusters using the default options</a></p>
+</li>
+<li>
+<p><a href="../rosa_hcp/rosa-hcp-sts-creating-a-cluster-quickly.html#rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-sts-creating-a-cluster-quickly">Creating a Red&#160;Hat OpenShift Services on AWS cluster using the CLI</a></p>
+</li>
+<li>
 <p><a href="https://cloud.redhat.com/learning/learn:getting-started-red-hat-openshift-service-aws-rosa/resource/resources:how-deploy-cluster-red-hat-openshift-service-aws-using-console-ui">Getting started with Red Hat OpenShift Service on AWS learning path</a></p>
 </li>
 </ul>
@@ -5760,7 +5831,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have installed the most recent <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/cli_tools/index#rosa-get-started-cli">ROSA CLI</a>.</p>
+<p>You have installed the most recent <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/cli_tools/index#rosa-get-started-cli"><code>rosa</code> CLI</a>.</p>
 </li>
 <li>
 <p>You have installed the most recent <a href="https://aws.amazon.com/cli/">AWS CLI</a>.</p>
@@ -5884,10 +5955,10 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>Click the <strong>How to associate a new AWS account</strong>, if you don&#8217;t see the account into which you want to deploy the Red&#160;Hat OpenShift Services on AWS cluster for detailed information on how to create or link account roles for this association.</p>
 </li>
 <li>
-<p>The ROSA CLI is used for this.</p>
+<p>The <code>rosa</code> CLI is used for this.</p>
 </li>
 <li>
-<p>If you are using multiple AWS accounts and have their profiles configured for the AWS CLI, you can use the <code>--profile</code> selector to specify the AWS profile when working with the ROSA CLI commands.</p>
+<p>If you are using multiple AWS accounts and have their profiles configured for the AWS CLI, you can use the <code>--profile</code> selector to specify the AWS profile when working with the <code>rosa</code> CLI commands.</p>
 </li>
 </ul>
 </div>
@@ -5976,6 +6047,15 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <div class="ulist _additional-resources">
 <div class="title">Additional resources</div>
 <ul>
+<li>
+<p><a href="../rosa_govcloud/rosa-govcloud-account-management.html#rosa-govcloud-account-management">Managing your Red&#160;Hat OpenShift Services on AWS in AWS GovCloud account</a></p>
+</li>
+<li>
+<p><a href="../rosa_govcloud/rosa-install-govcloud-cluster.html#rosa-install-govcloud-cluster">Installing a Red&#160;Hat OpenShift Services on AWS cluster in AWS GovCloud</a></p>
+</li>
+<li>
+<p><a href="../rosa_govcloud/rosa-fedramp-security-config.html#rosa-fedramp-security-config">Red&#160;Hat OpenShift Container Platform FedRAMP Rev5 Secure Configuration Guidance</a></p>
+</li>
 <li>
 <p><a href="https://access.redhat.com/compliance/fedramp">Red&#160;Hat FedRAMP Compliance</a></p>
 </li>
@@ -6658,6 +6738,14 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <div class="paragraph _abstract">
 <p>You can install a Red&#160;Hat OpenShift Services on AWS cluster in AWS GovCloud with or without AWS PrivateLink. Before you begin, ensure that you meet the requirements to access AWS GovCloud, you have prepared to access Red&#160;Hat OpenShift Services on AWS in AWS GovCloud, and you have signed up for a Red&#160;Hat FedRAMP account.</p>
 </div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../rosa_govcloud/rosa-govcloud-getting-started.html#rosa-govcloud-getting-started">Getting started with Red&#160;Hat OpenShift Services on AWS in AWS GovCloud</a></p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="rosa-govcloud-deploy-cluster_rosa-hcp-create-your-first-red-hat-openshift-services-on-aws-cluster-in-aws-govcloud">Preparing to deploy a Red&#160;Hat OpenShift Services on AWS cluster in AWS GovCloud</h5>
 <div class="paragraph _abstract">
@@ -6775,7 +6863,7 @@ For instructions on setting up a VPC, see <a href="https://docs.aws.amazon.com/R
 <p>You have enabled the Red&#160;Hat OpenShift Services on AWS service in the AWS Console.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, on your installation host.</p>
 </li>
 <li>
 <p>For GovCloud, you have enabled the Red&#160;Hat OpenShift Services on AWS service in the AWS Console on the linked commercial account because it is inside the commercial account that you enable Red&#160;Hat OpenShift Services on AWS for GovCloud. For more information, see <a href="https://docs.aws.amazon.com/rosa/latest/userguide/set-up.html#enable-rosa">Enable ROSA and configure AWS prerequisites</a>.</p>
@@ -6887,7 +6975,7 @@ For more information, see <a href="https://aws.amazon.com/marketplace/pp/prodvie
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 22:36:02 -0400
+Last updated 2026-10-09 14:37:16 -0400
 </div>
 </div>
 </body>

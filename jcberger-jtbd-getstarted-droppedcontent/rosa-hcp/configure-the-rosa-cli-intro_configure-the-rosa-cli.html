@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues" class="book toc2 toc-left navmap-has-right-toc">
+<body id="configure-the-rosa-cli-intro_configure-the-rosa-cli" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS</h1>
 <div id="toc" class="toc2">
@@ -678,8 +678,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_troubleshoot.html">▶</button><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
-<li><a href="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues.html"><span class="toc-current">Troubleshoot cluster infrastructure issues</span></a>
+<li><a href="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues.html">Troubleshoot cluster infrastructure issues</a>
 </li>
 <li><a href="rosa-hcp-troubleshoot-component-and-workload-issues_rosa-hcp-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
 </li>
@@ -701,9 +702,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
-
 <ul class="sectlevel2">
-<li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a>
+<li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html"><span class="toc-current">Configure ROSA CLI</span></a>
 </li>
 <li><a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a>
 </li>
@@ -712,880 +712,1162 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-troubleshoot-rosa-installations_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot ROSA installations</a></li><li class="level-5"><a href="#rosa-troubleshooting-installing_rosa-hcp-troubleshoot-rosa-installations">Installation troubleshooting</a></li><li class="level-5"><a href="#rosa-verify-hcp-install_rosa-hcp-troubleshoot-rosa-installations">Verify installation of Red Hat OpenShift Services on AWS clusters</a></li><li class="level-5"><a href="#rosa-troubleshoot-hcp-install_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot Red Hat OpenShift Services on AWS installation error codes</a></li><li class="level-5"><a href="#rosa-hcp-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot access to Red Hat Hybrid Cloud Console</a></li><li class="level-5"><a href="#rosa-hcp-ready-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Verify access to Red Hat OpenShift Services on AWS web console for Red Hat OpenShift Services on AWS cluster in ready state</a></li><li class="level-5"><a href="#rosa-hcp-private-ready-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Verify access to Red Hat Hybrid Cloud Console for private Red Hat OpenShift Services on AWS clusters</a></li><li class="level-4"><a href="#rosa-hcp-troubleshoot-networking_rosa-hcp-troubleshoot-networking">Troubleshoot networking</a></li><li class="level-5"><a href="#rosa-troubleshooting-general-deployment-failure_rosa-hcp-troubleshoot-networking">Connectivity issues on clusters with private network load balancers</a></li><li class="level-4"><a href="#rosa-hcp-troubleshoot-red-hat-build-of-karpenter_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Troubleshoot Red Hat build of Karpenter</a></li><li class="level-5"><a href="#autonode-troubleshooting-overview_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">About Red Hat build of Karpenter troubleshooting</a></li><li class="level-6"><a href="#autonode-troubleshooting-diagnostic-workflow_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">General diagnostic workflow</a></li><li class="level-6"><a href="#autonode-troubleshooting-escalating_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">When to escalate to Red Hat Support</a></li><li class="level-5"><a href="#karpenter-resource-readiness-conditions_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Karpenter resource readiness conditions</a></li><li class="level-6"><a href="#karpenter-resource-readiness-conditions-common-failures_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Common failure messages</a></li><li class="level-6"><a href="#query-ec2nodeclass-condition-status_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Query EC2NodeClass condition status</a></li><li class="level-5"><a href="#verify-karpenter-crds-installed_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Verify Karpenter CRDs are installed</a></li><li class="level-5"><a href="#resolve-ec2nodeclass-not-ready-status_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Resolve EC2NodeClass not ready status</a></li><li class="level-5"><a href="#resolve-iam-permissions-for-tagging_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Resolve IAM permissions for AWS resource tagging</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</a></li><li class="level-5"><a href="#rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the rosa CLI</a></li><li class="level-5"><a href="#rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the rosa CLI</a></li><li class="level-6"><a href="#_authentication_methods">Authentication methods</a></li><li class="level-5"><a href="#rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on authorization code</a></li><li class="level-5"><a href="#rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on device code</a></li><li class="level-5"><a href="#rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with an offline token</a></li><li class="level-5"><a href="#rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the rosa CLI</a></li><li class="level-5"><a href="#rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the rosa CLI</a></li><li class="level-6"><a href="#rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</a></li><li class="level-6"><a href="#rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</a></li><li class="level-5"><a href="#rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the rosa CLI</a></li><li class="level-6"><a href="#rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</a></li><li class="level-6"><a href="#rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</a></li><li class="level-6"><a href="#rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</a></li><li class="level-5"><a href="#rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red Hat OpenShift Services on AWS</a></li><li class="level-6"><a href="#rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</a></li><li class="level-5"><a href="#rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</a></li><li class="level-5"><a href="#rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the rosa CLI</a></li><li class="level-4"><a href="#rosa-change-the-aws-billing-account_rosa-change-the-aws-billing-account">Change the AWS billing account for your cluster</a></li><li class="level-5"><a href="#rosa-update-billing_rosa-change-the-aws-billing-account">Update billing accounts for Red Hat OpenShift Services on AWS clusters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues">Troubleshoot cluster infrastructure issues</h3>
+<h3 id="configure-the-rosa-cli-intro_configure-the-rosa-cli">Configure ROSA CLI</h3>
 <div class="paragraph _abstract">
-<p>Diagnose and resolve problems with the underlying infrastructure of your Red&#160;Hat OpenShift Services on AWS cluster, including installation failures, networking errors, node health, and automatic node scaling.</p>
+<p>Find the exact parameters, command-line interface (CLI) options, application programming interface (API) fields, and schemas required to configure and automate your Red&#160;Hat OpenShift Services on AWS clusters.</p>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-troubleshoot-rosa-installations_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot ROSA installations</h4>
+<h4 id="rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</h4>
 <div class="paragraph _abstract">
-<p>Troubleshoot the installation of Red&#160;Hat OpenShift Services on AWS clusters, including clusters that report a ready state but provide no console access.</p>
+<p>Learn how to install, configure, and update the ROSA command-line interface (CLI) (<code>rosa</code>). You can use the <code>rosa</code> CLI to create, update, manage, and delete Red&#160;Hat OpenShift Services on AWS clusters and resources.</p>
 </div>
 <div class="sect4">
-<h5 id="rosa-troubleshooting-installing_rosa-hcp-troubleshoot-rosa-installations">Installation troubleshooting</h5>
+<h5 id="rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the <code>rosa</code> CLI</h5>
 <div class="paragraph _abstract">
-<p>This procedure describes how to troubleshoot installation issues for Red&#160;Hat OpenShift Services on AWS clusters.</p>
+<p>Put the ROSA command-line interface (CLI) (<code>rosa</code>) on the computer you use to run cluster commands.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Install and configure the latest AWS CLI (<code>aws</code>).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Follow the <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a> documentation to install and configure the AWS CLI for your operating system.</p>
+<div class="paragraph">
+<p>Put <code>aws_access_key_id</code>, <code>aws_secret_access_key</code>, and <code>region</code> in the <code>.aws/credentials</code> file. See <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html">AWS Configuration basics</a> in the AWS documentation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can optionally use the <code>AWS_DEFAULT_REGION</code> environment variable to set the default AWS region.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Query the AWS API to verify if the AWS CLI is installed and configured correctly:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws sts get-caller-identity  --output text</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;aws_account_id&gt;    arn:aws:iam::&lt;aws_account_id&gt;:user/&lt;username&gt;  &lt;aws_user_id&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Download the latest version of the ROSA command-line interface (CLI) (<code>rosa</code>) for your operating system from the <a href="https://console.redhat.com/openshift/downloads"><strong>Downloads</strong></a> page on OpenShift Cluster Manager.</p>
+</li>
+<li>
+<p>Extract the <code>rosa</code> binary file from the downloaded archive. The following example extracts the binary from a Linux tar archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar xvf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add <code>rosa</code> to your path. In the following example, the <code>/usr/local/bin</code> directory is included in the path of the user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify if the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: Turn on tab completion for the <code>rosa</code> CLI. Press <code>Tab</code> twice to finish subcommands or see hints:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To enable persistent tab completion for Bash on a Linux host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># rosa completion bash &gt; /etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Bash on a macOS host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/usr/local/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion bash &gt; /usr/local/etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Zsh:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If tab completion is not enabled for your Zsh environment, enable it by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "autoload -U compinit; compinit" &gt;&gt; ~/.zshrc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Zsh and save it to the first directory in your functions path:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion zsh &gt; "${fpath[1]}/_rosa"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for fish:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for fish and save it to your <code>~/.config/fish/completions/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion fish &gt; ~/.config/fish/completions/rosa.fish</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for PowerShell:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for PowerShell and save it to a file named <code>rosa.ps1</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">PS&gt; rosa completion powershell | Out-String | Invoke-Expression</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Source the <code>rosa.ps1</code> file from your PowerShell profile.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about configuring <code>rosa</code> tab completion, see the help menu by running the <code>rosa completion --help</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>You can log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with Red&#160;Hat single sign-on or with an offline authentication token. Red&#160;Hat recommends using the <code>rosa</code> CLI with Red&#160;Hat single sign-on, instead of using an offline authentication token.</p>
+</div>
+<div class="paragraph">
+<p>An offline authentication token is long-lived, stored on your operating system, and cannot be revoked. These factors increase overall security risks and the likelihood of unauthorized access to your account.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, authenticating with the Red&#160;Hat single sign-on method automatically sends your <code>rosa</code> instance a refresh token that is valid for 10 hours. This unique, temporary authorization code enhances security and reduces the risk of unauthorized access.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The method of authenticating using Red&#160;Hat single sign-on does not break any existing automations that rely on offline tokens. Red&#160;Hat recommends using services accounts for automation purposes. If you still need to use offline tokens for automation or other purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_authentication_methods">Authentication methods</h6>
+<div class="paragraph">
+<p>You can use one of the following methods to authenticate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Single sign-on authorization code</strong>: Use this method if your system has a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Single sign-on device code</strong>: Use this method if you are working with containers, remote hosts, or other environments without a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Offline token</strong>: Use this method if you need to use an offline token for automation or other purposes. Red&#160;Hat recommends using service accounts for automation purposes instead.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on authorization code</h5>
+<div class="paragraph _abstract">
+<p>You can log in to your account with the <code>rosa</code> CLI by using a Red&#160;Hat single sign-on authorization code.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a web browser available on your system.</p>
+</li>
+<li>
+<p>You have <code>rosa</code> CLI version 1.2.36 or later installed.</p>
+</li>
+</ul>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
 <ul>
 <li>
-<p>Inspect install or uninstall logs:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>To display install logs, run the following command, replacing <code>&lt;cluster_name&gt;</code> with the name of your cluster:</p>
+<p>To log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat single sign-on authorization code, run the following command:</p>
 <div class="listingblock">
+<div class="title">Syntax</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logs install --cluster=&lt;cluster_name&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-auth-code</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>To watch the logs, include the <code>--watch</code> flag:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logs install --cluster=&lt;cluster_name&gt; --watch</code></pre>
+<div class="paragraph">
+<p>Running this command redirects you to the Red&#160;Hat single sign-on login. Log in with your Red&#160;Hat login or email.</p>
 </div>
-</div>
-</li>
-<li>
-<p>To display uninstall logs, run the following command, replacing <code>&lt;cluster_name&gt;</code> with the name of your cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logs uninstall --cluster=&lt;cluster_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To watch the logs, include the <code>--watch</code> flag:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logs uninstall --cluster=&lt;cluster_name&gt; --watch</code></pre>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 62. Optional arguments inherited from parent commands+</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on device code</h5>
+<div class="paragraph _abstract">
+<p>If you are working with containers, remote hosts, and other environments without a web browser, you can use a Red&#160;Hat single sign-on device code for secure authentication. To do this, you must use a second device that has a web browser to approve the login.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have ROSA command-line interface (CLI) (<code>rosa</code>) version 1.2.36 or later installed.</p>
 </li>
 <li>
-<p>Verify your AWS account and quota:</p>
+<p>You have access to a second device with a web browser.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to the <code>rosa</code> CLI with a Red&#160;Hat single sign-on device code, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-device-code</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Run the following command to verify you have the available quota on your AWS account:</p>
+<p>Running this command redirects you to the Red&#160;Hat SSO login and provides a login code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 63. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with an offline token</h5>
+<div class="paragraph _abstract">
+<p>Log in to your Red&#160;Hat account, saving the credentials to the <code>rosa</code> configuration file.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To use offline tokens for automation purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.
+To use service accounts for automation purposes, see the <a href="https://console.redhat.com/iam/service-accounts">Service Accounts</a> page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat recommends using service accounts for automation purposes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat offline token, run the following command:</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 64. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 65. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Log out of <code>rosa</code>. Logging out also removes the <code>rosa</code> configuration file.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Log out of your <code>rosa</code> session by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logout [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 66. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Verify AWS permissions and quotas by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</h6>
+<div class="paragraph">
+<p>Verify that the AWS permissions required to create a Red&#160;Hat OpenShift Services on AWS cluster are configured correctly:</p>
 </div>
 <div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions [arguments]</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command verifies permissions only for clusters that do not use the AWS Security Token Service (STS).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 67. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify that the AWS permissions are configured correctly:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that the AWS permissions are configured correctly in a specific region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions --region=us-west-2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</h6>
+<div class="paragraph">
+<p>Verifies that AWS quotas are configured correctly for your default region.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 68. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify that the AWS quotas are configured correctly for the default region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>AWS quotas change based on region. Be sure you are verifying your quota for the correct AWS region. If you need to increase your quota, go to your <a href="https://aws.amazon.com/console/">AWS console</a>, and request a quota increase for the service that failed.</p>
+<p>Verify that the AWS quotas are configured correctly in a specific region:</p>
 </div>
-</li>
-<li>
-<p>AWS notification emails:</p>
-<div class="paragraph">
-<p>When creating a cluster, the Red&#160;Hat OpenShift Services on AWS service creates small instances in all supported regions. This check ensures the AWS account being used can deploy to each supported region.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota --region=us-west-2</code></pre>
 </div>
-<div class="paragraph">
-<p>For AWS accounts that are not using all supported regions, AWS might send one or more emails confirming that "Your Request For Accessing AWS Resources Has Been Validated." Typically the sender of this email is <a href="mailto:aws-verification@amazon.com">aws-verification@amazon.com</a>.</p>
 </div>
-<div class="paragraph">
-<p>This is expected behavior as the Red&#160;Hat OpenShift Services on AWS service is validating your AWS account configuration.</p>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="rosa-verify-hcp-install_rosa-hcp-troubleshoot-rosa-installations">Verify installation of Red&#160;Hat OpenShift Services on AWS clusters</h5>
+<h5 id="rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the <code>rosa</code> CLI</h5>
 <div class="paragraph _abstract">
-<p>If the Red&#160;Hat OpenShift Services on AWS cluster is in the installing state for over 30 minutes and has not become ready, ensure the AWS account environment is prepared for the required cluster configurations. If the AWS account environment is prepared for the required cluster configurations correctly, try to delete and re-create the cluster. If the problem persists, contact support.</p>
+<p>Download and verify the <code>rosa</code> and <code>oc</code> CLI tools by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Verify the AWS account environment is prepared for the required cluster configurations.</p>
-</li>
-<li>
-<p>If the AWS account environment is prepared correctly, try to delete and re-create the cluster.</p>
-</li>
-<li>
-<p>If the problem persists, contact support.</p>
-</li>
-</ul>
+<div class="sect5">
+<h6 id="rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</h6>
+<div class="paragraph">
+<p>Download the latest compatible version of the <code>rosa</code> CLI.</p>
 </div>
+<div class="paragraph">
+<p>After you download <code>rosa</code> CLI, extract the contents of the archive and add it to your path.</p>
 </div>
-<div class="sect4">
-<h5 id="rosa-troubleshoot-hcp-install_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot Red&#160;Hat OpenShift Services on AWS installation error codes</h5>
-<div class="paragraph _abstract">
-<p>The following table lists Red&#160;Hat OpenShift Services on AWS installation error codes and what you can do to troubleshoot these errors.</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa [arguments]</code></pre>
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 60. Red&#160;Hat OpenShift Services on AWS installation error codes</caption>
+<caption class="title">Table 69. Optional arguments inherited from parent commands</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 30%;">
+<col style="width: 70%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Error code</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Resolution</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM3999</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown error.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Check the cluster installation logs for more details, or delete this cluster and retry cluster installation. If this issue persists, contact Red&#160;Hat support. See <em>Additional resources</em> for more information.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5001</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Services on AWS cluster provision has failed.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Check the cluster installation logs for more details, or delete this cluster and retry cluster installation. If this issue persists, contact Red&#160;Hat support. See <em>Additional resources</em> for more information.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5002</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum resource tag size of 25 has been exceeded.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Check the cluster information to determine if you can remove any unnecessary tags you have specified and retry cluster installation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5003</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unable to establish an AWS client to provision the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You must create several role resources on your AWS account to create and manage a Red&#160;Hat OpenShift Services on AWS cluster. Ensure that your provided AWS credentials are correct and retry cluster installation.</p>
-<p class="tableblock">For more information about Red&#160;Hat OpenShift Services on AWS IAM role resources, see <em>ROSA IAM role resources</em> in the <em>Additional resources</em> section.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5004</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unable to establish a cross-account AWS client to provision the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You must create several role resources on your AWS account to create and manage a Red&#160;Hat OpenShift Services on AWS cluster. Ensure that your provided AWS credentials are correct and retry cluster installation.</p>
-<p class="tableblock">For more information about Red&#160;Hat OpenShift Services on AWS IAM role resources, see <em>ROSA IAM role resources</em> in the <em>Additional resources</em> section.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5005</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Failed to retrieve AWS subnets defined for the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review the provided subnet IDs and retry cluster installation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5006</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You must configure at least one private AWS subnet for the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review the provided subnet IDs and retry cluster installation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5007</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unable to create AWS STS prerequisites for the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that account and operator roles have been created and are correct. For more information, see <em>AWS STS and ROSA with HCP explained</em> in the <em>Additional resources</em> section.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5008</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The provided cluster flavour is incorrect.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that the provided name or ID is correct when you are using the flavour parameter and retry cluster creation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5009</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cluster version could not be found.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ensure that the configured version ID matches a valid Red&#160;Hat OpenShift Services on AWS version.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5010</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Failed to tag subnets for the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Confirm that the AWS permissions and the subnet configurations are correct. You must tag at least one private subnet and, if applicable, one public subnet.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OCM5011</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster installation has failed due to unavailable capacity in the selected region.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Try your cluster installation in another region or retry cluster installation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://access.redhat.com/support/cases/#/case/list">Red Hat Customer Support</a></p>
-</li>
-</ul>
 </div>
-</div>
-<div class="sect4">
-<h5 id="rosa-hcp-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Troubleshoot access to Red Hat Hybrid Cloud Console</h5>
-<div class="paragraph _abstract">
-<p>In Red&#160;Hat OpenShift Services on AWS clusters, the Red&#160;Hat OpenShift Services on AWS OAuth server is hosted in the Red Hat service&#8217;s AWS account while the web console service is published by using the cluster&#8217;s default ingress controller in the cluster&#8217;s AWS account. If you can log in to your cluster by using the OpenShift CLI (oc) but cannot access the Red&#160;Hat OpenShift Services on AWS web console, verify the following criteria are met:</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Verify the console workloads are running.</p>
-</li>
-<li>
-<p>Verify the default ingress controller&#8217;s load balancer is active.</p>
-</li>
-<li>
-<p>Verify you are accessing the console from a machine that has network connectivity to the cluster&#8217;s VPC network.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-hcp-ready-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Verify access to Red&#160;Hat OpenShift Services on AWS web console for Red&#160;Hat OpenShift Services on AWS cluster in ready state</h5>
-<div class="paragraph _abstract">
-<p>Red&#160;Hat OpenShift Services on AWS clusters return a <code>ready</code> status when the control plane hosted in the Red&#160;Hat OpenShift Services on AWS service account becomes ready. Cluster console workloads are deployed on the cluster&#8217;s worker nodes. The Red&#160;Hat OpenShift Services on AWS web console will not be available and accessible until the worker nodes have joined the cluster and console workloads are running.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>If your Red&#160;Hat OpenShift Services on AWS cluster is ready but you are unable to access the Red&#160;Hat OpenShift Services on AWS web console for the cluster, wait for the worker nodes to join the cluster and retry accessing the console.</p>
+<div class="sect5">
+<h6 id="rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</h6>
 <div class="paragraph">
-<p>You can either log in to the Red&#160;Hat OpenShift Services on AWS cluster or use the <code>rosa describe machinepool</code> command in the <code>rosa</code> CLI watch the nodes.</p>
+<p>Download the latest compatible version of the OpenShift CLI (<code>oc</code>).</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>After you download <code>oc</code>, you must extract the contents of the archive and add it to your path.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 70. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Download <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</h6>
+<div class="paragraph">
+<p>Verifies that the OpenShift CLI (<code>oc</code>) installed correctly.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 71. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="rosa-hcp-private-ready-no-console-access_rosa-hcp-troubleshoot-rosa-installations">Verify access to Red Hat Hybrid Cloud Console for private Red&#160;Hat OpenShift Services on AWS clusters</h5>
+<h5 id="rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red&#160;Hat OpenShift Services on AWS</h5>
 <div class="paragraph _abstract">
-<p>The console of the private cluster is private by default. During cluster installation, the default Ingress Controller managed by OpenShift&#8217;s Ingress Operator is configured with an internal AWS Network Load Balancer (NLB).</p>
+<p>Use the <code>init</code> command to initialize Red&#160;Hat OpenShift Services on AWS only if you are using non-STS.</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</h6>
+<div class="paragraph">
+<p>Perform a series of checks to verify that you are ready to deploy a Red&#160;Hat OpenShift Services on AWS cluster.</p>
+</div>
+<div class="paragraph">
+<p>The list of checks includes the following:</p>
 </div>
 <div class="ulist">
-<div class="title">Procedure</div>
 <ul>
 <li>
-<p>If your private Red&#160;Hat OpenShift Services on AWS cluster shows a <code>ready</code> status but you cannot access the Red&#160;Hat OpenShift Services on AWS web console for the cluster, try accessing the cluster console from either within the cluster VPC or from a network that is connected to the VPC.</p>
+<p>Checks to see that you have logged in (see <code>login</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS credentials are valid</p>
+</li>
+<li>
+<p>Checks that your AWS permissions are valid (see <code>verify permissions</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS quota levels are high enough (see <code>verify quota</code>)</p>
+</li>
+<li>
+<p>Runs a cluster simulation to ensure cluster creation will perform as expected</p>
+</li>
+<li>
+<p>Checks that the <code>osdCcsAdmin</code> user has been created in your AWS account</p>
+</li>
+<li>
+<p>Checks that the OpenShift Container Platform command-line tool is available on your system</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 72. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to verify quota and permissions. This value overrides the <code>AWS_REGION</code> environment variable only when running the <code>init</code> command, but it does not change your AWS CLI configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the stack template that is applied to your AWS account during the <code>init</code> command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it completely replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 73. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Configure your AWS account to allow Red&#160;Hat OpenShift Services on AWS clusters:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure a new AWS account using pre-existing OpenShift Cluster Manager credentials:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=$OFFLINE_ACCESS_TOKEN</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</h5>
+<div class="paragraph _abstract">
+<p>This example workflow shows how to use a Bash script with the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>Make sure that AWS credentials are available as one of the following options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS profile</p>
+</li>
+<li>
+<p>Environment variables (<code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>)</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Initialize <code>rosa</code> using a Red Hat OpenShift Cluster Manager offline token <a href="https://console.redhat.com/openshift/token/rosa">from Red&#160;Hat</a>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=&lt;token&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the Red&#160;Hat OpenShift Services on AWS cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create cluster --cluster-name=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add an identity provider (IDP):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create idp --cluster=&lt;cluster_name&gt; --type=&lt;identity_provider&gt; [arguments]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add a <code>dedicated-admin</code> user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa grant user dedicated-admin --user=&lt;idp_user_name&gt; --cluster=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Update the ROSA command-line interface (CLI) (<code>rosa</code>) to the latest version that works with your cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that a new version of the <code>rosa</code> CLI (<code>rosa</code>) is available:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.12
+There is a newer release version '1.2.15', please consider updating: https://mirror.openshift.com/pub/openshift-v4/clients/rosa/latest/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the latest compatible version of the <code>rosa</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command downloads an archive called <code>rosa-*.tar.gz</code> into the current directory. The exact name of the file depends on your operating system and system architecture.</p>
+</div>
+</li>
+<li>
+<p>Extract the contents of the archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar -xzf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install the new version of the <code>rosa</code> CLI by moving the extracted file into your path. In the following example, your path includes the <code>/usr/local/bin</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the new version of the <code>rosa</code> CLI installed successfully.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-troubleshoot-networking_rosa-hcp-troubleshoot-networking">Troubleshoot networking</h4>
+<h4 id="rosa-change-the-aws-billing-account_rosa-change-the-aws-billing-account">Change the AWS billing account for your cluster</h4>
 <div class="paragraph _abstract">
-<p>Troubleshoot networking errors on your Red&#160;Hat OpenShift Services on AWS cluster.</p>
+<p>You can use the ROSA command-line interface (CLI) (<code>rosa</code>) to point an existing cluster at a different AWS billing account after deployment. You can correct a billing account linked at install time or change the account at a later date.</p>
 </div>
 <div class="sect4">
-<h5 id="rosa-troubleshooting-general-deployment-failure_rosa-hcp-troubleshoot-networking">Connectivity issues on clusters with private network load balancers</h5>
+<h5 id="rosa-update-billing_rosa-change-the-aws-billing-account">Update billing accounts for Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
-<p>Private AWS NLBs preserve client IP addresses, which can drop connections when the source and destination are on the same host. Workloads on the same node as router pods might not reach the private NLB fronting the ingress controller.</p>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Services on AWS clusters created with version {product-version} deploy AWS Network Load Balancers (NLB) by default for the <code>default</code> ingress controller. See the AWS documentation about how to <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-troubleshooting.html#loopback-timeout">Troubleshoot your Network Load Balancer</a>.</p>
+<p>Change the AWS billing account a deployed cluster uses by running <code>rosa edit cluster</code> in interactive mode.</p>
 </div>
 <div class="ulist">
-<div class="title">Procedure</div>
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>To mitigate this impact, reschedule your workloads onto nodes separate from those where the router pods run. Or, rely on the internal pod and service networks for accessing other workloads co-located within the same cluster.</p>
+<p>You must have more than one AWS billing account.</p>
+</li>
+<li>
+<p>You must link the AWS billing account to the same Red&#160;Hat organization where you deployed the cluster.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="rosa-hcp-troubleshoot-red-hat-build-of-karpenter_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Troubleshoot Red Hat build of Karpenter</h4>
-<div class="paragraph _abstract">
-<p>Identify the root cause of Red&#160;Hat build of Karpenter failures and restore automatic scaling capabilities on your Red&#160;Hat OpenShift Services on AWS cluster.</p>
-</div>
-<div class="sect4">
-<h5 id="autonode-troubleshooting-overview_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">About Red&#160;Hat build of Karpenter troubleshooting</h5>
-<div class="paragraph _abstract">
-<p>The Red&#160;Hat build of Karpenter uses the Karpenter controller to provide automated node provisioning in OpenShift clusters. When the Red&#160;Hat build of Karpenter fails to provision nodes or reports configuration errors, you can diagnose and resolve issues by examining Karpenter resource status, AWS infrastructure tags, and AWS Identity and Access Management (IAM) permissions.</p>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat build of Karpenter troubleshooting addresses the main failure categories:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Controller deployment issues</dt>
-<dd>
-<p>Karpenter Custom Resource Definitions (CRDs) do not appear after enabling the Red&#160;Hat build of Karpenter, preventing you from creating or managing Karpenter resources.</p>
-</dd>
-<dt class="hdlist1">AWS resource discovery failures</dt>
-<dd>
-<p>The EC2NodeClass resource cannot discover AWS subnets or security groups because required discovery tags are missing or incorrect.</p>
-</dd>
-<dt class="hdlist1">IAM permission issues</dt>
-<dd>
-<p>The control plane Operator does not have the authorization to create tags on AWS resources, preventing Karpenter from properly configuring security groups.</p>
-</dd>
-</dl>
-</div>
-<div class="sect5">
-<h6 id="autonode-troubleshooting-diagnostic-workflow_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">General diagnostic workflow</h6>
-<div class="paragraph">
-<p>Follow this workflow to diagnose and resolve Red&#160;Hat build of Karpenter issues:</p>
 </div>
 <div class="olist arabic">
+<div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Identify the symptom by checking which Karpenter resources are missing or not ready.</p>
-</li>
-<li>
-<p>Gather diagnostic data using <code>oc</code> commands to inspect custom resource status and AWS CLI commands to verify infrastructure configuration.</p>
-</li>
-<li>
-<p>Analyze the root cause by comparing observed resource state with expected configuration.</p>
-</li>
-<li>
-<p>Apply the resolution by adding missing tags, updating IAM policies, or verifying capabilities.</p>
-</li>
-<li>
-<p>Verify the fix by confirming that Karpenter resources reach ready status and automatic scaling functions correctly.</p>
-</li>
-</ol>
+<p>Run the following command in your terminal window. Replace <code>&lt;cluster_ID&gt;</code> with the ID of the cluster whose billing account you want to update.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit cluster -c &lt;cluster_ID&gt;</code></pre>
 </div>
 </div>
-<div class="sect5">
-<h6 id="autonode-troubleshooting-escalating_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">When to escalate to Red&#160;Hat Support</h6>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Escalate to Red&#160;Hat Support in these situations:</p>
+<p>To locate the IDs of your active clusters, run the <code>$ rosa list clusters</code> command in your terminal window.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Karpenter CRDs do not appear after 5 minutes and the Karpenter controller pod is not running.</p>
-</li>
-<li>
-<p>EC2NodeClass remains not ready after adding all required discovery tags and waiting 60 seconds.</p>
-</li>
-<li>
-<p>IAM policies are correctly attached but CloudTrail continues showing authorization errors.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When escalating, provide:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Cluster ID</p>
-</li>
-<li>
-<p>Output of <code>rosa describe cluster -c $CLUSTER_ID -o json</code></p>
-</li>
-<li>
-<p>Output of <code>oc get ec2nodeclass/default -o json</code></p>
-</li>
-<li>
-<p>Output of <code>oc get pods -n kube-system</code></p>
-</li>
-<li>
-<p>CloudTrail event details for authorization errors</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="karpenter-resource-readiness-conditions_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Karpenter resource readiness conditions</h5>
-<div class="paragraph _abstract">
-<p>The <code>EC2NodeClass</code> resource reports readiness through status conditions that indicate whether Karpenter successfully discovered and validated AWS resources. Each condition reports a boolean status and explains why the condition is true or false. Understanding these conditions helps you identify which AWS resources require configuration changes.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 61. EC2NodeClass status conditions</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 60%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Condition</th>
-<th class="tableblock halign-left valign-top">Status values</th>
-<th class="tableblock halign-left valign-top">Meaning</th>
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AMIsReady</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Amazon Machine Images (AMI) selector matched available AMIs in the AWS region.
-If <code>False</code>, the specified AMI selector did not match any AMIs accessible to your AWS account.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SubnetsReady</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The subnet selector matched private subnets with the required Karpenter discovery tag.
-If <code>False</code>, no subnets in your Virtual Private Cloud (VPC) have the <code>karpenter.sh/discovery</code> tag with the value expected by the <code>EC2NodeClass</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SecurityGroupsReady</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The security group selector matched security groups with the required Karpenter discovery tag.
-If <code>False</code>, no security groups have the <code>karpenter.sh/discovery</code> tag with the value expected by the <code>EC2NodeClass</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InstanceProfileReady</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IAM instance profile exists and is accessible to Karpenter.
-If <code>False</code>, the specified instance profile name is incorrect or the profile does not exist in your AWS account.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ValidationSucceeded</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The EC2NodeClass specification passed validation.
-If <code>False</code>, the EC2NodeClass contains invalid configuration values or references non-existent resources.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ready</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code> or <code>False</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Overall readiness status.
-This condition is <code>True</code> only when all dependent conditions (<code>AMIsReady</code>, <code>SubnetsReady</code>, <code>SecurityGroupsReady</code>, <code>InstanceProfileReady</code>, <code>ValidationSucceeded</code>) are <code>True</code>.
-If <code>False</code>, the message field lists which conditions are not ready.</p></td>
-</tr>
-</tbody>
 </table>
-<div class="sect5">
-<h6 id="karpenter-resource-readiness-conditions-common-failures_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Common failure messages</h6>
-<div class="paragraph">
-<p>When EC2NodeClass conditions report <code>False</code> status, the message field provides details about the failure:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>SubnetSelector</code> did not match any Subnets</dt>
-<dd>
-<p>No subnets in your VPC have the required <code>karpenter.sh/discovery</code> tag.
-Add the tag to all private subnets where Karpenter should provision nodes.</p>
-</dd>
-<dt class="hdlist1"><code>SecurityGroupSelector</code> did not match any <code>SecurityGroups</code></dt>
-<dd>
-<p>No security groups have the required <code>karpenter.sh/discovery</code> tag.
-Add the tag to the default security group and any additional security groups Karpenter should use.</p>
-</dd>
-<dt class="hdlist1"><code>UnhealthyDependents</code></dt>
-<dd>
-<p>The <code>Ready</code> condition shows this message when one or more dependent conditions are <code>False</code>.
-The message lists which specific conditions are not ready, for example: <code>SecurityGroupsReady=False, SubnetsReady=False</code>.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="query-ec2nodeclass-condition-status_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Query EC2NodeClass condition status</h6>
-<div class="paragraph _abstract">
-<p>Use the <code>oc</code> command-line interface to inspect EC2NodeClass status conditions and identify which AWS resources require configuration changes.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To view the full condition status for an EC2NodeClass, run:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq .status.conditions</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output displays all condition types with their status, reason, and explanatory message.</p>
 </div>
 </li>
 <li>
-<p>Optional: To view only the overall <code>Ready</code> condition, run:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq '.status.conditions[] | select(.type=="Ready")'</code></pre>
-</div>
-</div>
+<p>Skip to the <code>Billing Account</code> parameter within the interactive mode.</p>
+</li>
+<li>
+<p>Select the required AWS billing account from the list of available options and press <strong>Enter</strong>.</p>
 <div class="paragraph">
-<p>The output shows the <code>Ready</code> condition type, status, reason, and message explaining why the condition is in that state.</p>
+<p>The AWS billing account for your cluster is now updated.</p>
 </div>
 </li>
 </ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Review the output to identify which conditions show <code>"status": "False"</code>.</p>
-</li>
-<li>
-<p>Check the <code>message</code> field for each failed condition to determine what AWS resources need configuration changes.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="verify-karpenter-crds-installed_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Verify Karpenter CRDs are installed</h5>
-<div class="paragraph _abstract">
-<p>After enabling the Red&#160;Hat build of Karpenter on a Red&#160;Hat OpenShift Services on AWS cluster, the Karpenter controller automatically creates Custom Resource Definitions (CRDs) in your cluster. If Karpenter CRDs do not appear within several minutes, you can check the controller deployment status.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check for Karpenter CRDs:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crd | grep karpenter</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ec2nodeclasses.karpenter.k8s.aws
-nodeclaims.karpenter.sh
-nodepools.karpenter.sh
-openshiftec2nodeclasses.karpenter.hypershift.openshift.io</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If CRDs are not present, wait 5 minutes for the Karpenter controller to create them. The controller deployment can take several minutes to complete after enabling the Red&#160;Hat build of Karpenter.</p>
-</li>
-<li>
-<p>After 5 minutes, if CRDs are still not present, check whether the Karpenter controller pod is running:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n kube-system | grep karpenter</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output should show a Karpenter controller pod in <code>Running</code> status.</p>
-</div>
-</li>
-<li>
-<p>If the controller pod is not running or CRDs are still missing after 5 minutes, escalate to Red&#160;Hat Support. Provide the following diagnostic information:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Your cluster ID</p>
-</li>
-<li>
-<p>Output of <code>rosa describe cluster -c $CLUSTER_ID -o json</code></p>
-</li>
-<li>
-<p>Output of <code>oc get pods -n kube-system</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="resolve-ec2nodeclass-not-ready-status_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Resolve EC2NodeClass not ready status</h5>
-<div class="paragraph _abstract">
-<p>Karpenter discovers AWS subnets and security groups by searching for resources tagged with a cluster-specific discovery tag. When the EC2NodeClass resource reports <code>SubnetsReady</code> or <code>SecurityGroupsReady</code> conditions as <code>False</code>, you need to add the required discovery tag to your AWS Virtual Private Cloud (VPC) resources.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check the EC2NodeClass status:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq .status.conditions</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command displays all status conditions for the default EC2NodeClass.</p>
-</div>
-</li>
-<li>
-<p>Identify which conditions are not ready by looking for entries with <code>"status": "False"</code>.</p>
-<div class="paragraph">
-<p>Common failures are <code>SubnetsReady</code> and <code>SecurityGroupsReady</code>.</p>
-</div>
-</li>
-<li>
-<p>If <code>SubnetsReady</code> shows <code>False</code> with the message "SubnetSelector did not match any Subnets", private subnets in your VPC are missing the required discovery tag.
-Continue to the next step.</p>
-</li>
-<li>
-<p>If <code>SecurityGroupsReady</code> shows <code>False</code> with message "SecurityGroupSelector did not match any SecurityGroups", security groups are missing the required discovery tag.
-The same resolution process applies for both subnets and security groups.</p>
-</li>
-<li>
-<p>Get the Karpenter discovery tag value from the EC2NodeClass specification:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq -r '.spec.subnetSelectorTerms[0].tags["karpenter.sh/discovery"]'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;discovery_tag_value&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This cluster-specific value must be added as a tag to AWS resources.</p>
-</div>
-</li>
-<li>
-<p>List private subnets in your cluster VPC:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 describe-subnets --filters "Name=vpc-id,Values=&lt;vpc_id&gt;" \
-  --query 'Subnets[?MapPublicIpOnLaunch==`false`].[SubnetId,Tags]' --output table</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;vpc_id&gt;</code> with your cluster&#8217;s VPC ID.</p>
-</div>
-</li>
-<li>
-<p>For each private subnet, verify whether the Karpenter discovery tag is present:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 describe-subnets --subnet-ids &lt;subnet_id&gt; \
-  --query 'Subnets[0].Tags[?Key==`karpenter.sh/discovery`].Value' --output text</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;subnet_id&gt;</code> with the subnet ID to check.</p>
-</div>
-</li>
-<li>
-<p>If the discovery tag is missing, add it to the subnet:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 create-tags --resources &lt;subnet_id&gt; \
-  --tags Key=karpenter.sh/discovery,Value=&lt;discovery_tag_value&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;subnet_id&gt;</code> with the subnet ID and <code>&lt;discovery_tag_value&gt;</code> with the value from step 5.</p>
-</div>
-</li>
-<li>
-<p>Repeat steps 7 and 8 for all private subnets in your VPC.</p>
-</li>
-<li>
-<p>Verify that the default security group has the discovery tag:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 describe-security-groups --group-ids &lt;default_sg_id&gt; \
-  --query 'SecurityGroups[0].Tags[?Key==`karpenter.sh/discovery`].Value' --output text</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;default_sg_id&gt;</code> with your cluster&#8217;s default security group ID.</p>
-</div>
-</li>
-<li>
-<p>If the discovery tag is missing from the security group, add it:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 create-tags --resources &lt;default_sg_id&gt; \
-  --tags Key=karpenter.sh/discovery,Value=&lt;discovery_tag_value&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;default_sg_id&gt;</code> with the security group ID and <code>&lt;discovery_tag_value&gt;</code> with the value from step 5.</p>
-</div>
-</li>
-<li>
-<p>Wait 30 to 60 seconds for Karpenter to re-scan AWS resources.</p>
-</li>
-<li>
-<p>Verify that the EC2NodeClass Ready condition is now <code>True</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq '.status.conditions[] | select(.type=="Ready")'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output should show <code>"status": "True"</code>.</p>
-</div>
-</li>
-<li>
-<p>If the Ready condition is still <code>False</code>, check for other condition failures in the output and repeat the appropriate steps.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>The EC2NodeClass Ready condition reports <code>True</code> status:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq '.status.conditions[] | select(.type=="Ready")'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>The SubnetsReady and SecurityGroupsReady conditions report <code>True</code> status:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ec2nodeclass/default -o json | jq '.status.conditions[] | select(.type=="SubnetsReady" or .type=="SecurityGroupsReady")'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>All required AWS resources have the correct <code>karpenter.sh/discovery</code> tag:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws ec2 describe-subnets --subnet-ids &lt;subnet_id&gt; \
-  --query 'Subnets[0].Tags[?Key==`karpenter.sh/discovery`].Value' --output text</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="dlist">
-<div class="title">Troubleshooting</div>
-<dl>
-<dt class="hdlist1">If adding tags fails with authorization errors</dt>
-<dd>
-<p>You need to update IAM permissions for the control plane operator.
-See "Resolve IAM permissions for AWS resource tagging".</p>
-</dd>
-<dt class="hdlist1">If the EC2NodeClass remains not ready after adding tags</dt>
-<dd>
-<p>Verify that the tag value exactly matches the value in the EC2NodeClass specification.
-Tag values are case-sensitive and must match character-for-character.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect4">
-<h5 id="resolve-iam-permissions-for-tagging_rosa-hcp-troubleshoot-red-hat-build-of-karpenter">Resolve IAM permissions for AWS resource tagging</h5>
-<div class="paragraph _abstract">
-<p>The Karpenter controller requires permission to create tags on AWS security groups. When the control plane operator IAM role lacks the <code>ec2:CreateTags</code> permission, Karpenter cannot automatically tag security groups with the discovery tag.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Identify the IAM role used by the control plane operator:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam list-roles | grep kube-system-control-plane-operator</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The role name follows the pattern <code>&lt;cluster_prefix&gt;-kube-system-control-plane-operator</code>.</p>
-</div>
-</li>
-<li>
-<p>Optional: Verify the authorization error in AWS CloudTrail:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Navigate to the AWS CloudTrail console.</p>
-</li>
-<li>
-<p>Search for events matching these criteria:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Event name: <code>CreateTags</code></p>
-</li>
-<li>
-<p>Error code: <code>Client.UnauthorizedOperation</code></p>
-</li>
-<li>
-<p>User identity: Contains <code>control-plane-operator</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you find matching events, the error message confirms that the IAM role lacks <code>ec2:CreateTags</code> permission.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Create an IAM policy document that allows creating tags:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &gt; /tmp/create-tags-policy.json &lt;&lt; 'POLICY_EOF'
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowCreateTags",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:CreateTags"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-POLICY_EOF</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Attach the policy to the control plane operator IAM role:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam put-role-policy \
-  --role-name &lt;cluster_prefix&gt;-kube-system-control-plane-operator \
-  --policy-name KarpenterCreateTags \
-  --policy-document file:///tmp/create-tags-policy.json</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;cluster_prefix&gt;</code> with your cluster&#8217;s prefix from step 1.</p>
-</div>
-</li>
-<li>
-<p>Verify that the policy is attached to the role:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam get-role-policy \
-  --role-name &lt;cluster_prefix&gt;-kube-system-control-plane-operator \
-  --policy-name KarpenterCreateTags</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output shows the policy document you attached.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>The IAM policy is successfully attached to the control plane operator role:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam get-role-policy \
-  --role-name &lt;cluster_prefix&gt;-kube-system-control-plane-operator \
-  --policy-name KarpenterCreateTags</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command returns the policy document without errors.</p>
-</div>
-</li>
-<li>
-<p>AWS CloudTrail no longer shows <code>Client.UnauthorizedOperation</code> errors for CreateTags operations performed by the control plane operator.</p>
-</li>
-<li>
-<p>If your EC2NodeClass previously showed <code>SecurityGroupsReady = False</code>, you can now manually add the Karpenter discovery tag to the default security group.
-After you add the tag, the authorization error will not recur because the IAM role now has the required permissions.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="rosa-hcp-troubleshoot-component-and-workload-issues_rosa-hcp-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a> →</p>
+<p>↑ Up: <a href="_reference.html">Reference</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a> →</p>
 </div>
 </div>
 <div id="footer">

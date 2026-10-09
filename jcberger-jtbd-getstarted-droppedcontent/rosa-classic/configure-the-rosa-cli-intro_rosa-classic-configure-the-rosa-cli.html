@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls" class="book toc2 toc-left navmap-has-right-toc">
+<body id="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS (classic architecture)</h1>
 <div id="toc" class="toc2">
@@ -592,6 +592,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
+
 <ul class="sectlevel2">
 <li><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html">Create a Red Hat OpenShift Classic Service on AWS Using the Default Options</a>
 </li>
@@ -675,9 +676,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
-
 <ul class="sectlevel2">
-<li><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html">Configure ROSA CLI</a>
+<li><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html"><span class="toc-current">Configure ROSA CLI</span></a>
 </li>
 <li><a href="rosa-cli-reference_rosa-classic-rosa-cli-reference.html">ROSA CLI reference</a>
 </li>
@@ -686,210 +686,408 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-prerequisites_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Prerequisites for updating component routes</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-environment-setup_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Set up your environment</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-find-current-component-routes_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Find the current routes</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-create-tls-certificates_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Create a valid TLS certificate for each component route</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-add-certificates-as-secrets_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Add the certificates to the cluster as secrets</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-find-lb-hostname_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Find the hostname of the load balancer in your cluster</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-add-component-routes-to-dns_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Add component route DNS records to your hosting provider</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-tls-using-rosa-cli_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Update the component routes and TLS secret using the rosa CLI</a></li><li class="level-4"><a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#cloud-experts-update-component-routes-reset-component-routes-to-default_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Reset the component routes to the default using the rosa CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</a></li><li class="level-5"><a href="#rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the rosa CLI</a></li><li class="level-5"><a href="#rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the rosa CLI</a></li><li class="level-6"><a href="#_authentication_methods">Authentication methods</a></li><li class="level-5"><a href="#rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on authorization code</a></li><li class="level-5"><a href="#rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with a single sign-on device code</a></li><li class="level-5"><a href="#rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the rosa CLI with an offline token</a></li><li class="level-5"><a href="#rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the rosa CLI</a></li><li class="level-5"><a href="#rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the rosa CLI</a></li><li class="level-6"><a href="#rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</a></li><li class="level-6"><a href="#rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</a></li><li class="level-5"><a href="#rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the rosa CLI</a></li><li class="level-6"><a href="#rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</a></li><li class="level-6"><a href="#rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</a></li><li class="level-6"><a href="#rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</a></li><li class="level-5"><a href="#rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red Hat OpenShift Services on AWS (classic architecture)</a></li><li class="level-6"><a href="#rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</a></li><li class="level-5"><a href="#rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</a></li><li class="level-5"><a href="#rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the rosa CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Tutorial: Update component routes with custom domains and TLS</h3>
+<h3 id="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli">Configure ROSA CLI</h3>
 <div class="paragraph _abstract">
-<p>You can modify the hostname and Transport Layer Security (TLS) certificate of the Web console, OAuth server, and Downloads component routes in Red&#160;Hat OpenShift Services on AWS (classic architecture) version 4.14 and later.</p>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/authentication_and_authorization/configuring-internal-oauth#customizing-the-oauth-server-url_configuring-internal-oauth">Customizing the internal OAuth server URL</a></p>
-</li>
-<li>
-<p><a href="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html-single/web_console/index#customizing-the-console-route_customizing-web-console">Customizing the console route</a></p>
-</li>
-<li>
-<p><a href="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html-single/web_console/index#customizing-the-download-route_customizing-web-console">Customizing the download route</a></p>
-</li>
-</ul>
+<p>Find the exact parameters, command-line interface (CLI) options, application programming interface (API) fields, and schemas required to configure and automate your Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters.</p>
 </div>
 <div class="sect3">
-<h4 id="cloud-experts-update-component-routes-prerequisites_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Prerequisites for updating component routes</h4>
+<h4 id="rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</h4>
 <div class="paragraph _abstract">
-<p>Review the following prerequisites before updating component routes.</p>
+<p>Learn how to install, configure, and update the ROSA command-line interface (CLI) (<code>rosa</code>). You can use the <code>rosa</code> CLI to create, update, manage, and delete Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters and resources.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The ROSA command-line interface (CLI) (<code>rosa</code>) version 1.2.37 or later is installed.</p>
-</li>
-<li>
-<p>The AWS CLI (<code>aws</code>) is installed.</p>
-</li>
-<li>
-<p>You have a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster version 4.14 or later.</p>
-</li>
-<li>
-<p>The OpenShift CLI (<code>oc</code>) is installed.</p>
-</li>
-<li>
-<p>The <code>jq</code> CLI tool is installed.</p>
-</li>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>OpenSSL is installed.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-environment-setup_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Set up your environment</h4>
+<div class="sect4">
+<h5 id="rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the <code>rosa</code> CLI</h5>
 <div class="paragraph _abstract">
-<p>Set environment variables to ensure consistency across the commands within this tutorial.</p>
+<p>Put the ROSA command-line interface (CLI) (<code>rosa</code>) on the computer you use to run cluster commands.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Log in to your cluster using an account with <code>cluster-admin</code> privileges.</p>
-</li>
+<p>Install and configure the latest AWS CLI (<code>aws</code>).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Configure an environment variable for your cluster name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export CLUSTER_NAME=$(oc get infrastructure cluster -o=jsonpath="{.status.infrastructureName}"  | sed 's/-[a-z0-9]\{5\}$//')</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Ensure all fields output correctly before moving to the next section:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "Cluster: ${CLUSTER_NAME}"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Cluster: my-rosa-cluster</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-find-current-component-routes_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Find the current routes</h4>
-<div class="paragraph _abstract">
-<p>Find the base hostnames of your cluster routes and retrieve the ingress ID so you can update the routes with custom domains later.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Verify that you can reach the component routes on their default hostnames.</p>
+<p>Follow the <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a> documentation to install and configure the AWS CLI for your operating system.</p>
 <div class="paragraph">
-<p>You can find the hostnames by querying the lists of routes in the <code>openshift-console</code> and <code>openshift-authentication</code> projects.</p>
+<p>Put <code>aws_access_key_id</code>, <code>aws_secret_access_key</code>, and <code>region</code> in the <code>.aws/credentials</code> file. See <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html">AWS Configuration basics</a> in the AWS documentation.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get routes -n openshift-console</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get routes -n openshift-authentication</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME        HOST/PORT                                                                          PATH       SERVICES    PORT    TERMINATION          WILDCARD
-console     console-openshift-console.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com    ... 1 more  console    https   reencrypt/Redirect   None
-downloads   downloads-openshift-console.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com  ... 1 more  downloads  http    edge/Redirect        None
-NAME              HOST/PORT                                                             PATH        SERVICES          PORT   TERMINATION            WILDCARD
-oauth-openshift   oauth-openshift.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com ... 1 more  oauth-openshift   6443   passthrough/Redirect   None</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>From this output you can see that your base hostname is <code>z9a9.p1.openshiftapps.com</code>.</p>
-</div>
-</li>
-<li>
-<p>Get the ID of the default ingress by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export INGRESS_ID=$(rosa list ingress -c ${CLUSTER_NAME} -o json | jq -r '.[] | select(.default == true) | .id')</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Ensure all fields output correctly before moving to the next section:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "Ingress ID: ${INGRESS_ID}"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Ingress ID: r3l6</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>By running these commands you can see that the default component routes for your cluster are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>console-openshift-console.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com</code> for Console</p>
-</li>
-<li>
-<p><code>downloads-openshift-console.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com</code> for Downloads</p>
-</li>
-<li>
-<p><code>oauth-openshift.apps.my-example-cluster-aws.z9a9.p1.openshiftapps.com</code> for OAuth</p>
-<div class="paragraph">
-<p>You can use the <code>rosa edit ingress</code> command to change the hostname of each service and add a TLS certificate for all of your component routes. The relevant parameters are shown in this excerpt of the command-line help for the <code>rosa edit ingress</code> command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit ingress -h
-Edit a cluster ingress for a cluster. Usage:
-  rosa edit ingress ID [flags]
-  [...]
-  --component-routes string                Component routes settings. Available keys [oauth, console, downloads]. For each key a pair of hostname and tlsSecretRef is expected to be supplied. Format should be a comma separate list 'oauth: hostname=example-hostname;tlsSecretRef=example-secret-ref,downloads:...'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For this example, you use the following custom component routes:</p>
-</div>
-</li>
-<li>
-<p><code>console.my-new-domain.dev</code> for Console</p>
-</li>
-<li>
-<p><code>downloads.my-new-domain.dev</code> for Downloads</p>
-</li>
-<li>
-<p><code>oauth.my-new-domain.dev</code> for OAuth</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-create-tls-certificates_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Create a valid TLS certificate for each component route</h4>
-<div class="paragraph _abstract">
-<p>Create three separate self-signed Transport Layer Security (TLS) certificate key pairs and add them to your local trust store to verify that you can access the new component routes in a web browser.</p>
-</div>
-<div class="admonitionblock warning">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Warning">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This is for demonstration purposes only, and is not recommended as a solution for production workloads. Consult your certificate authority to understand how to create certificates with similar attributes for your production workloads.</p>
+<p>You can optionally use the <code>AWS_DEFAULT_REGION</code> environment variable to set the default AWS region.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Query the AWS API to verify if the AWS CLI is installed and configured correctly:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws sts get-caller-identity  --output text</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;aws_account_id&gt;    arn:aws:iam::&lt;aws_account_id&gt;:user/&lt;username&gt;  &lt;aws_user_id&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Download the latest version of the ROSA command-line interface (CLI) (<code>rosa</code>) for your operating system from the <a href="https://console.redhat.com/openshift/downloads"><strong>Downloads</strong></a> page on OpenShift Cluster Manager.</p>
+</li>
+<li>
+<p>Extract the <code>rosa</code> binary file from the downloaded archive. The following example extracts the binary from a Linux tar archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar xvf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add <code>rosa</code> to your path. In the following example, the <code>/usr/local/bin</code> directory is included in the path of the user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify if the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: Turn on tab completion for the <code>rosa</code> CLI. Press <code>Tab</code> twice to finish subcommands or see hints:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To enable persistent tab completion for Bash on a Linux host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># rosa completion bash &gt; /etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Bash on a macOS host:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Bash and save it to your <code>/usr/local/etc/bash_completion.d/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion bash &gt; /usr/local/etc/bash_completion.d/rosa</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for Zsh:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If tab completion is not enabled for your Zsh environment, enable it by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "autoload -U compinit; compinit" &gt;&gt; ~/.zshrc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for Zsh and save it to the first directory in your functions path:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion zsh &gt; "${fpath[1]}/_rosa"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for fish:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for fish and save it to your <code>~/.config/fish/completions/</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa completion fish &gt; ~/.config/fish/completions/rosa.fish</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open a new terminal to activate the configuration.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To enable persistent tab completion for PowerShell:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Generate a <code>rosa</code> tab completion configuration file for PowerShell and save it to a file named <code>rosa.ps1</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">PS&gt; rosa completion powershell | Out-String | Invoke-Expression</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Source the <code>rosa.ps1</code> file from your PowerShell profile.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about configuring <code>rosa</code> tab completion, see the help menu by running the <code>rosa completion --help</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login_rosa-set-up-and-authenticate-the-rosa-cli">About logging in to the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>You can log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with Red&#160;Hat single sign-on or with an offline authentication token. Red&#160;Hat recommends using the <code>rosa</code> CLI with Red&#160;Hat single sign-on, instead of using an offline authentication token.</p>
+</div>
+<div class="paragraph">
+<p>An offline authentication token is long-lived, stored on your operating system, and cannot be revoked. These factors increase overall security risks and the likelihood of unauthorized access to your account.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, authenticating with the Red&#160;Hat single sign-on method automatically sends your <code>rosa</code> instance a refresh token that is valid for 10 hours. This unique, temporary authorization code enhances security and reduces the risk of unauthorized access.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The method of authenticating using Red&#160;Hat single sign-on does not break any existing automations that rely on offline tokens. Red&#160;Hat recommends using services accounts for automation purposes. If you still need to use offline tokens for automation or other purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_authentication_methods">Authentication methods</h6>
+<div class="paragraph">
+<p>You can use one of the following methods to authenticate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Single sign-on authorization code</strong>: Use this method if your system has a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Single sign-on device code</strong>: Use this method if you are working with containers, remote hosts, or other environments without a web browser. Single sign-on authorization is supported with <code>rosa</code> CLI version 1.2.36 or later.</p>
+</li>
+<li>
+<p><strong>Offline token</strong>: Use this method if you need to use an offline token for automation or other purposes. Red&#160;Hat recommends using service accounts for automation purposes instead.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-auth-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on authorization code</h5>
+<div class="paragraph _abstract">
+<p>You can log in to your account with the <code>rosa</code> CLI by using a Red&#160;Hat single sign-on authorization code.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a web browser available on your system.</p>
+</li>
+<li>
+<p>You have <code>rosa</code> CLI version 1.2.36 or later installed.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to the ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat single sign-on authorization code, run the following command:</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-auth-code</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running this command redirects you to the Red&#160;Hat single sign-on login. Log in with your Red&#160;Hat login or email.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 46. Optional arguments inherited from parent commands+</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-sso-device-code_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with a single sign-on device code</h5>
+<div class="paragraph _abstract">
+<p>If you are working with containers, remote hosts, and other environments without a web browser, you can use a Red&#160;Hat single sign-on device code for secure authentication. To do this, you must use a second device that has a web browser to approve the login.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have ROSA command-line interface (CLI) (<code>rosa</code>) version 1.2.36 or later installed.</p>
+</li>
+<li>
+<p>You have access to a second device with a web browser.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To log in to the <code>rosa</code> CLI with a Red&#160;Hat single sign-on device code, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login --use-device-code</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running this command redirects you to the Red&#160;Hat SSO login and provides a login code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 47. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>To switch accounts, log out from <a href="https://sso.redhat.com">https://sso.redhat.com</a> and run the <code>rosa logout</code> command in your terminal before attempting to log in again.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-login-offline-token_rosa-set-up-and-authenticate-the-rosa-cli">Authenticate the <code>rosa</code> CLI with an offline token</h5>
+<div class="paragraph _abstract">
+<p>Log in to your Red&#160;Hat account, saving the credentials to the <code>rosa</code> configuration file.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To use offline tokens for automation purposes, you can download the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a>.
+To use service accounts for automation purposes, see the <a href="https://console.redhat.com/iam/service-accounts">Service Accounts</a> page.</p>
 </div>
 </td>
 </tr>
@@ -903,7 +1101,7 @@ Edit a cluster ingress for a cluster. Usage:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To prevent issues with HTTP/2 connection coalescing, you must use a separate individual certificate for each endpoint. Using a wildcard or Subject Alternative Name (SAN) certificate is not supported.</p>
+<p>Red&#160;Hat recommends using service accounts for automation purposes.</p>
 </div>
 </td>
 </tr>
@@ -913,184 +1111,668 @@ Edit a cluster ingress for a cluster. Usage:
 <div class="title">Procedure</div>
 <ul>
 <li>
-<p>Generate a certificate for each component route, taking care to set the certificate&#8217;s subject (<code>-subj</code>) to the custom domain of the component route you want to use:</p>
+<p>To log in to ROSA command-line interface (CLI) (<code>rosa</code>) with a Red&#160;Hat offline token, run the following command:</p>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa login [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 48. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 49. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-logout_rosa-set-up-and-authenticate-the-rosa-cli">Log out of the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Log out of <code>rosa</code>. Logging out also removes the <code>rosa</code> configuration file.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Log out of your <code>rosa</code> session by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa logout [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 50. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-verify_rosa-set-up-and-authenticate-the-rosa-cli">Verify AWS settings with the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Verify AWS permissions and quotas by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-permissions_rosa-set-up-and-authenticate-the-rosa-cli">verify permissions</h6>
+<div class="paragraph">
+<p>Verify that the AWS permissions required to create a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster are configured correctly:</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions [arguments]</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command verifies permissions only for clusters that do not use the AWS Security Token Service (STS).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 51. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify that the AWS permissions are configured correctly:</p>
+</div>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openssl req -newkey rsa:2048 -new -nodes -x509 -days 365 -keyout key-console.pem -out cert-console.pem -subj "/CN=console.my-new-domain.dev"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openssl req -newkey rsa:2048 -new -nodes -x509 -days 365 -keyout key-downloads.pem -out cert-downloads.pem -subj "/CN=downloads.my-new-domain.dev"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openssl req -newkey rsa:2048 -new -nodes -x509 -days 365 -keyout key-oauth.pem -out cert-oauth.pem -subj "/CN=oauth.my-new-domain.dev"</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This generates three pairs of <code>.pem</code> files, <code>key-&lt;component&gt;.pem</code> and <code>cert-&lt;component&gt;.pem</code>.</p>
+<p>Verify that the AWS permissions are configured correctly in a specific region:</p>
 </div>
-</li>
-</ul>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify permissions --region=us-west-2</code></pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-add-certificates-as-secrets_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Add the certificates to the cluster as secrets</h4>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-quota_rosa-set-up-and-authenticate-the-rosa-cli">verify quota</h6>
+<div class="paragraph">
+<p>Verifies that AWS quotas are configured correctly for your default region.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 52. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to run the command. This value overrides the <code>AWS_REGION</code> environment variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify that the AWS quotas are configured correctly for the default region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that the AWS quotas are configured correctly in a specific region:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify quota --region=us-west-2</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-download_rosa-set-up-and-authenticate-the-rosa-cli">Download CLI tools with the <code>rosa</code> CLI</h5>
 <div class="paragraph _abstract">
-<p>Add the Transport Layer Security (TLS) certificates to your cluster as secrets by using the OpenShift CLI (<code>oc</code>) tool. Store the certificates as secrets in the <code>openshift-config</code> namespace so that you can reference them when you update the component routes later.</p>
+<p>Download and verify the <code>rosa</code> and <code>oc</code> CLI tools by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-download-rosa-client_rosa-set-up-and-authenticate-the-rosa-cli">download rosa</h6>
+<div class="paragraph">
+<p>Download the latest compatible version of the <code>rosa</code> CLI.</p>
+</div>
+<div class="paragraph">
+<p>After you download <code>rosa</code> CLI, extract the contents of the archive and add it to your path.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 53. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="rosa-download-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">download oc</h6>
+<div class="paragraph">
+<p>Download the latest compatible version of the OpenShift CLI (<code>oc</code>).</p>
+</div>
+<div class="paragraph">
+<p>After you download <code>oc</code>, you must extract the contents of the archive and add it to your path.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 54. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Download <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download oc</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="rosa-verify-ocp-client_rosa-set-up-and-authenticate-the-rosa-cli">verify oc</h6>
+<div class="paragraph">
+<p>Verifies that the OpenShift CLI (<code>oc</code>) installed correctly.</p>
+</div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc [arguments]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 55. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Verify <code>oc</code> client tools:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa verify oc</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-initialize_rosa-set-up-and-authenticate-the-rosa-cli">Initializing Red&#160;Hat OpenShift Services on AWS (classic architecture)</h5>
+<div class="paragraph _abstract">
+<p>Use the <code>init</code> command to initialize Red&#160;Hat OpenShift Services on AWS (classic architecture) only if you are using non-STS.</p>
+</div>
+<div class="sect5">
+<h6 id="rosa-init_rosa-set-up-and-authenticate-the-rosa-cli">init</h6>
+<div class="paragraph">
+<p>Perform a series of checks to verify that you are ready to deploy a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster.</p>
+</div>
+<div class="paragraph">
+<p>The list of checks includes the following:</p>
 </div>
 <div class="ulist">
-<div class="title">Procedure</div>
 <ul>
 <li>
-<p>Create three TLS secrets in the <code>openshift-config</code> namespace.</p>
-<div class="paragraph">
-<p>These become your secret reference when you update the component routes.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret tls console-tls --cert=cert-console.pem --key=key-console.pem -n openshift-config</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret tls downloads-tls --cert=cert-downloads.pem --key=key-downloads.pem -n openshift-config</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret tls oauth-tls --cert=cert-oauth.pem --key=key-oauth.pem -n openshift-config</code></pre>
-</div>
-</div>
+<p>Checks to see that you have logged in (see <code>login</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS credentials are valid</p>
+</li>
+<li>
+<p>Checks that your AWS permissions are valid (see <code>verify permissions</code>)</p>
+</li>
+<li>
+<p>Checks that your AWS quota levels are high enough (see <code>verify quota</code>)</p>
+</li>
+<li>
+<p>Runs a cluster simulation to ensure cluster creation will perform as expected</p>
+</li>
+<li>
+<p>Checks that the <code>osdCcsAdmin</code> user has been created in your AWS account</p>
+</li>
+<li>
+<p>Checks that the OpenShift Container Platform command-line tool is available on your system</p>
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="title">Syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init [arguments]</code></pre>
 </div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-find-lb-hostname_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Find the hostname of the load balancer in your cluster</h4>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 56. Arguments</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS region (string) in which to verify quota and permissions. This value overrides the <code>AWS_REGION</code> environment variable only when running the <code>init</code> command, but it does not change your AWS CLI configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the stack template that is applied to your AWS account during the <code>init</code> command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client identifier (string). Default: <code>cloud-services</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--client-secret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID client secret (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--insecure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables insecure communication with the server. This disables verification of TLS certificates and host names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID scope (string). If this option is used, it completely replaces the default scopes. This can be repeated multiple times to specify multiple scopes. Default: <code>openid</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesses or refreshes the token (string).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--token-url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OpenID token URL (string). Default: <code>https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 57. Optional arguments inherited from parent commands</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows help for this command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies an AWS profile (string) from your credentials file.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Configure your AWS account to allow Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure a new AWS account using pre-existing OpenShift Cluster Manager credentials:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=$OFFLINE_ACCESS_TOKEN</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-using-bash-script_rosa-set-up-and-authenticate-the-rosa-cli">Use a Bash script</h5>
 <div class="paragraph _abstract">
-<p>When you create a cluster, the service creates a load balancer and generates a hostname for that load balancer. You need to know the load balancer hostname to create Domain Name System (DNS) records for your cluster.</p>
+<p>This example workflow shows how to use a Bash script with the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>Make sure that AWS credentials are available as one of the following options:</p>
 </div>
 <div class="ulist">
-<div class="title">Procedure</div>
 <ul>
 <li>
-<p>Run the following command against the <code>openshift-ingress</code> namespace.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get svc -n openshift-ingress</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME            TYPE          CLUSTER-IP     EXTERNAL-IP                                             PORT(S)                     AGE
-router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-1.elb.amazonaws.com  80:31175/TCP,443:31554/TCP  76d</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The hostname of the load balancer is the <code>EXTERNAL-IP</code> associated with the <code>router-default</code> service in the <code>openshift-ingress</code> namespace. In this example, the hostname is <code>a234gsr3242rsfsfs-1342r624.us-east-1.elb.amazonaws.com</code>.</p>
-</div>
-<div class="paragraph">
-<p>Save this value, because you need it to configure DNS records for your new component route hostnames.</p>
-</div>
+<p>AWS profile</p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-add-component-routes-to-dns_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Add component route DNS records to your hosting provider</h4>
-<div class="paragraph _abstract">
-<p>You can add component route Domain Name System (DNS) records to your hosting provider to map the new component route hostnames to the load balancer.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
 <li>
-<p>In your hosting provider, add DNS records that map the <code>CNAME</code> of your new component route hostnames to the load balancer hostname that you found in <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html-single/tutorials/index#cloud-experts-update-component-routes-find-lb-hostname_cloud-experts-update-component-routes">Find the hostname of the load balancer in your cluster</a>.</p>
+<p>Environment variables (<code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>)</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-tls-using-rosa-cli_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Update the component routes and TLS secret using the <code>rosa</code> CLI</h4>
-<div class="paragraph _abstract">
-<p>When your Domain Name System (DNS) records have been updated, change the component routes and Transport Layer Security (TLS) secret references to ensure your cluster traffic is routed correctly through your custom domain and protected with updated TLS certificates.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Update your default ingress route with the new base domain and the secret reference associated with it, and update the hostnames for each component route:</p>
+<p>Initialize <code>rosa</code> using a Red Hat OpenShift Cluster Manager offline token <a href="https://console.redhat.com/openshift/token/rosa">from Red&#160;Hat</a>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit ingress -c ${CLUSTER_NAME} ${INGRESS_ID} --component-routes 'console: hostname=console.my-new-domain.dev;tlsSecretRef=console-tls,downloads: hostname=downloads.my-new-domain.dev;tlsSecretRef=downloads-tls,oauth: hostname=oauth.my-new-domain.dev;tlsSecretRef=oauth-tls'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can edit only a subset of the component routes by leaving the component routes you do not want to change set to an empty string. For example, to change only the Console and OAuth server hostnames and TLS certificates, run the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit ingress -c ${CLUSTER_NAME} ${INGRESS_ID} --component-routes 'console: hostname=console.my-new-domain.dev;tlsSecretRef=console-tls,downloads: hostname="";tlsSecretRef="", oauth: hostname=oauth.my-new-domain.dev;tlsSecretRef=oauth-tls'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa init --token=&lt;token&gt;</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Verify that your changes were successfully made:</p>
+<p>Create the Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa list ingress -c ${CLUSTER_NAME} -ojson | jq ".[] | select(.id == \"${INGRESS_ID}\") | .component_routes"</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create cluster --cluster-name=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add an identity provider (IDP):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create idp --cluster=&lt;cluster_name&gt; --type=&lt;identity_provider&gt; [arguments]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add a <code>dedicated-admin</code> user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa grant user dedicated-admin --user=&lt;idp_user_name&gt; --cluster=&lt;cluster_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="rosa-updating-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Updating the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Update the ROSA command-line interface (CLI) (<code>rosa</code>) to the latest version that works with your cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that a new version of the <code>rosa</code> CLI (<code>rosa</code>) is available:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">{
-  "console": {
-    "kind": "ComponentRoute",
-    "hostname": "console.my-new-domain.dev",
-    "tls_secret_ref": "console-tls"
-  },
-  "downloads": {
-    "kind": "ComponentRoute",
-    "hostname": "downloads.my-new-domain.dev",
-    "tls_secret_ref": "downloads-tls"
-  },
-  "oauth": {
-    "kind": "ComponentRoute",
-    "hostname": "oauth.my-new-domain.dev",
-    "tls_secret_ref": "oauth-tls"
-  }
-}</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.12
+There is a newer release version '1.2.15', please consider updating: https://mirror.openshift.com/pub/openshift-v4/clients/rosa/latest/</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Add your certificate to the truststore on your local system.</p>
+<p>Download the latest compatible version of the <code>rosa</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa download rosa</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command downloads an archive called <code>rosa-*.tar.gz</code> into the current directory. The exact name of the file depends on your operating system and system architecture.</p>
+</div>
 </li>
 <li>
-<p>Confirm that you can access your components at their new routes by using your local web browser.</p>
+<p>Extract the contents of the archive:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar -xzf rosa-linux.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install the new version of the <code>rosa</code> CLI by moving the extracted file into your path. In the following example, your path includes the <code>/usr/local/bin</code> directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv rosa /usr/local/bin/rosa</code></pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-update-component-routes-reset-component-routes-to-default_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls">Reset the component routes to the default using the <code>rosa</code> CLI</h4>
-<div class="paragraph _abstract">
-<p>You can use the ROSA command-line interface (CLI) (<code>rosa</code>) tool to reset the component routes to the default configuration if you no longer need your custom domain.</p>
-</div>
 <div class="ulist">
-<div class="title">Procedure</div>
+<div class="title">Verification</div>
 <ul>
 <li>
-<p>Reset your component routes by running the following command:</p>
+<p>Verify the new version of the <code>rosa</code> CLI installed successfully.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit ingress -c ${CLUSTER_NAME} ${INGRESS_ID} --component-routes 'console: hostname="";tlsSecretRef="",downloads: hostname="";tlsSecretRef="", oauth: hostname="";tlsSecretRef=""'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.15
+Your <code>rosa</code> CLI is up to date.</code></pre>
 </div>
 </div>
 </li>
@@ -1098,8 +1780,9 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 </div>
 </div>
 </div>
+</div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rosa-classic-create-a-cluster-using-the-default-options_rosa-classic-create-a-cluster-using-the-default-options.html#rosa-classic-tutorial-deploy-with-a-custom-dns-resolver_rosa-classic-tutorial-deploy-with-a-custom-dns-resolver">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-classic-deploy-and-access-a-simple-application_rosa-classic-deploy-and-access-a-simple-application.html#rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront">Tutorial: Protect your workloads with AWS WAF and CloudFront</a> →</p>
+<p>↑ Up: <a href="_reference.html">Reference</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-cli-reference_rosa-classic-rosa-cli-reference.html">ROSA CLI reference</a> →</p>
 </div>
 </div>
 <div id="footer">

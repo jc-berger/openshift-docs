@@ -700,6 +700,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
+
+<ul class="sectlevel2">
+<li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a>
+</li>
+<li><a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -813,7 +822,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>Install and configure the latest ROSA CLI.</p>
+<p>Install and configure the latest <code>rosa</code> CLI.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -842,7 +851,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>Verify that the ROSA CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<p>Verify that the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
@@ -854,7 +863,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.47
-Your ROSA CLI is up to date.</code></pre>
+Your &lt;code&gt;rosa&lt;/code&gt; CLI is up to date.</code></pre>
 </div>
 </div>
 </li>
@@ -862,7 +871,7 @@ Your ROSA CLI is up to date.</code></pre>
 </div>
 </li>
 <li>
-<p>Log in to the ROSA CLI using an offline access token.</p>
+<p>Log in to the <code>rosa</code> CLI using an offline access token.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -942,7 +951,7 @@ OCM Organization External ID: &lt;external_org_id&gt;</code></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use the ROSA CLI to download the <code>oc</code> CLI.</p>
+<p>Use the <code>rosa</code> CLI to download the <code>oc</code> CLI.</p>
 <div class="paragraph">
 <p>The following command downloads the latest version of the CLI to the current working directory:</p>
 </div>
@@ -1150,7 +1159,7 @@ $ oc version</code></pre>
 <p>You have installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your installation host.</p>
 </li>
 <li>
-<p>You have logged in to your Red&#160;Hat account by using the ROSA CLI.</p>
+<p>You have logged in to your Red&#160;Hat account by using the <code>rosa</code> CLI.</p>
 </li>
 </ul>
 </div>
@@ -1734,7 +1743,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet_id&gt;        subnet  1</code></pre>
 <p>You have configured your Red Hat accounts</p>
 </li>
 <li>
-<p>You have installed the ROSA CLI and configured it to the latest version</p>
+<p>You have installed the <code>rosa</code> CLI and configured it to the latest version</p>
 </li>
 </ul>
 </div>
@@ -1818,7 +1827,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <div class="sect4">
 <h5 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-create-a-rosa-hcp-cluster-using-the-cli">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
-<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the ROSA CLI, or you can manually create the VPC resources in the AWS console.</p>
+<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the <code>rosa</code> CLI, or you can manually create the VPC resources in the AWS console.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1876,7 +1885,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>You have the permissions required to install AWS account-wide roles.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, <code>rosa</code>, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -1931,7 +1940,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the ROSA CLI (<code>rosa</code>) create your Operator roles and policies.
+<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the <code>rosa</code> CLI (<code>rosa</code>) create your Operator roles and policies.
 See "Methods of account-wide role creation" for more information. The following example shows what your creation flow might look like.</p>
 </div>
 <div class="listingblock">
@@ -1990,7 +1999,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 </dd>
 <dt class="hdlist1"><code>Role creation mode</code></dt>
 <dd>
-<p>Choose the method to create your AWS roles. By using <code>auto</code>, the ROSA CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
+<p>Choose the method to create your AWS roles. By using <code>auto</code>, the <code>rosa</code> CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
 </dd>
 <dt class="hdlist1"><code>Create the 'ManagedOpenShift-OCM-Role-182' role?</code></dt>
 <dd>
@@ -2928,7 +2937,7 @@ EOF</code></pre>
 <p>Default cluster version: Latest</p>
 </li>
 <li>
-<p>Default AWS region for installations using the ROSA CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
+<p>Default AWS region for installations using the <code>rosa</code> CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
 </li>
 <li>
 <p>Default EC2 IMDS endpoints (both v1 and v2) are enabled</p>
@@ -3247,7 +3256,7 @@ EOF</code></pre>
 <p>When deletion protection is enabled, attempts to delete the cluster using <code>rosa delete cluster</code> fail immediately before prompting for deletion confirmation. To delete a cluster, disable the protection first by running <code>rosa edit cluster -c &lt;cluster_name&gt; --enable-delete-protection=false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Deletion protection only blocks deletion requests made through the ROSA CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
+<p>Deletion protection only blocks deletion requests made through the <code>rosa</code> CLI. It does not set any AWS-level resource protections, and you can still delete cluster resources directly in AWS, risking data loss or cluster outage. Additionally, deletion protection does not override the Red&#160;Hat <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-delete-policy_rosa-hcp-life-cycle">Deletion policy</a>. Red&#160;Hat reserves the right to delete clusters that violate service requirements.</p>
 </div>
 </dd>
 </dl>
@@ -4006,7 +4015,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::46545644412:oidc-provider/oidc.o
 <p>git CLI installed</p>
 </li>
 <li>
-<p>The necessary ROSA CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
+<p>The necessary <code>rosa</code> CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
 </li>
 </ul>
 </div>
@@ -4179,7 +4188,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::46545644412:oidc-provider/oidc.o
 <p>You installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -4278,10 +4287,10 @@ I: Created OIDC provider with ARN 'arn:aws:iam::46545644412:oidc-provider/oidc.o
 <p>You have an AWS account.</p>
 </li>
 <li>
-<p>You installed and configured the latest ROSA CLI on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -4465,7 +4474,7 @@ External Authentication:    Enabled</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Similar to the <code>rosa create|delete|list idp[s]</code> command in the ROSA CLI, you cannot edit an existing identity provider that you created using <code>rosa create external-auth-provider</code>. Instead, you must delete the external authentication provider and create a new one.</p>
+<p>Similar to the <code>rosa create|delete|list idp[s]</code> command in the <code>rosa</code> CLI, you cannot edit an existing identity provider that you created using <code>rosa create external-auth-provider</code>. Instead, you must delete the external authentication provider and create a new one.</p>
 </div>
 </td>
 </tr>
@@ -5589,10 +5598,10 @@ Removing debug pod ...</code></pre>
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You installed and configured the latest ROSA CLI on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -5790,10 +5799,10 @@ Removing debug pod ...</code></pre>
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You installed and configured the latest ROSA CLI, <code>rosa</code>, on your workstation.</p>
+<p>You installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -6084,7 +6093,7 @@ I: Successfully deleted the user role</code></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>List the account-wide roles in your AWS account by using the ROSA CLI:</p>
+<p>List the account-wide roles in your AWS account by using the <code>rosa</code> CLI:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa list account-roles</code></pre>
@@ -6260,7 +6269,7 @@ I: Successfully deleted the hosted CP account roles</code></pre>
 <p>You have installed a Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -6353,7 +6362,7 @@ External Authentication:    Disabled</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>After the cluster is deleted, you need the cluster ID to delete the cluster-specific Security Token Service (STS) resources using the ROSA CLI.</p>
+<p>After the cluster is deleted, you need the cluster ID to delete the cluster-specific Security Token Service (STS) resources using the <code>rosa</code> CLI.</p>
 </div>
 </td>
 </tr>
@@ -6374,7 +6383,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </li>
 <li>
-<p>Delete the cluster by using either the OpenShift Cluster Manager or the ROSA CLI:</p>
+<p>Delete the cluster by using either the OpenShift Cluster Manager or the <code>rosa</code> CLI:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -6394,7 +6403,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </li>
 <li>
-<p>To delete the cluster using the ROSA CLI:</p>
+<p>To delete the cluster using the <code>rosa</code> CLI:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -6574,7 +6583,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </li>
 <li>
-<p>Install and configure the latest ROSA CLI.</p>
+<p>Install and configure the latest <code>rosa</code> CLI.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -6603,7 +6612,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </li>
 <li>
-<p>Verify that the ROSA CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<p>Verify that the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
@@ -6615,7 +6624,7 @@ External Authentication:    Disabled</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.47
-Your ROSA CLI is up to date.</code></pre>
+Your &lt;code&gt;rosa&lt;/code&gt; CLI is up to date.</code></pre>
 </div>
 </div>
 </li>
@@ -6623,7 +6632,7 @@ Your ROSA CLI is up to date.</code></pre>
 </div>
 </li>
 <li>
-<p>Log in to the ROSA CLI using an offline access token.</p>
+<p>Log in to the <code>rosa</code> CLI using an offline access token.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -6703,7 +6712,7 @@ OCM Organization External ID: &lt;external_org_id&gt;</code></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use the ROSA CLI to download the <code>oc</code> CLI.</p>
+<p>Use the <code>rosa</code> CLI to download the <code>oc</code> CLI.</p>
 <div class="paragraph">
 <p>The following command downloads the latest version of the CLI to the current working directory:</p>
 </div>
@@ -6911,7 +6920,7 @@ $ oc version</code></pre>
 <p>You have installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your installation host.</p>
 </li>
 <li>
-<p>You have logged in to your Red&#160;Hat account by using the ROSA CLI.</p>
+<p>You have logged in to your Red&#160;Hat account by using the <code>rosa</code> CLI.</p>
 </li>
 </ul>
 </div>
@@ -7495,7 +7504,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet_id&gt;        subnet  1</code></pre>
 <p>You have configured your Red Hat accounts</p>
 </li>
 <li>
-<p>You have installed the ROSA CLI and configured it to the latest version</p>
+<p>You have installed the <code>rosa</code> CLI and configured it to the latest version</p>
 </li>
 </ul>
 </div>
@@ -7579,7 +7588,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <div class="sect4">
 <h5 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-create-a-rosa-hcp-cluster-using-the-hybrid-cloud-console">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
-<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the ROSA CLI, or you can manually create the VPC resources in the AWS console.</p>
+<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the <code>rosa</code> CLI, or you can manually create the VPC resources in the AWS console.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -7637,7 +7646,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>You have the permissions required to install AWS account-wide roles.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, <code>rosa</code>, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -7692,7 +7701,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the ROSA CLI (<code>rosa</code>) create your Operator roles and policies.
+<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the <code>rosa</code> CLI (<code>rosa</code>) create your Operator roles and policies.
 See "Methods of account-wide role creation" for more information. The following example shows what your creation flow might look like.</p>
 </div>
 <div class="listingblock">
@@ -7751,7 +7760,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 </dd>
 <dt class="hdlist1"><code>Role creation mode</code></dt>
 <dd>
-<p>Choose the method to create your AWS roles. By using <code>auto</code>, the ROSA CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
+<p>Choose the method to create your AWS roles. By using <code>auto</code>, the <code>rosa</code> CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
 </dd>
 <dt class="hdlist1"><code>Create the 'ManagedOpenShift-OCM-Role-182' role?</code></dt>
 <dd>
@@ -8689,7 +8698,7 @@ EOF</code></pre>
 <p>Default cluster version: Latest</p>
 </li>
 <li>
-<p>Default AWS region for installations using the ROSA CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
+<p>Default AWS region for installations using the <code>rosa</code> CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
 </li>
 <li>
 <p>Default EC2 IMDS endpoints (both v1 and v2) are enabled</p>
@@ -9660,7 +9669,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::46545644412:oidc-provider/oidc.o
 <p>git CLI installed</p>
 </li>
 <li>
-<p>The necessary ROSA CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
+<p>The necessary <code>rosa</code> CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
 </li>
 </ul>
 </div>
@@ -9953,7 +9962,7 @@ External Authentication:    Enabled</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Similar to the <code>rosa create|delete|list idp[s]</code> command in the ROSA CLI, you cannot edit an existing identity provider that you created using <code>rosa create external-auth-provider</code>. Instead, you must delete the external authentication provider and create a new one.</p>
+<p>Similar to the <code>rosa create|delete|list idp[s]</code> command in the <code>rosa</code> CLI, you cannot edit an existing identity provider that you created using <code>rosa create external-auth-provider</code>. Instead, you must delete the external authentication provider and create a new one.</p>
 </div>
 </td>
 </tr>
@@ -10860,7 +10869,7 @@ I: Successfully deleted external authentication provider 'entra-test' from clust
 <p>You installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your workstation.</p>
 </li>
 <li>
-<p>You logged in to your Red&#160;Hat account using the ROSA CLI.</p>
+<p>You logged in to your Red&#160;Hat account using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You created a Red&#160;Hat OpenShift Services on AWS cluster.</p>
@@ -11088,7 +11097,7 @@ I: Successfully deleted external authentication provider 'entra-test' from clust
 <div class="ulist">
 <ul>
 <li>
-<p>You have installed the ROSA CLI tool.</p>
+<p>You have installed the <code>rosa</code> CLI tool.</p>
 </li>
 <li>
 <p>You have your offline <a href="https://console.redhat.com/openshift/token/rosa">Red Hat OpenShift Cluster Manager token</a>.</p>
@@ -11289,7 +11298,7 @@ I: Successfully deleted external authentication provider 'entra-test' from clust
 </div>
 </li>
 <li>
-<p>Install and configure the latest ROSA CLI.</p>
+<p>Install and configure the latest <code>rosa</code> CLI.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -11318,7 +11327,7 @@ I: Successfully deleted external authentication provider 'entra-test' from clust
 </div>
 </li>
 <li>
-<p>Verify that the ROSA CLI is installed correctly by querying the <code>rosa</code> version:</p>
+<p>Verify that the <code>rosa</code> CLI is installed correctly by querying the <code>rosa</code> version:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa version</code></pre>
@@ -11330,7 +11339,7 @@ I: Successfully deleted external authentication provider 'entra-test' from clust
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">1.2.47
-Your ROSA CLI is up to date.</code></pre>
+Your &lt;code&gt;rosa&lt;/code&gt; CLI is up to date.</code></pre>
 </div>
 </div>
 </li>
@@ -11338,7 +11347,7 @@ Your ROSA CLI is up to date.</code></pre>
 </div>
 </li>
 <li>
-<p>Log in to the ROSA CLI using an offline access token.</p>
+<p>Log in to the <code>rosa</code> CLI using an offline access token.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -11418,7 +11427,7 @@ OCM Organization External ID: &lt;external_org_id&gt;</code></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use the ROSA CLI to download the <code>oc</code> CLI.</p>
+<p>Use the <code>rosa</code> CLI to download the <code>oc</code> CLI.</p>
 <div class="paragraph">
 <p>The following command downloads the latest version of the CLI to the current working directory:</p>
 </div>
@@ -11626,7 +11635,7 @@ $ oc version</code></pre>
 <p>You have installed and configured the latest ROSA command-line interface (CLI) (<code>rosa</code>) on your installation host.</p>
 </li>
 <li>
-<p>You have logged in to your Red&#160;Hat account by using the ROSA CLI.</p>
+<p>You have logged in to your Red&#160;Hat account by using the <code>rosa</code> CLI.</p>
 </li>
 </ul>
 </div>
@@ -11827,7 +11836,7 @@ $ oc version</code></pre>
 <div class="sect4">
 <h5 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-create-a-rosa-hcp-cluster-using-terraform">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
-<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the ROSA CLI, or you can manually create the VPC resources in the AWS console.</p>
+<p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the <code>rosa</code> CLI, or you can manually create the VPC resources in the AWS console.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -11885,7 +11894,7 @@ $ oc version</code></pre>
 <p>You have the permissions required to install AWS account-wide roles.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI, <code>rosa</code>, on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI, <code>rosa</code>, on your installation host.</p>
 </li>
 </ul>
 </div>
@@ -11940,7 +11949,7 @@ $ oc version</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the ROSA CLI (<code>rosa</code>) create your Operator roles and policies.
+<p>This command allows you to create the role by specifying specific attributes. The following example output shows the "auto mode" selected, which lets the <code>rosa</code> CLI (<code>rosa</code>) create your Operator roles and policies.
 See "Methods of account-wide role creation" for more information. The following example shows what your creation flow might look like.</p>
 </div>
 <div class="listingblock">
@@ -11999,7 +12008,7 @@ I: Successfully linked role-arn 'arn:aws:iam::&lt;ARN&gt;:role/ManagedOpenShift-
 </dd>
 <dt class="hdlist1"><code>Role creation mode</code></dt>
 <dd>
-<p>Choose the method to create your AWS roles. By using <code>auto</code>, the ROSA CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
+<p>Choose the method to create your AWS roles. By using <code>auto</code>, the <code>rosa</code> CLI generates and links the roles and policies. In the <code>auto</code> mode, you receive some different prompts to create the AWS roles.</p>
 </dd>
 <dt class="hdlist1"><code>Create the 'ManagedOpenShift-OCM-Role-182' role?</code></dt>
 <dd>
@@ -12322,7 +12331,7 @@ Additional Principals:      arn:aws:iam::&lt;aws_id&gt;:role/additional-user-rol
 <p>You have configured your Red Hat accounts</p>
 </li>
 <li>
-<p>You have installed the ROSA CLI and configured it to the latest version</p>
+<p>You have installed the <code>rosa</code> CLI and configured it to the latest version</p>
 </li>
 </ul>
 </div>
@@ -13342,7 +13351,7 @@ EOF</code></pre>
 <p>Default cluster version: Latest</p>
 </li>
 <li>
-<p>Default AWS region for installations using the ROSA CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
+<p>Default AWS region for installations using the <code>rosa</code> CLI (<code>rosa</code>): Defined by your <code>aws</code> CLI configuration</p>
 </li>
 <li>
 <p>Default EC2 IMDS endpoints (both v1 and v2) are enabled</p>
@@ -14032,7 +14041,7 @@ rosa-demo      8</code></pre>
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have installed and configured the latest version of the ROSA CLI.</p>
+<p>You have installed and configured the latest version of the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You have installed and configured the latest version of Terraform.</p>
@@ -15003,7 +15012,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::46545644412:oidc-provider/oidc.o
 <p>git CLI installed</p>
 </li>
 <li>
-<p>The necessary ROSA CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
+<p>The necessary <code>rosa</code> CLI and Red Hat Hybrid Cloud Console firewall rules enabled</p>
 </li>
 </ul>
 </div>
@@ -15408,7 +15417,7 @@ Removing debug pod ...</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 22:36:02 -0400
+Last updated 2026-10-09 14:37:16 -0400
 </div>
 </div>
 </body>

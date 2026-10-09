@@ -530,48 +530,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands" class="book toc2 toc-left navmap-has-right-toc">
+<body id="_reference" class="book toc2 toc-left">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS (classic architecture)</h1>
 <div id="toc" class="toc2">
@@ -637,8 +597,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
-<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html"><span class="toc-current">Optimize cluster capacity to match workload demands</span></a>
+<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
 </li>
 </ul>
 </li>
@@ -674,8 +635,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
-
+<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html"><span class="toc-current">Reference</span></a>
 <ul class="sectlevel2">
 <li><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html">Configure ROSA CLI</a>
 </li>
@@ -686,422 +646,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understand-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Understand cluster autoscaling</a></li><li class="level-5"><a href="#rosa-cluster-autoscaler-about_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">About the cluster autoscaler</a></li><li class="level-5"><a href="#rosa-cluster-autoscaler-scale-down_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Automatic node removal</a></li><li class="level-5"><a href="#rosa-cluster-autoscaler-limitations_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Limitations</a></li><li class="level-5"><a href="#rosa-cluster-autoscaler-interaction_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Interaction with other scheduling features</a></li><li class="level-4"><a href="#enable-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable cluster autoscaling</a></li><li class="level-5"><a href="#rosa-enable-cluster-autoscale-cli-after_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable autoscaling after cluster creation with the rosa CLI</a></li><li class="level-5"><a href="#rosa-enable-cluster-autoscale-ui-after_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable autoscaling after cluster creation with OpenShift Cluster Manager</a></li><li class="level-5"><a href="#rosa-cluster-cli-autoscale-parameters_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Cluster autoscaling parameters using the ROSA CLI</a></li><li class="level-4"><a href="#tune-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Tune cluster autoscaling</a></li><li class="level-5"><a href="#rosa-cluster-autoscaler-cli-describe_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">View autoscaler configurations with the rosa CLI</a></li><li class="level-5"><a href="#rosa-edit-cluster-autoscale-cli_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Edit autoscaling after cluster creation with the ROSA CLI</a></li></ul></aside>
 <div id="content">
-<div class="sect2">
-<h3 id="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Optimize cluster capacity to match workload demands</h3>
-<div class="paragraph _abstract">
-<p>Configure cluster autoscaling so that your cluster&#8217;s compute capacity adjusts automatically as workload demand changes.</p>
-</div>
-<div class="sect3">
-<h4 id="understand-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Understand cluster autoscaling</h4>
-<div class="paragraph _abstract">
-<p>Learn how the cluster autoscaler adjusts your cluster&#8217;s compute capacity to workload demand.</p>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-autoscaler-about_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">About the cluster autoscaler</h5>
-<div class="paragraph _abstract">
-<p>The cluster autoscaler adjusts the size of a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster to meet its current deployment needs. It uses declarative, Kubernetes-style arguments for infrastructure management that are not specific to a cloud provider.</p>
-</div>
-<div class="paragraph">
-<p>The cluster autoscaler has a cluster scope and is not associated with a particular namespace. In Red&#160;Hat OpenShift Services on AWS (classic architecture), the cluster autoscaler is fully managed and hosted with the control plane.</p>
-</div>
-<div class="paragraph">
-<p>The cluster autoscaler increases the size of the cluster when there are pods that fail to schedule on any of the current worker nodes due to insufficient resources or when another node is necessary to meet deployment needs. The cluster autoscaler does not increase the cluster resources beyond the limits that you specify.</p>
-</div>
-<div class="paragraph">
-<p>The cluster autoscaler computes the total memory, CPU, and GPU only on the nodes that belong to autoscaling machine pools. All of the machine pool nodes that are not autoscaling are excluded from this aggregation. For example, if you set the <code>maxNodesTotal</code> to <code>50</code> on a Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster with three machine pools in which a single machine pool is not autoscaling, the cluster autoscaler restricts the total nodes to <code>50</code> in only those two machine pools that are autoscaling. The single manually scaling machine pool can have additional nodes, making the overall cluster nodes total more than <code>50</code>.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-autoscaler-scale-down_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Automatic node removal</h5>
-<div class="paragraph _abstract">
-<p>Every 10 seconds, the cluster autoscaler checks which nodes are unnecessary in the cluster and removes them.</p>
-</div>
-<div class="paragraph">
-<p>The cluster autoscaler considers a node for removal if the following conditions apply:</p>
-</div>
+<div class="sect1">
+<h2 id="_reference">Reference</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>The node utilization is less than the <em>node utilization level</em> threshold for the cluster. The node utilization level is the sum of the requested resources divided by the allocated resources for the node. If you do not specify a value in the <code>ClusterAutoscaler</code> custom resource, the cluster autoscaler uses a default value of <code>0.5</code>, which corresponds to 50% utilization.</p>
+<p><a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html">Configure ROSA CLI</a></p>
 </li>
 <li>
-<p>The cluster autoscaler can move all pods running on the node to the other nodes. The Kubernetes scheduler is responsible for scheduling pods on the nodes.</p>
-</li>
-<li>
-<p>The cluster autoscaler does not have scale down disabled annotation.</p>
+<p><a href="rosa-cli-reference_rosa-classic-rosa-cli-reference.html">ROSA CLI reference</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If the following types of pods are present on a node, the cluster autoscaler will not remove the node:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pods with restrictive pod disruption budgets (PDBs).</p>
-</li>
-<li>
-<p>Kube-system pods that do not run on the node by default.</p>
-</li>
-<li>
-<p>Kube-system pods that do not have a PDB or have a PDB that is too restrictive.</p>
-</li>
-<li>
-<p>Pods that are not backed by a controller object such as a deployment, replica set, or stateful set.</p>
-</li>
-<li>
-<p>Pods with local storage.</p>
-</li>
-<li>
-<p>Pods that cannot be moved elsewhere because of a lack of resources, incompatible node selectors or affinity, matching anti-affinity, and so on.</p>
-</li>
-<li>
-<p>Unless they also have a <code>"cluster-autoscaler.kubernetes.io/safe-to-evict": "true"</code> annotation, pods that have a <code>"cluster-autoscaler.kubernetes.io/safe-to-evict": "false"</code> annotation.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, you set the maximum CPU limit to 64 cores and configure the cluster autoscaler to only create machines that have 8 cores each. If your cluster starts with 30 cores, the cluster autoscaler can add up to 4 more nodes with 32 cores, for a total of 62.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-autoscaler-limitations_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Limitations</h5>
-<div class="paragraph _abstract">
-<p>If you configure the cluster autoscaler, additional usage restrictions apply.</p>
-</div>
-<div class="paragraph">
-<p>See the following restrictions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Do not modify the nodes that are in autoscaled node groups directly. All nodes within the same node group have the same capacity and labels and run the same system pods.</p>
-</li>
-<li>
-<p>Specify requests for your pods.</p>
-</li>
-<li>
-<p>If you have to prevent pods from being deleted too quickly, configure appropriate PDBs.</p>
-</li>
-<li>
-<p>Confirm that your cloud provider quota is large enough to support the maximum node pools that you configure.</p>
-</li>
-<li>
-<p>Do not run additional node group autoscalers, especially the ones offered by your cloud provider.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The cluster autoscaler only adds nodes in autoscaled node groups if doing so would result in a schedulable pod.
-If the available node types cannot meet the requirements for a pod request, or if the node groups that could meet these requirements are at their maximum size, the cluster autoscaler cannot scale up.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-autoscaler-interaction_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Interaction with other scheduling features</h5>
-<div class="paragraph _abstract">
-<p>The horizontal pod autoscaler (HPA) and the cluster autoscaler modify cluster resources differently. The HPA adjusts replica count based on CPU load, creating new replicas regardless of available resources. The cluster autoscaler then adds resources so those pods can run.</p>
-</div>
-<div class="paragraph">
-<p>If the load decreases, the HPA stops some replicas. If this causes nodes to be underutilized or empty, the cluster autoscaler deletes the unnecessary nodes.</p>
-</div>
-<div class="paragraph">
-<p>The cluster autoscaler takes pod priorities into account. The Pod Priority and Preemption feature enables scheduling pods based on priorities if the cluster does not have enough resources, but the cluster autoscaler ensures that the cluster has resources to run all pods. To honor the intention of both features, the cluster autoscaler includes a priority cutoff function. You can use this cutoff to schedule "best-effort" pods, which do not cause the cluster autoscaler to increase resources but instead run only when spare resources are available.</p>
-</div>
-<div class="paragraph">
-<p>Pods with priority lower than the cutoff value do not cause the cluster to scale up or prevent the cluster from scaling down. No new nodes are added to run the pods, and nodes running these pods might be deleted to free resources.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="enable-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable cluster autoscaling</h4>
-<div class="paragraph _abstract">
-<p>Enable the cluster autoscaler and review its settings.</p>
-</div>
-<div class="sect4">
-<h5 id="rosa-enable-cluster-autoscale-cli-after_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable autoscaling after cluster creation with the <code>rosa</code> CLI</h5>
-<div class="paragraph _abstract">
-<p>You can use the ROSA command-line interface (CLI) (<code>rosa</code>) to set cluster-wide autoscaling after cluster creation.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>After you have created a cluster, create the autoscaler:</p>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create autoscaler --cluster=&lt;mycluster&gt;</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You can also create the autoscaler with specific parameters using the following command:</p>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create autoscaler --cluster=&lt;mycluster&gt; &lt;parameter&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-enable-cluster-autoscale-ui-after_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Enable autoscaling after cluster creation with OpenShift Cluster Manager</h5>
-<div class="paragraph _abstract">
-<p>Enable cluster autoscaling on an existing cluster by using OpenShift Cluster Manager to automatically adjust the number of nodes based on workload demands.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In OpenShift Cluster Manager, click the name of the cluster you want to autoscale. The <strong>Overview</strong> page for the cluster has a <strong>Autoscaling</strong> item that indicates if it is enabled or disabled.</p>
-</li>
-<li>
-<p>Click the <strong>Machine Pools</strong> tab.</p>
-</li>
-<li>
-<p>Click the <strong>Edit cluster autoscaling</strong> button. The <strong>Edit cluster autoscaling</strong> settings window is shown.</p>
-</li>
-<li>
-<p>Click the <strong>Autoscale cluster</strong> toggle at the top of the window. All the settings are now editable.</p>
-</li>
-<li>
-<p>Edit any settings you want and then click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>Click the <strong>x</strong> at the top right of the screen to close the settings window.</p>
-<div class="paragraph">
-<p>To revert all autoscaling settings to the defaults if they have been changed, click the <strong>Revert all to defaults</strong> button.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-cli-autoscale-parameters_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Cluster autoscaling parameters using the ROSA CLI</h5>
-<div class="paragraph _abstract">
-<p>You can add the following parameters to the cluster creation command to configure autoscaler parameters when using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 45. Configurable autoscaler parameters available with the <code>rosa</code> CLI</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Setting</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Type or Range</th>
-<th class="tableblock halign-left valign-top">Example/Instruction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-balance-similar-node-groups</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identify node groups with the same instance type and label set, and try to balance respective sizes of those node groups.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add it to set to true, omit the option to set to false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-skip-nodes-with-local-storage</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If set, the cluster autoscaler does not delete nodes with pods that have local storage, for example, EmptyDir or HostPath.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add it to set to true, omit the option to set to false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-log-verbosity <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autoscaler log level. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-log-verbosity 4</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-pod-grace-period <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gives pods graceful termination time before scaling down, measured in seconds. Replace <em>int</em> in the command with the number of seconds you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-pod-grace-period 0</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-pod-priority-threshold <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The priority that a pod must exceed to cause the cluster autoscaler to deploy additional nodes. Replace <em>int</em> in the command with the number you want to use, can be negative.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-pod-priority-threshold -10</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-gpu-limit <em>stringArray</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum and maximum number of different GPUs in cluster. Cluster autoscaler does not scale the cluster less than or greater than these numbers. The format must be a comma-separated list of "&lt;gpu_type&gt;,&lt;min&gt;,&lt;max&gt;".</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-gpu-limit nvidia.com/gpu,0,10  --autoscaler-gpu-limit amd.com/gpu,1,5</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-ignore-daemonsets-utilization</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If set, the cluster-autoscaler ignores daemon set pods when calculating resource utilization for scaling down.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add it to set to true, omit the option to set to false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-node-provision-time <em>string</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum time that the cluster autoscaler waits for a node to be provisioned. Replace <em>string</em> in the command with an integer and time unit (ns,us,µs,ms,s,m,h).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-node-provision-time 35m</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-balancing-ignored-labels <em>strings</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A comma-separated list of label keys that the cluster autoscaler should ignore when comparing node groups for similarity. Replace <em>strings</em> in the command with the relevant labels..</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-balancing-ignored-labels topology.ebs.csi.aws.com/zone,alpha.eksctl.io/instance-id</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-nodes-total <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum amount of nodes in the cluster, including the autoscaled nodes. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-nodes-total 180</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-min-cores <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum number of cores to deploy in the cluster. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-min-cores 0</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-cores <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of cores to deploy in the cluster. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-cores 100</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-min-memory <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum amount of memory, in GiB, in the cluster. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-min-memory 0</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-memory <em>int</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum amount of memory, in GiB, in the cluster. Replace <em>int</em> in the command with the number you want to use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-max-memory 4096</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If set, the cluster autoscaler should scale down the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add it to set to true, omit the option to set to false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-unneeded-time <em>string</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How long a node should be unneeded before it is eligible for scale down. Replace <em>string</em> in the command with an integer and time unit (ns,us,µs,ms,s,m,h).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-unneeded-time 1h</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-utilization-threshold <em>float</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down. Value must be between 0 and 1.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>float</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-utilization-threshold 0.5</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-add <em>string</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How long after scale up that scale down evaluation resumes. Replace <em>string</em> in the command with an integer and time unit (ns,us,µs,ms,s,m,h).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-add 1h</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-delete <em>string</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How long after node deletion that scale down evaluation resumes. Replace <em>string</em> in the command with an integer and time unit (ns,us,µs,ms,s,m,h).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-delete 1h</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-failure <em>string</em></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How long after scale down failure that scale down evaluation resumes. Replace <em>string</em> in the command with an integer and time unit (ns,us,µs,ms,s,m,h).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--autoscaler-scale-down-delay-after-failure 1h</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="tune-cluster-autoscaling-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Tune cluster autoscaling</h4>
-<div class="paragraph _abstract">
-<p>View and change your cluster&#8217;s autoscaling configuration.</p>
-</div>
-<div class="sect4">
-<h5 id="rosa-cluster-autoscaler-cli-describe_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">View autoscaler configurations with the <code>rosa</code> CLI</h5>
-<div class="paragraph _abstract">
-<p>You can view your cluster autoscaler configurations by using the <code>rosa describe autoscaler</code> command.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>To view cluster autoscaler configurations, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa describe autoscaler --cluster=&lt;mycluster&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-edit-cluster-autoscale-cli_rosa-classic-optimize-cluster-capacity-to-match-workload-demands">Edit autoscaling after cluster creation with the ROSA CLI</h5>
-<div class="paragraph _abstract">
-<p>You can edit any specific parameters of the cluster autoscaler after creating the autoscaler.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>To edit the cluster autoscaler, run the following command:</p>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit autoscaler --cluster=&lt;mycluster&gt;</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To edit a specific parameter, run the following command:</p>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit autoscaler --cluster=&lt;mycluster&gt; &lt;parameter&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="_troubleshoot.html">Troubleshoot</a> →</p>
+<p>← Previous: <a href="rosa-classic-deploy-and-access-a-simple-application_rosa-classic-deploy-and-access-a-simple-application.html#rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads">Tutorial: Assign a consistent egress IP to your workloads</a> | ↑ Up: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="configure-the-rosa-cli-intro_rosa-classic-configure-the-rosa-cli.html">Configure ROSA CLI</a> →</p>
 </div>
 </div>
 <div id="footer">

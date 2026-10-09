@@ -530,48 +530,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity" class="book toc2 toc-left navmap-has-right-toc">
+<body id="_reference" class="book toc2 toc-left">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS</h1>
 <div id="toc" class="toc2">
@@ -654,10 +614,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_administer.html">▶</button><a href="_administer.html">Administer</a>
+
 <ul class="sectlevel2">
 <li><a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-hcp-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a>
 </li>
-<li><a href="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity.html"><span class="toc-current">Understand compute capacity</span></a>
+<li><a href="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity.html">Understand compute capacity</a>
 </li>
 <li><a href="rosa-hcp-manage-compute-capacity-manually_rosa-hcp-manage-compute-capacity-manually.html">Manage compute capacity manually</a>
 </li>
@@ -700,8 +661,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
-
+<li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html"><span class="toc-current">Reference</span></a>
 <ul class="sectlevel2">
 <li><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a>
 </li>
@@ -712,186 +672,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-nodes-machinepools-infrastructure_rosa-hcp-understand-compute-capacity">Machine pool infrastructure</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure-machines_rosa-hcp-understand-compute-capacity">Machines</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_rosa-hcp-understand-compute-capacity">Machine sets</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_rosa-hcp-understand-compute-capacity">Machine pools</a></li><li class="level-4"><a href="#rosa-capacity-reservations-overview_rosa-hcp-understand-compute-capacity">Overview of AWS Capacity Reservations</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-overview_rosa-hcp-understand-compute-capacity">Overview of Spot instances on Red Hat OpenShift Services on AWS</a></li></ul></aside>
 <div id="content">
-<div class="sect2">
-<h3 id="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity">Understand compute capacity</h3>
-<div class="paragraph _abstract">
-<p>Before you manage compute capacity for your cluster, learn how machine pools provide the underlying infrastructure for your worker nodes.</p>
-</div>
-<div class="sect3">
-<h4 id="rosa-nodes-machinepools-infrastructure_rosa-hcp-understand-compute-capacity">Machine pool infrastructure</h4>
-<div class="paragraph _abstract">
-<p>Red&#160;Hat OpenShift Services on AWS uses machines, compute machine sets, and machine pools to manage the underlying cloud infrastructure for worker nodes.</p>
-</div>
-<div class="sect4">
-<h5 id="rosa-nodes-machinepools-infrastructure-machines_rosa-hcp-understand-compute-capacity">Machines</h5>
-<div class="paragraph">
-<p>A machine is a fundamental unit that describes the host for a worker node.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-nodes-machinepools-infrastructure-machine-sets_rosa-hcp-understand-compute-capacity">Machine sets</h5>
-<div class="paragraph">
-<p><code>MachineSet</code> resources are groups of compute machines. If you need more machines or must scale them down, change the number of replicas in the machine pool to which the compute machine sets belong.</p>
-</div>
-<div class="paragraph">
-<p>Machine sets are not directly modifiable in Red&#160;Hat OpenShift Services on AWS.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-nodes-machinepools-infrastructure-machine-pools_rosa-hcp-understand-compute-capacity">Machine pools</h5>
-<div class="paragraph">
-<p>Machine pools are a higher-level construct than compute machine sets.</p>
-</div>
-<div class="paragraph">
-<p>A machine pool creates compute machine sets that are all clones of the same configuration across availability zones. Machine pools perform all of the host node provisioning management actions on a worker node. If you need more machines or must scale them down, change the number of replicas in the machine pool to meet your compute needs. You can manually configure scaling or set autoscaling.</p>
-</div>
-<div class="paragraph">
-<p>In Red&#160;Hat OpenShift Services on AWS clusters, the hosted control plane spans multiple availability zones (AZ) in the installed cloud region. Each machine pool in a Red&#160;Hat OpenShift Services on AWS cluster deploys in a single subnet within a single AZ.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Worker node longevity is not guaranteed, and nodes may be replaced at any time as part of the normal operation and management of OpenShift. For more details about the node lifecycle, refer to <em>Additional resources</em>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Many machine pools can exist on a single cluster, and each machine pool can contain a unique node type and node size configuration.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>By default, a cluster has one machine pool. During cluster installation, you can define instance type or size, add labels to this machine pool, and define the size of the root disk.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="rosa-capacity-reservations-overview_rosa-hcp-understand-compute-capacity">Overview of AWS Capacity Reservations</h4>
-<div class="paragraph _abstract">
-<p>If you have reserved compute capacity using AWS Capacity Reservations for a specific instance type and Availability Zone (AZ), you can use it for your Red&#160;Hat OpenShift Services on AWS worker nodes. Both On-Demand Capacity Reservations and Capacity Blocks for machine learning (ML) workloads are supported.</p>
-</div>
-<div class="paragraph">
-<p>Purchase and manage a Capacity Reservation directly with AWS. After reserving the capacity, add a Capacity Reservation ID to a new machine pool when you create it in your Red&#160;Hat OpenShift Services on AWS cluster. You can also use a Capacity Reservation shared with you from another AWS account within your AWS Organization.</p>
-</div>
-<div class="paragraph">
-<p>After you configure Capacity Reservations in Red&#160;Hat OpenShift Services on AWS, you can then use your AWS account to monitor reserved capacity usage across all workloads in the account.</p>
-</div>
-<div class="paragraph">
-<p>Using Capacity Reservations on machine pools in Red&#160;Hat OpenShift Services on AWS clusters has the following prerequisites and limitations:</p>
-</div>
+<div class="sect1">
+<h2 id="_reference">Reference</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>You installed and configured the latest <code>rosa</code> CLI.</p>
+<p><a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a></p>
 </li>
 <li>
-<p>Your Red&#160;Hat OpenShift Services on AWS cluster is version 4.19 or later.</p>
-</li>
-<li>
-<p>The cluster already has a machine pool that is not using a Capacity Reservation or taints. The machine pool must have at least 2 worker nodes.</p>
-</li>
-<li>
-<p>You have purchased a Capacity Reservation for the instance type required in the AZ of the machine pool that you are creating.</p>
-</li>
-<li>
-<p>You can only add a Capacity Reservation ID to a new machine pool.</p>
-</li>
-<li>
-<p>You cannot use autoscaling with Capacity Reservations if you create a machine pool using the <code>rosa</code> CLI. However, you can enable both autoscaling and Capacity Reservations on machine pools created using OpenShift Cluster Manager.</p>
+<p><a href="rosa-cli-reference_rosa-cli-reference.html">ROSA CLI reference</a></p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="rosa-hcp-config-spot-instance-overview_rosa-hcp-understand-compute-capacity">Overview of Spot instances on Red&#160;Hat OpenShift Services on AWS</h4>
-<div class="paragraph _abstract">
-<p>AWS Spot instances allow you to use spare EC2 capacity at significantly reduced costs compared to on-demand instances. Red&#160;Hat OpenShift Services on AWS supports Spot instances for worker node machine pools, enabling cost optimization for fault-tolerant and stateless workloads.</p>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Services on AWS provides two operational modes for Spot instance termination handling:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Mode</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">AWS infrastructure required</th>
-<th class="tableblock halign-left valign-top">Graceful drain</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Simple</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spot instances work with no additional AWS setup. When AWS reclaims a Spot instance, the node is terminated abruptly. A <code>MachineHealthCheck</code> detects the missing node and provisions a replacement.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enhanced</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Requires a customer-configured SQS queue and EventBridge rules. The AWS Node Termination Handler receives an approximately 2m warning before interruption and gracefully drains pods, respecting <code>PodDisruptionBudgets</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SQS queue, EventBridge rules, SQS resource policy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Enhanced Spot termination handling requires three AWS components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A Simple Queue Service (SQS) queue to receive interruption events.</p>
-</li>
-<li>
-<p>EventBridge rules to route EC2 Spot events to the queue.</p>
-</li>
-<li>
-<p>An SQS queue resource policy that grants access to EventBridge and the cluster&#8217;s NodePoolManagement role.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Use enhanced mode for any workload that benefits from graceful shutdown before Spot interruptions.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-hcp-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="rosa-hcp-manage-compute-capacity-manually_rosa-hcp-manage-compute-capacity-manually.html">Manage compute capacity manually</a> →</p>
+<p>← Previous: <a href="rosa-hcp-deploy-and-access-a-simple-application_rosa-hcp-deploy-and-access-a-simple-application.html#rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a> | ↑ Up: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="configure-the-rosa-cli-intro_configure-the-rosa-cli.html">Configure ROSA CLI</a> →</p>
 </div>
 </div>
 <div id="footer">
