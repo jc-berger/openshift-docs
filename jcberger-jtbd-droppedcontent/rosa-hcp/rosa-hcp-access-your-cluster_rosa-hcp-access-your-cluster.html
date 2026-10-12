@@ -589,9 +589,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="rosa-hcp-learn-about-benefits-and-use-cases_rosa-hcp-learn-about-benefits-and-use-cases.html">Benefits and use cases</a>
 </li>
-<li><a href="rosa-hcp-evaluate-shared-responsibilities_rosa-hcp-evaluate-shared-responsibilities.html">Shared responsibilities</a>
+<li><a href="rosa-hcp-evaluate-shared-responsibilities_rosa-hcp-evaluate-shared-responsibilities.html">Shared responsibilities model</a>
 </li>
-<li><a href="rosa-hcp-review-the-service-definition_rosa-hcp-review-the-service-definition.html">Service definition</a>
+<li><a href="rosa-hcp-review-the-service-definition_rosa-hcp-review-the-service-definition.html">Policies and service definitions</a>
 </li>
 </ul>
 </li>
@@ -619,13 +619,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-quickstart-set-up-your-environment.html">Overview of the default cluster specifications</a>
+<li><a href="rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-quickstart-set-up-your-environment.html">Default cluster specifications</a>
 </li>
 <li><a href="rosa-hcp-quickstart-create-your-cluster_rosa-hcp-quickstart-create-your-cluster.html">Quick start: Create your cluster</a>
 </li>
 <li><a href="rosa-hcp-quickstart-manage-your-cluster_rosa-hcp-quickstart-manage-your-cluster.html">Quick start: Manage your cluster</a>
 </li>
-<li><a href="considerations-regarding-auto-creation-mode_rosa-hcp-create-a-cluster-with-default-options.html">About automatic IAM resource creation</a>
+<li><a href="considerations-regarding-auto-creation-mode_rosa-hcp-create-a-cluster-with-default-options.html">Automatic IAM resource creation</a>
 </li>
 <li><a href="rosa-hcp-activate-red-hat-openshift-services-on-aws-cluster-and-link-your-aws-account_rosa-hcp-activate-red-hat-openshift-services-on-aws-cluster-and-link-your-aws-account.html">Activate Red Hat OpenShift Services on AWS cluster and link your AWS account</a>
 </li>
@@ -737,7 +737,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-getting-started-access-cluster-web-console_rosa-hcp-access-your-cluster">Access a cluster through the web console</a></li><li class="level-4"><a href="#rosa-getting-started-grant-admin-privileges_rosa-hcp-access-your-cluster">Grant administrator privileges to a user</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-external-auth-provider-cli_rosa-hcp-access-your-cluster">Creating an external authentication provider</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Creating a break glass credential for a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-4"><a href="#rosa-hcp-sts-accessing-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Accessing a Red Hat OpenShift Services on AWS cluster by using a break glass credential</a></li><li class="level-4"><a href="#rosa-hcp-sts-revoking-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Revoking a break glass credential for a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-external-auth-provider-delete-cli_rosa-hcp-access-your-cluster">Deleting an external authentication provider</a></li><li class="level-4"><a href="#deploy-app_rosa-hcp-access-your-cluster">Deploy an application from the Developer Catalog</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-getting-started-access-cluster-web-console_rosa-hcp-access-your-cluster">Access a cluster through the web console</a></li><li class="level-4"><a href="#rosa-getting-started-grant-admin-privileges_rosa-hcp-access-your-cluster">Grant administrator privileges to a user</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-external-auth-provider-cli_rosa-hcp-access-your-cluster">Create an external authentication provider</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Create a break glass credential for a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-4"><a href="#rosa-hcp-sts-accessing-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Access a Red Hat OpenShift Services on AWS cluster by using a break glass credential</a></li><li class="level-4"><a href="#rosa-hcp-sts-revoking-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Revoke a break glass credential for a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-external-auth-provider-delete-cli_rosa-hcp-access-your-cluster">Delete an external authentication provider</a></li><li class="level-4"><a href="#deploy-app_rosa-hcp-access-your-cluster">Deploy an application from the Developer Catalog</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-access-your-cluster_rosa-hcp-access-your-cluster">Access your cluster</h3>
@@ -921,7 +921,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-cluster-external-auth-provider-cli_rosa-hcp-access-your-cluster">Creating an external authentication provider</h4>
+<h4 id="rosa-hcp-sts-creating-a-cluster-external-auth-provider-cli_rosa-hcp-access-your-cluster">Create an external authentication provider</h4>
 <div class="paragraph _abstract">
 <p>After you have created a Red&#160;Hat OpenShift Services on AWS cluster with the enabled option for external authentication providers, you must create a provider by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1043,7 +1043,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Creating a break glass credential for a Red&#160;Hat OpenShift Services on AWS cluster</h4>
+<h4 id="rosa-hcp-sts-creating-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Create a break glass credential for a Red&#160;Hat OpenShift Services on AWS cluster</h4>
 <div class="paragraph _abstract">
 <p>You can create a break glass credential to generate temporary cluster-admin credentials for Red&#160;Hat OpenShift Services on AWS clusters that use custom OIDC token issuers. The break glass credential provides a <code>kubeconfig</code> file that you can use to access the cluster.</p>
 </div>
@@ -1285,7 +1285,7 @@ Status:                                issued</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-accessing-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Accessing a Red&#160;Hat OpenShift Services on AWS cluster by using a break glass credential</h4>
+<h4 id="rosa-hcp-sts-accessing-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Access a Red&#160;Hat OpenShift Services on AWS cluster by using a break glass credential</h4>
 <div class="paragraph _abstract">
 <p>Use the new <code>kubeconfig</code> from the break glass credential to gain temporary admin access to a Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </div>
@@ -1393,7 +1393,7 @@ EOF</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-revoking-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Revoking a break glass credential for a Red&#160;Hat OpenShift Services on AWS cluster</h4>
+<h4 id="rosa-hcp-sts-revoking-a-break-glass-cred-cli_rosa-hcp-access-your-cluster">Revoke a break glass credential for a Red&#160;Hat OpenShift Services on AWS cluster</h4>
 <div class="paragraph _abstract">
 <p>You can revoke access to any break glass credentials that you have provisioned at any time by using the <code>revoke break-glass-credentials</code> command.</p>
 </div>
@@ -1489,7 +1489,7 @@ Revoked at:                            Dec 27 2026 15:30:33 EDT</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-cluster-external-auth-provider-delete-cli_rosa-hcp-access-your-cluster">Deleting an external authentication provider</h4>
+<h4 id="rosa-hcp-sts-creating-a-cluster-external-auth-provider-delete-cli_rosa-hcp-access-your-cluster">Delete an external authentication provider</h4>
 <div class="paragraph _abstract">
 <p>You can delete external authentication providers from a cluster by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1679,7 +1679,7 @@ nodejs-5d9c6c7d9c-kghq2   1/1     Running     0          2m</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 12:45:27 -0400
+Last updated 2026-10-12 17:16:39 -0400
 </div>
 </div>
 </body>
