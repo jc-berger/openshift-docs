@@ -594,6 +594,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_plan.html">▶</button><a href="_plan.html">Plan</a>
+
+<ul class="sectlevel2">
+<li><a href="choose-the-cluster-architecture-intro_choose-the-cluster-architecture.html">Choose the cluster architecture</a>
+</li>
+<li><a href="plan-network-capacity-and-placement-intro_plan-network-capacity-and-placement.html">Plan network capacity and placement</a>
+</li>
+<li><a href="choose-the-cluster-networking-plugin-intro_choose-the-cluster-networking-plugin.html">Choose the cluster networking plugin</a>
+</li>
+<li><a href="define-how-users-and-applications-access-the-cluster-intro_define-how-users-and-applications-access-the-cluster.html">Define how users and applications access the cluster</a>
+</li>
+<li><a href="plan-outbound-connectivity-intro_plan-outbound-connectivity.html">Plan outbound connectivity</a>
+</li>
+<li><a href="choose-the-authentication-model-intro_choose-the-authentication-model.html">Choose the authentication model</a>
+</li>
+<li><a href="choose-the-cluster-encryption-strategy-intro_choose-the-cluster-encryption-strategy.html">Choose the cluster encryption strategy</a>
+</li>
+<li><a href="plan-compute-resources-intro_plan-compute-resources.html">Plan compute resources</a>
+</li>
+</ul>
+</li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
 
 <ul class="sectlevel2">
@@ -620,9 +641,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><button class="toc-toggle" type="button" data-toc-key="_install.html">▶</button><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-intro_rosa-hcp-create-a-rosa-hcp-cluster.html">Create a ROSA HCP Cluster</a>
+<li><a href="rosa-hcp-prepare-to-create-a-cluster_rosa-hcp-prepare-to-create-a-cluster.html">Prepare to create a cluster</a>
 </li>
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-intro_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc.html">Create a ROSA HCP Cluster in a Shared VPC</a>
+<li><a href="rosa-hcp-create-a-cluster-using-the-cli_rosa-hcp-create-a-cluster-using-the-cli.html">Create a cluster using the CLI</a>
+</li>
+<li><a href="rosa-hcp-create-a-cluster-in-the-hybrid-cloud-console_rosa-hcp-create-a-cluster-in-the-hybrid-cloud-console.html">Create a cluster in the Hybrid Cloud Console</a>
+</li>
+<li><a href="rosa-hcp-create-a-cluster-using-terraform_rosa-hcp-create-a-cluster-using-terraform.html">Create a cluster using Terraform</a>
+</li>
+<li><a href="rosa-hcp-access-your-cluster_rosa-hcp-access-your-cluster.html">Access your cluster</a>
+</li>
+<li><a href="rosa-hcp-delete-your-cluster_rosa-hcp-delete-your-cluster.html">Delete your cluster</a>
 </li>
 </ul>
 </li>
@@ -708,7 +737,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-key-features_rosa-hcp-learn-about-benefits-and-use-cases">Key features of Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#rosa-sdpolicy-billing_rosa-hcp-learn-about-benefits-and-use-cases">Billing and pricing</a></li><li class="level-4"><a href="#rosa-getting-started-learn_rosa-hcp-learn-about-benefits-and-use-cases">Getting started with Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#architect_rosa-hcp-learn-about-benefits-and-use-cases">Architect</a></li><li class="level-4"><a href="#cluster-administrator_rosa-hcp-learn-about-benefits-and-use-cases">Cluster administrator</a></li><li class="level-4"><a href="#rosa-developer-topics_rosa-hcp-learn-about-benefits-and-use-cases">Developer</a></li><li class="level-4"><a href="#rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models">Architecture models</a></li><li class="level-5"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture</a></li><li class="level-6"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture on public and private networks</a></li><li class="level-5"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS</a></li><li class="level-6"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS on public and private networks</a></li><li class="level-5"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-6"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-5"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS with Local Zones</a></li><li class="level-4"><a href="#rosa-hcp-acquire-aws-sts-authentication_rosa-hcp-acquire-aws-sts-authentication">AWS STS authentication</a></li><li class="level-5"><a href="#rosa-hcp-sts-credential-method_rosa-hcp-acquire-aws-sts-authentication">AWS STS credential method</a></li><li class="level-5"><a href="#rosa-hcp-sts-security_rosa-hcp-acquire-aws-sts-authentication">AWS STS security</a></li><li class="level-5"><a href="#rosa-hcp-sts-components_rosa-hcp-acquire-aws-sts-authentication">Components of Red Hat OpenShift Services on AWS</a></li><li class="level-5"><a href="#rosa-hcp-sts-deploying-cluster_rosa-hcp-acquire-aws-sts-authentication">Deploy a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-5"><a href="#rosa-hcp-sts-workflow_rosa-hcp-acquire-aws-sts-authentication">Red Hat OpenShift Services on AWS workflow</a></li><li class="level-4"><a href="#rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters">IAM resources for STS clusters</a></li><li class="level-5"><a href="#rosa-sts-understanding-ocm-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the OpenShift Cluster Manager role</a></li><li class="level-6"><a href="#rosa-sts-understanding-user-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the user role</a></li><li class="level-5"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an ocm-role IAM role</a></li><li class="level-5"><a href="#rosa-sts-account-wide-roles-and-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-roles-and-policies-creation-methods_rosa-hcp-explore-sts-resources-for-iam-clusters">Methods of account-wide role creation</a></li><li class="level-5"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy AWS CLI reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-manual-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using manual mode for account role creation</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-auto-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using auto mode for role creation</a></li><li class="level-5"><a href="#rosa-sts-aws-requirements-attaching-boundary-policy_rosa-hcp-explore-sts-resources-for-iam-clusters">Permission boundaries for the installer role</a></li><li class="level-5"><a href="#rosa-sts-operator-roles_rosa-hcp-explore-sts-resources-for-iam-clusters">Cluster-specific Operator IAM role reference</a></li><li class="level-5"><a href="#rosa-sts-operator-role-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Operator IAM role AWS CLI reference</a></li><li class="level-5"><a href="#rosa-sts-about-operator-role-prefixes_rosa-hcp-explore-sts-resources-for-iam-clusters">About custom Operator IAM role prefixes</a></li><li class="level-5"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OIDC provider using the rosa CLI</a></li><li class="level-5"><a href="#rosa-byo-odic-overview_rosa-hcp-explore-sts-resources-for-iam-clusters">OpenID Connect configuration overview</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-options_rosa-hcp-explore-sts-resources-for-iam-clusters">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-raw-files_rosa-hcp-explore-sts-resources-for-iam-clusters">raw-files</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">mode</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-managed_rosa-hcp-explore-sts-resources-for-iam-clusters">managed</a></li><li class="level-5"><a href="#rosa-minimum-scp_rosa-hcp-explore-sts-resources-for-iam-clusters">Minimum set of effective permissions for service control policies (SCP)</a></li><li class="level-5"><a href="#rosa-aws-customer-managed-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Customer-managed policies</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-key-features_rosa-hcp-learn-about-benefits-and-use-cases">Key features of Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#rosa-sdpolicy-billing_rosa-hcp-learn-about-benefits-and-use-cases">Billing and pricing</a></li><li class="level-4"><a href="#rosa-getting-started-learn_rosa-hcp-learn-about-benefits-and-use-cases">Getting started with Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#architect_rosa-hcp-learn-about-benefits-and-use-cases">Architect</a></li><li class="level-4"><a href="#cluster-administrator_rosa-hcp-learn-about-benefits-and-use-cases">Cluster administrator</a></li><li class="level-4"><a href="#rosa-developer-topics_rosa-hcp-learn-about-benefits-and-use-cases">Developer</a></li><li class="level-4"><a href="#rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models">Architecture models</a></li><li class="level-5"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture</a></li><li class="level-6"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture on public and private networks</a></li><li class="level-5"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS</a></li><li class="level-6"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS on public and private networks</a></li><li class="level-5"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-6"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-5"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS with Local Zones</a></li><li class="level-4"><a href="#rosa-hcp-acquire-aws-sts-authentication_rosa-hcp-acquire-aws-sts-authentication">AWS STS authentication</a></li><li class="level-5"><a href="#rosa-hcp-sts-credential-method_rosa-hcp-acquire-aws-sts-authentication">AWS STS credential method</a></li><li class="level-5"><a href="#rosa-hcp-sts-security_rosa-hcp-acquire-aws-sts-authentication">AWS STS security</a></li><li class="level-5"><a href="#rosa-hcp-sts-components_rosa-hcp-acquire-aws-sts-authentication">Components of Red Hat OpenShift Services on AWS</a></li><li class="level-5"><a href="#rosa-hcp-sts-deploying-cluster_rosa-hcp-acquire-aws-sts-authentication">Deploy a Red Hat OpenShift Services on AWS cluster</a></li><li class="level-5"><a href="#rosa-hcp-sts-workflow_rosa-hcp-acquire-aws-sts-authentication">Red Hat OpenShift Services on AWS workflow</a></li><li class="level-4"><a href="#rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters">IAM resources for STS clusters</a></li><li class="level-5"><a href="#rosa-sts-understanding-ocm-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the OpenShift Cluster Manager role</a></li><li class="level-6"><a href="#rosa-sts-understanding-user-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the user role</a></li><li class="level-5"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an ocm-role IAM role</a></li><li class="level-5"><a href="#rosa-sts-account-wide-roles-and-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-roles-and-policies-creation-methods_rosa-hcp-explore-sts-resources-for-iam-clusters">Methods of account-wide role creation</a></li><li class="level-5"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy AWS CLI reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-manual-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using manual mode for account role creation</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-auto-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using auto mode for role creation</a></li><li class="level-5"><a href="#rosa-sts-operator-roles_rosa-hcp-explore-sts-resources-for-iam-clusters">Cluster-specific Operator IAM role reference</a></li><li class="level-5"><a href="#rosa-sts-operator-role-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Operator IAM role AWS CLI reference</a></li><li class="level-5"><a href="#rosa-sts-about-operator-role-prefixes_rosa-hcp-explore-sts-resources-for-iam-clusters">About custom Operator IAM role prefixes</a></li><li class="level-5"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OIDC provider using the rosa CLI</a></li><li class="level-5"><a href="#rosa-byo-odic-overview_rosa-hcp-explore-sts-resources-for-iam-clusters">OpenID Connect configuration overview</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-options_rosa-hcp-explore-sts-resources-for-iam-clusters">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-raw-files_rosa-hcp-explore-sts-resources-for-iam-clusters">raw-files</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">mode</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-managed_rosa-hcp-explore-sts-resources-for-iam-clusters">managed</a></li><li class="level-5"><a href="#rosa-minimum-scp_rosa-hcp-explore-sts-resources-for-iam-clusters">Minimum set of effective permissions for service control policies (SCP)</a></li><li class="level-5"><a href="#rosa-aws-customer-managed-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Customer-managed policies</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-learn-about-benefits-and-use-cases_rosa-hcp-learn-about-benefits-and-use-cases">Benefits and use cases</h3>
@@ -991,7 +1020,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="sect4">
-<h5 id="rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</h5>
+<h5 id="rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</h5>
 <div class="paragraph _abstract">
 <p>Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture) differ in how they host the control plane, deploy infrastructure, and handle upgrades.</p>
 </div>
@@ -1827,8 +1856,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters">IAM resources for STS clusters</h4>
 <div class="paragraph _abstract">
-<p>Red Hat OpenShift Service on AWS uses the AWS Security Token Service (STS) to provide temporary, limited-permission credentials for your cluster. This means that before you deploy your cluster,
-you must create the following AWS Identity Access Management (IAM) resources:</p>
+<p>Red Hat OpenShift Service on AWS uses the AWS Security Token Service (STS) to provide temporary, limited-permission credentials for your cluster. This means that before you deploy your cluster, you must create the following AWS Identity Access Management (IAM) resources:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1858,8 +1886,7 @@ and compute functionality. This includes account-wide Operator policies.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>This document provides reference information about the IAM resources that you must deploy
-when you create a ROSA with HCP cluster.
+<p>This document provides reference information about the IAM resources that you must deploy when you create a ROSA with HCP cluster.
 It also includes the <code>aws</code> CLI commands that are generated when you use <code>manual</code> mode with the <code>rosa create</code> command.</p>
 </div>
 <div class="ulist _additional-resources">
@@ -2815,228 +2842,6 @@ I: To create a cluster with these roles, run the following command:
 rosa create cluster --sts</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="rosa-sts-aws-requirements-attaching-boundary-policy_rosa-hcp-explore-sts-resources-for-iam-clusters">Permission boundaries for the installer role</h5>
-<div class="paragraph _abstract">
-<p>You can apply a policy as a <em>permissions boundary</em> on an installer role. You can use an AWS-managed policy or a customer-managed policy to set the boundary for an Amazon Web Services (AWS) Identity and Access Management (IAM) entity (user or role). The combination of policy and boundary policy limits the maximum permissions for the user or role. Red&#160;Hat OpenShift Services on AWS includes a set of three prepared permission boundary policy files, with which you can restrict permissions for the installer role since changing the installer policy itself is not supported.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This feature is only supported on Red Hat OpenShift Service on AWS (classic architecture) clusters.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The permission boundary policy files are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>Core</em> boundary policy file contains the minimum permissions needed for Red&#160;Hat OpenShift Services on AWS installer to install an Red&#160;Hat OpenShift Services on AWS cluster.
-The installer does not have permissions to create a virtual private cloud (VPC) or PrivateLink (PL). A VPC needs to be provided.</p>
-</li>
-<li>
-<p>The <em>VPC</em> boundary policy file contains the minimum permissions needed for Red&#160;Hat OpenShift Services on AWS installer to create/manage the VPC. It does not include permissions for PL or core installation. If you need to install a cluster with enough permissions for the installer to install the cluster and create/manage the VPC, but you do not need to set up PL, then use the core and VPC boundary files together with the installer role.</p>
-</li>
-<li>
-<p>The <em>PrivateLink (PL)</em> boundary policy file contains the minimum permissions needed for Red&#160;Hat OpenShift Services on AWS installer to create the AWS PL with a cluster. It does not include permissions for VPC or core installation. Provide a pre-created VPC for all PL clusters during installation.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When using the permission boundary policy files, the following combinations apply:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>No permission boundary policies means that the full installer policy permissions apply to your cluster.</p>
-</li>
-<li>
-<p><strong>Core</strong> only sets the most restricted permissions for the installer role. The VPC and PL permissions are not included in the <strong>Core only</strong> boundary policy.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Installer cannot create or manage the VPC or PL.</p>
-</li>
-<li>
-<p>You must have a customer-provided VPC, and PrivateLink (PL) is not available.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Core + VPC</strong> sets the core and VPC permissions for the installer role.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Installer cannot create or manage the PL.</p>
-</li>
-<li>
-<p>Assumes you are not using custom/BYO-VPC.</p>
-</li>
-<li>
-<p>Assumes the installer will create and manage the VPC.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Core + PrivateLink (PL)</strong> means the installer can provision the PL infrastructure.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have a customer-provided VPC.</p>
-</li>
-<li>
-<p>This is for a private cluster with PL.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This example procedure is applicable for an installer role and policy with the most restriction of permissions, using only the <em>core</em> installer permission boundary policy for Red&#160;Hat OpenShift Services on AWS. You can complete this with the AWS console or the AWS CLI. This example uses the AWS CLI and the following policy:</p>
-</div>
-<div class="paragraph">
-<p>The following example shows <code>sts_installer_core_permission_boundary_policy.json</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">link:https://raw.githubusercontent.com/openshift/managed-cluster-config/refs/heads/master/resources/sts/4.21/sts_installer_core_permission_boundary_policy.json[role=include]</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To use the permission boundaries, you will need to prepare the permission boundary policy and add it to your relevant installer role in AWS IAM. While the ROSA command-line interface (CLI) (<code>rosa</code>) offers a permission boundary function, it applies to all roles and not just the installer role, which means it does not work with the provided permission boundary policies (which are only for the installer role).</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have an AWS account.</p>
-</li>
-<li>
-<p>You have the permissions required to administer AWS roles and policies.</p>
-</li>
-<li>
-<p>You have installed and configured the latest AWS (<code>aws</code>) CLI and <code>rosa</code> CLI on your workstation.</p>
-</li>
-<li>
-<p>You have already prepared your Red&#160;Hat OpenShift Services on AWS account-wide roles, includes the installer role, and the corresponding policies. If these do not exist in your AWS account, see "Creating the account-wide STS roles and policies" in <em>Additional resources</em>.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Prepare the policy file by entering the following command in the <code>rosa</code> CLI:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ curl -o ./rosa-installer-core.json https://raw.githubusercontent.com/openshift/managed-cluster-config/master/resources/sts/4.21/sts_installer_core_permission_boundary_policy.json</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the policy in AWS and gather its Amazon Resource Name (ARN) by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam create-policy \
---policy-name rosa-core-permissions-boundary-policy \
---policy-document file://./rosa-installer-core.json \
---description "ROSA installer core permission boundary policy, the minimum permission set, allows BYO-VPC, disallows PrivateLink"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
-    "Policy": {
-        "PolicyName": "rosa-core-permissions-boundary-policy",
-        "PolicyId": "&lt;Policy ID&gt;",
-        "Arn": "arn:aws:iam::&lt;account ID&gt;:policy/rosa-core-permissions-boundary-policy",
-        "Path": "/",
-        "DefaultVersionId": "v1",
-        "AttachmentCount": 0,
-        "PermissionsBoundaryUsageCount": 0,
-        "IsAttachable": true,
-        "CreateDate": "&lt;CreateDate&gt;",
-        "UpdateDate": "&lt;UpdateDate&gt;"
-    }
-}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add the permission boundary policy to the installer role you want to restrict by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam put-role-permissions-boundary \
---role-name ManagedOpenShift-Installer-Role \
---permissions-boundary arn:aws:iam::&lt;account ID&gt;:policy/rosa-core-permissions-boundary-policy</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Display the installer role to validate attached policies (including permissions boundary) by entering the following command in the <code>rosa</code> CLI:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam get-role --role-name ManagedOpenShift-Installer-Role \
---output text | grep PERMISSIONSBOUNDARY</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">PERMISSIONSBOUNDARY	arn:aws:iam::&lt;account ID&gt;:policy/rosa-core-permissions-boundary-policy	Policy</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For more examples of PL and VPC permission boundary policies see:</p>
-</div>
-<div class="paragraph">
-<p>The following example shows <code>sts_installer_privatelink_permission_boundary_policy.json</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">link:https://raw.githubusercontent.com/openshift/managed-cluster-config/refs/heads/master/resources/sts/4.21/sts_installer_privatelink_permission_boundary_policy.json[role=include]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following example shows <code>sts_installer_vpc_permission_boundary_policy.json</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">link:https://raw.githubusercontent.com/openshift/managed-cluster-config/refs/heads/master/resources/sts/4.21/sts_installer_vpc_permission_boundary_policy.json[role=include]</code></pre>
-</div>
-</div>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect4">
@@ -4348,7 +4153,7 @@ The ability to attach these policies to ROSA-specific IAM roles extends a ROSA c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 18:26:08 -0400
+Last updated 2026-10-12 12:45:27 -0400
 </div>
 </div>
 </body>

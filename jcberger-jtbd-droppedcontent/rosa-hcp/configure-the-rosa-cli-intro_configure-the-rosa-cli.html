@@ -595,6 +595,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_plan.html">▶</button><a href="_plan.html">Plan</a>
+
+<ul class="sectlevel2">
+<li><a href="choose-the-cluster-architecture-intro_choose-the-cluster-architecture.html">Choose the cluster architecture</a>
+</li>
+<li><a href="plan-network-capacity-and-placement-intro_plan-network-capacity-and-placement.html">Plan network capacity and placement</a>
+</li>
+<li><a href="choose-the-cluster-networking-plugin-intro_choose-the-cluster-networking-plugin.html">Choose the cluster networking plugin</a>
+</li>
+<li><a href="define-how-users-and-applications-access-the-cluster-intro_define-how-users-and-applications-access-the-cluster.html">Define how users and applications access the cluster</a>
+</li>
+<li><a href="plan-outbound-connectivity-intro_plan-outbound-connectivity.html">Plan outbound connectivity</a>
+</li>
+<li><a href="choose-the-authentication-model-intro_choose-the-authentication-model.html">Choose the authentication model</a>
+</li>
+<li><a href="choose-the-cluster-encryption-strategy-intro_choose-the-cluster-encryption-strategy.html">Choose the cluster encryption strategy</a>
+</li>
+<li><a href="plan-compute-resources-intro_plan-compute-resources.html">Plan compute resources</a>
+</li>
+</ul>
+</li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
 
 <ul class="sectlevel2">
@@ -621,9 +642,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><button class="toc-toggle" type="button" data-toc-key="_install.html">▶</button><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-intro_rosa-hcp-create-a-rosa-hcp-cluster.html">Create a ROSA HCP Cluster</a>
+<li><a href="rosa-hcp-prepare-to-create-a-cluster_rosa-hcp-prepare-to-create-a-cluster.html">Prepare to create a cluster</a>
 </li>
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-intro_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc.html">Create a ROSA HCP Cluster in a Shared VPC</a>
+<li><a href="rosa-hcp-create-a-cluster-using-the-cli_rosa-hcp-create-a-cluster-using-the-cli.html">Create a cluster using the CLI</a>
+</li>
+<li><a href="rosa-hcp-create-a-cluster-in-the-hybrid-cloud-console_rosa-hcp-create-a-cluster-in-the-hybrid-cloud-console.html">Create a cluster in the Hybrid Cloud Console</a>
+</li>
+<li><a href="rosa-hcp-create-a-cluster-using-terraform_rosa-hcp-create-a-cluster-using-terraform.html">Create a cluster using Terraform</a>
+</li>
+<li><a href="rosa-hcp-access-your-cluster_rosa-hcp-access-your-cluster.html">Access your cluster</a>
+</li>
+<li><a href="rosa-hcp-delete-your-cluster_rosa-hcp-delete-your-cluster.html">Delete your cluster</a>
 </li>
 </ul>
 </li>
@@ -719,6 +748,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="rosa-set-up-and-authenticate-the-rosa-cli_rosa-set-up-and-authenticate-the-rosa-cli">Set up and authenticate the ROSA CLI</h4>
 <div class="paragraph _abstract">
 <p>Learn how to install, configure, and update the ROSA command-line interface (CLI) (<code>rosa</code>). You can use the <code>rosa</code> CLI to create, update, manage, and delete Red&#160;Hat OpenShift Services on AWS clusters and resources.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../cli_reference/rosa_cli/rosa-get-started-cli.html#rosa-setting-up-cli_rosa-getting-started-cli">Setting up the <code>rosa</code> CLI</a></p>
+</li>
+<li>
+<p><a href="../../cli_reference/openshift_cli/getting-started-cli.html#cli-getting-started">Getting started with the OpenShift CLI</a></p>
+</li>
+<li>
+<p><a href="https://console.redhat.com/iam/service-accounts">Service accounts</a></p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="rosa-setting-up-cli_rosa-set-up-and-authenticate-the-rosa-cli">Setting up the <code>rosa</code> CLI</h5>
@@ -1005,7 +1048,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 <p>Running this command redirects you to the Red&#160;Hat single sign-on login. Log in with your Red&#160;Hat login or email.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 63. Optional arguments inherited from parent commands+</caption>
+<caption class="title">Table 52. Optional arguments inherited from parent commands+</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1065,7 +1108,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 <p>Running this command redirects you to the Red&#160;Hat SSO login and provides a login code.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 64. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 53. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1141,7 +1184,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 65. Arguments</caption>
+<caption class="title">Table 54. Arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1180,7 +1223,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 66. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 55. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1226,7 +1269,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 67. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 56. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1287,7 +1330,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 68. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 57. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1348,7 +1391,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 69. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 58. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1418,7 +1461,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 70. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 59. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1456,7 +1499,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 71. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 60. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1500,7 +1543,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 72. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 61. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1578,7 +1621,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 73. Arguments</caption>
+<caption class="title">Table 62. Arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1625,7 +1668,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 74. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 63. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1807,6 +1850,14 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 <div class="paragraph _abstract">
 <p>You can use the ROSA command-line interface (CLI) (<code>rosa</code>) to point an existing cluster at a different AWS billing account after deployment. You can correct a billing account linked at install time or change the account at a later date.</p>
 </div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://docs.redhat.com/en/documentation/openshift_cluster_manager/1-latest/html-single/managing_clusters/index#proc_updating-billing-accts-rosa-hcp_assembly-managing-clusters">Updating billing accounts for Red&#160;Hat OpenShift Services on AWS clusters</a></p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="rosa-update-billing_rosa-change-the-aws-billing-account">Update billing accounts for Red&#160;Hat OpenShift Services on AWS clusters</h5>
 <div class="paragraph _abstract">
@@ -1868,7 +1919,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 18:26:08 -0400
+Last updated 2026-10-12 12:45:27 -0400
 </div>
 </div>
 </body>
