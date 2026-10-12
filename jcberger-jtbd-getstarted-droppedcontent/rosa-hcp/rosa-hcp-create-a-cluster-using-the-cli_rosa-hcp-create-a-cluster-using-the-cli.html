@@ -741,7 +741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-create-a-cluster-using-the-cli">Overview of the default cluster specifications</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red Hat OpenShift Services on AWS cluster using the CLI</a></li><li class="level-4"><a href="#rosa-glossary-disconnected_rosa-hcp-create-a-cluster-using-the-cli">Glossary of network environment terms</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli-no-cni">Creating the cluster without a CNI plugin</a></li><li class="level-4"><a href="#rosa-hcp-no-cni-install-cni-plugin_rosa-hcp-create-a-cluster-using-the-cli">Installing a CNI plugin</a></li><li class="level-4"><a href="#creating-cluster-with-fips-encryption_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red Hat OpenShift Services on AWS cluster using FIPS encryption</a></li><li class="level-4"><a href="#rosa-operator-config-fips_rosa-hcp-create-a-cluster-using-the-cli">Creating Operator roles and policies</a></li><li class="level-4"><a href="#creating-cluster-with-fips-encryption-cli_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red Hat OpenShift Services on AWS cluster using FIPS encryption in the CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-create-a-cluster-using-the-cli">Default cluster specifications</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli">Create a Red Hat OpenShift Services on AWS cluster using the CLI</a></li><li class="level-4"><a href="#rosa-glossary-disconnected_rosa-hcp-create-a-cluster-using-the-cli">Glossary of network environment terms</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli-no-cni">Create the cluster without a CNI plugin</a></li><li class="level-4"><a href="#rosa-hcp-no-cni-install-cni-plugin_rosa-hcp-create-a-cluster-using-the-cli">Install a CNI plugin</a></li><li class="level-4"><a href="#creating-cluster-with-fips-encryption_rosa-hcp-create-a-cluster-using-the-cli">Create a Red Hat OpenShift Services on AWS cluster using FIPS encryption</a></li><li class="level-4"><a href="#rosa-operator-config-fips_rosa-hcp-create-a-cluster-using-the-cli">Create Operator roles and policies</a></li><li class="level-4"><a href="#creating-cluster-with-fips-encryption-cli_rosa-hcp-create-a-cluster-using-the-cli">Create a Red Hat OpenShift Services on AWS cluster using FIPS encryption in the CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-create-a-cluster-using-the-cli_rosa-hcp-create-a-cluster-using-the-cli">Create a cluster using the CLI</h3>
@@ -749,7 +749,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Create a Red&#160;Hat OpenShift Services on AWS cluster with the default options by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
 <div class="sect3">
-<h4 id="rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-create-a-cluster-using-the-cli">Overview of the default cluster specifications</h4>
+<h4 id="rosa-sts-overview-of-the-default-cluster-specifications_rosa-hcp-create-a-cluster-using-the-cli">Default cluster specifications</h4>
 <div class="paragraph _abstract">
 <p>You can quickly create a Red&#160;Hat OpenShift Services on AWS cluster by using the default installation options.</p>
 </div>
@@ -1016,7 +1016,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red&#160;Hat OpenShift Services on AWS cluster using the CLI</h4>
+<h4 id="rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli">Create a Red&#160;Hat OpenShift Services on AWS cluster using the CLI</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster quickly by using the ROSA command-line interface (CLI) (<code>rosa</code>) with default options.</p>
 </div>
@@ -1033,10 +1033,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You have enabled the Red&#160;Hat OpenShift Services on AWS in the AWS Console.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI (<code>rosa</code>) on your installation host. Run <code>rosa version</code> to see your currently installed version of the ROSA CLI. If a newer version is available, the CLI provides a link to download this upgrade.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI on your installation host. Run <code>rosa version</code> to see your currently installed version of the <code>rosa</code> CLI. If a newer version is available, the CLI provides a link to download this upgrade.</p>
 </li>
 <li>
-<p>You have logged in to your Red&#160;Hat account by using the ROSA CLI.</p>
+<p>You have logged in to your Red&#160;Hat account by using the <code>rosa</code> CLI.</p>
 </li>
 <li>
 <p>You have created an OpenID Connect (OIDC) configuration.</p>
@@ -1257,7 +1257,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </table>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli-no-cni">Creating the cluster without a CNI plugin</h4>
+<h4 id="rosa-hcp-sts-creating-a-cluster-cli_rosa-hcp-create-a-cluster-using-the-cli-no-cni">Create the cluster without a CNI plugin</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster without a CNI plugin by using the <code>--no-cni</code> flag with the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1413,7 +1413,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-no-cni-install-cni-plugin_rosa-hcp-create-a-cluster-using-the-cli">Installing a CNI plugin</h4>
+<h4 id="rosa-hcp-no-cni-install-cni-plugin_rosa-hcp-create-a-cluster-using-the-cli">Install a CNI plugin</h4>
 <div class="paragraph _abstract">
 <p>After creating a Red&#160;Hat OpenShift Services on AWS cluster without a CNI plugin, you must install the CNI plugin before the cluster nodes are ready and workloads can deploy. Until you install a CNI provider, components such as the web console, Ingress Controller, image registry, and monitoring stack are not available.</p>
 </div>
@@ -1430,7 +1430,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="creating-cluster-with-fips-encryption_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red&#160;Hat OpenShift Services on AWS cluster using FIPS encryption</h4>
+<h4 id="creating-cluster-with-fips-encryption_rosa-hcp-create-a-cluster-using-the-cli">Create a Red&#160;Hat OpenShift Services on AWS cluster using FIPS encryption</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster with Federal Information Processing Standards (FIPS) encryption and a customer-provided KMS key for node root volumes, the etcd database, or both. A different KMS key Amazon Resource Name (ARN) can be provided for each option.</p>
 </div>
@@ -1450,7 +1450,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-operator-config-fips_rosa-hcp-create-a-cluster-using-the-cli">Creating Operator roles and policies</h4>
+<h4 id="rosa-operator-config-fips_rosa-hcp-create-a-cluster-using-the-cli">Create Operator roles and policies</h4>
 <div class="paragraph _abstract">
 <p>When you deploy a Red&#160;Hat OpenShift Services on AWS cluster, you must create the Operator IAM roles. The cluster Operators use the Operator roles and policies to obtain temporary permissions to perform cluster operations, such as managing storage and external access.</p>
 </div>
@@ -1521,7 +1521,7 @@ ROLE NAME                                                         ROLE ARN      
 </div>
 </div>
 <div class="sect3">
-<h4 id="creating-cluster-with-fips-encryption-cli_rosa-hcp-create-a-cluster-using-the-cli">Creating a Red&#160;Hat OpenShift Services on AWS cluster using FIPS encryption in the CLI</h4>
+<h4 id="creating-cluster-with-fips-encryption-cli_rosa-hcp-create-a-cluster-using-the-cli">Create a Red&#160;Hat OpenShift Services on AWS cluster using FIPS encryption in the CLI</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster with Federal Information Processing Standards (FIPS) encryption and a customer-provided Key Management Service (KMS) key by using ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1662,7 +1662,7 @@ Removing debug pod ...</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 12:47:35 -0400
+Last updated 2026-10-12 19:01:29 -0400
 </div>
 </div>
 </body>

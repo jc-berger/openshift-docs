@@ -741,7 +741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Red Hat OpenShift Services on AWS prerequisites</a></li><li class="level-4"><a href="#rosa-getting-started-install-configure-cli-tools_rosa-hcp-prepare-to-create-a-cluster">Install and configure the required CLI tools</a></li><li class="level-4"><a href="#rosa-getting-started-verifying-rosa-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Verify Red Hat OpenShift Services on AWS prerequisites</a></li><li class="level-4"><a href="#considerations-regarding-auto-creation-mode_rosa-hcp-prepare-to-create-a-cluster">Automatic IAM resource creation</a></li><li class="level-4"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-prepare-to-create-a-cluster">Create an ocm-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-user-role-iam-basic-role_rosa-hcp-prepare-to-create-a-cluster">Create a user-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-creating-account-wide-sts-roles-and-policies_rosa-hcp-prepare-to-create-a-cluster">Creating the account-wide STS roles and policies</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc_rosa-hcp-prepare-to-create-a-cluster">Create an OpenID Connect configuration</a></li><li class="level-4"><a href="#rosa-hcp-sts-external-id_rosa-hcp-prepare-to-create-a-cluster">About external ID</a></li><li class="level-4"><a href="#rosa-operator-config_rosa-hcp-prepare-to-create-a-cluster">Creating Operator roles and policies</a></li><li class="level-4"><a href="#rosa-hcp-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud for your Red Hat OpenShift Services on AWS clusters</a></li><li class="level-4"><a href="#rosa-hcp-quickstart-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud for your Red Hat OpenShift Services on AWS clusters</a></li><li class="level-4"><a href="#rosa-hcp-vpc-manual_rosa-hcp-prepare-to-create-a-cluster">Requirements for manually creating an AWS Virtual Private Cloud</a></li><li class="level-4"><a href="#rosa-hcp-create-network_rosa-hcp-prepare-to-create-a-cluster">Creating an AWS VPC using the ROSA CLI</a></li><li class="level-4"><a href="#rosa-hcp-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-vpc-subnet-tagging_rosa-hcp-prepare-to-create-a-cluster">Tagging your subnets</a></li><li class="level-4"><a href="#troubleshooting_shared-vpc-hcp_vpc-creation_rosa-hcp-prepare-to-create-a-cluster">Troubleshooting cluster creation</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-creation-and-sharing_rosa-hcp-prepare-to-create-a-cluster">Step One - VPC Owner: Configuring a VPC to share within your AWS organization</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-dns-and-roles_rosa-hcp-prepare-to-create-a-cluster">Step Two - Cluster Creator: Reserving your DNS entries and creating cluster Operator roles</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-hosted-zones_rosa-hcp-prepare-to-create-a-cluster">Step Three - VPC Owner: Updating the shared VPC role and creating hosted zones</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-cluster-creation_rosa-hcp-prepare-to-create-a-cluster">Step Four - Cluster Creator: Creating your cluster in a shared VPC</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-overview_rosa-hcp-prepare-to-create-a-cluster">Overview of Spot instances on Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-intance-cli-auto_rosa-hcp-prepare-to-create-a-cluster">Set up the AWS infrastructure for Spot instances automatically</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-manual_rosa-hcp-prepare-to-create-a-cluster">Set up the AWS infrastructure for Spot instances manually</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-create-cluster_rosa-hcp-prepare-to-create-a-cluster">Create a new Red Hat OpenShift Services on AWS cluster using the CLI with Spot instances</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-create-spot-machine-pool_rosa-hcp-prepare-to-create-a-cluster">Create a Spot machine pool</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-upgrade_rosa-hcp-prepare-to-create-a-cluster">Upgrade your Red Hat OpenShift Services on AWS cluster with Spot instances from simple to enhance mode</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-sqs-queue_rosa-hcp-prepare-to-create-a-cluster">Create the SQS queue</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-sqs-queue-policy_rosa-hcp-prepare-to-create-a-cluster">Configure the SQS queue resource policy</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-define-vars_rosa-hcp-prepare-to-create-a-cluster">Define your required Terraform variables</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-create-cluser_rosa-hcp-prepare-to-create-a-cluster">Create a new Red Hat OpenShift Services on AWS cluster with Spot instances (Day 0) using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-update-cluster_rosa-hcp-prepare-to-create-a-cluster">Update an existing Red Hat OpenShift Services on AWS cluster with Spot machine pools (Day 2) using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-upgrade-simple-to-enhanced_rosa-hcp-prepare-to-create-a-cluster">Upgrade a Red Hat OpenShift Services on AWS cluster from simple mode to enhanced mode (Day 2) using Terraform</a></li><li class="level-4"><a href="#creating-cluster-with-aws-kms-key_rosa-hcp-prepare-to-create-a-cluster">Creating a Red Hat OpenShift Services on AWS cluster using a custom AWS KMS key</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-additional-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Additional prerequisites for egress zero install</a></li><li class="level-4"><a href="#rosa-glossary-disconnected_rosa-hcp-prepare-to-create-a-cluster">Glossary of network environment terms</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-set-environment-variables_rosa-hcp-prepare-to-create-a-cluster">Setting environment variables for cluster creation</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud using Terraform</a></li><li class="level-4"><a href="#rosa-sts-creating-account-wide-sts-roles-and-policies-egress-lockdown_rosa-hcp-prepare-to-create-a-cluster">Creating the account-wide STS roles and policies</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-egress-lockdown-cli_rosa-hcp-prepare-to-create-a-cluster">Creating Red Hat OpenShift Services on AWS clusters with egress zero using the CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Red Hat OpenShift Services on AWS prerequisites</a></li><li class="level-4"><a href="#rosa-getting-started-install-configure-cli-tools_rosa-hcp-prepare-to-create-a-cluster">Install and configure the required CLI tools</a></li><li class="level-4"><a href="#rosa-getting-started-verifying-rosa-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Verify Red Hat OpenShift Services on AWS prerequisites</a></li><li class="level-4"><a href="#considerations-regarding-auto-creation-mode_rosa-hcp-prepare-to-create-a-cluster">Automatic IAM resource creation</a></li><li class="level-4"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-prepare-to-create-a-cluster">Create an ocm-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-user-role-iam-basic-role_rosa-hcp-prepare-to-create-a-cluster">Create a user-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-creating-account-wide-sts-roles-and-policies_rosa-hcp-prepare-to-create-a-cluster">Create the account-wide STS roles and policies</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc_rosa-hcp-prepare-to-create-a-cluster">Create an OpenID Connect configuration</a></li><li class="level-4"><a href="#rosa-hcp-sts-external-id_rosa-hcp-prepare-to-create-a-cluster">External ID</a></li><li class="level-4"><a href="#rosa-operator-config_rosa-hcp-prepare-to-create-a-cluster">Create Operator roles and policies</a></li><li class="level-4"><a href="#rosa-hcp-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud for your Red Hat OpenShift Services on AWS clusters</a></li><li class="level-4"><a href="#rosa-hcp-quickstart-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud for your Red Hat OpenShift Services on AWS clusters</a></li><li class="level-4"><a href="#rosa-hcp-vpc-manual_rosa-hcp-prepare-to-create-a-cluster">Requirements for manually creating an AWS Virtual Private Cloud</a></li><li class="level-4"><a href="#rosa-hcp-create-network_rosa-hcp-prepare-to-create-a-cluster">Create an AWS VPC using the ROSA CLI</a></li><li class="level-4"><a href="#rosa-hcp-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-vpc-subnet-tagging_rosa-hcp-prepare-to-create-a-cluster">Tag your subnets</a></li><li class="level-4"><a href="#troubleshooting_shared-vpc-hcp_vpc-creation_rosa-hcp-prepare-to-create-a-cluster">Troubleshoot cluster creation</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-creation-and-sharing_rosa-hcp-prepare-to-create-a-cluster">Step One - VPC Owner: Configure a VPC to share within your AWS organization</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-dns-and-roles_rosa-hcp-prepare-to-create-a-cluster">Step Two - Cluster Creator: Reserve your DNS entries and create cluster Operator roles</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-hosted-zones_rosa-hcp-prepare-to-create-a-cluster">Step Three - VPC Owner: Update the shared VPC role and create hosted zones</a></li><li class="level-4"><a href="#rosa-hcp-sharing-vpc-cluster-creation_rosa-hcp-prepare-to-create-a-cluster">Step Four - Cluster Creator: Create your cluster in a shared VPC</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-overview_rosa-hcp-prepare-to-create-a-cluster">Spot instances on Red Hat OpenShift Services on AWS</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-intance-cli-auto_rosa-hcp-prepare-to-create-a-cluster">Set up the AWS infrastructure for Spot instances automatically</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-manual_rosa-hcp-prepare-to-create-a-cluster">Set up the AWS infrastructure for Spot instances manually</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-create-cluster_rosa-hcp-prepare-to-create-a-cluster">Create a new Red Hat OpenShift Services on AWS cluster using the CLI with Spot instances</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-create-spot-machine-pool_rosa-hcp-prepare-to-create-a-cluster">Create a Spot machine pool</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-cli-upgrade_rosa-hcp-prepare-to-create-a-cluster">Upgrade your Red Hat OpenShift Services on AWS cluster with Spot instances from simple to enhance mode</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-sqs-queue_rosa-hcp-prepare-to-create-a-cluster">Create the SQS queue</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-sqs-queue-policy_rosa-hcp-prepare-to-create-a-cluster">Configure the SQS queue resource policy</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-define-vars_rosa-hcp-prepare-to-create-a-cluster">Define your required Terraform variables</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-create-cluser_rosa-hcp-prepare-to-create-a-cluster">Create a new Red Hat OpenShift Services on AWS cluster with Spot instances (Day 0) using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-update-cluster_rosa-hcp-prepare-to-create-a-cluster">Update an existing Red Hat OpenShift Services on AWS cluster with Spot machine pools (Day 2) using Terraform</a></li><li class="level-4"><a href="#rosa-hcp-config-spot-instance-terraform-upgrade-simple-to-enhanced_rosa-hcp-prepare-to-create-a-cluster">Upgrade a Red Hat OpenShift Services on AWS cluster from simple mode to enhanced mode (Day 2) using Terraform</a></li><li class="level-4"><a href="#creating-cluster-with-aws-kms-key_rosa-hcp-prepare-to-create-a-cluster">Create a Red Hat OpenShift Services on AWS cluster using a custom AWS KMS key</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-additional-prerequisites_rosa-hcp-prepare-to-create-a-cluster">Additional prerequisites for egress zero install</a></li><li class="level-4"><a href="#rosa-glossary-disconnected_rosa-hcp-prepare-to-create-a-cluster">Glossary of network environment terms</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-set-environment-variables_rosa-hcp-prepare-to-create-a-cluster">Set environment variables for cluster creation</a></li><li class="level-4"><a href="#rosa-hcp-egress-zero-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud using Terraform</a></li><li class="level-4"><a href="#rosa-sts-creating-account-wide-sts-roles-and-policies-egress-lockdown_rosa-hcp-prepare-to-create-a-cluster">Create the account-wide STS roles and policies</a></li><li class="level-4"><a href="#rosa-hcp-sts-creating-a-cluster-egress-lockdown-cli_rosa-hcp-prepare-to-create-a-cluster">Create Red Hat OpenShift Services on AWS clusters with egress zero using the CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-prepare-to-create-a-cluster_rosa-hcp-prepare-to-create-a-cluster">Prepare to create a cluster</h3>
@@ -1452,7 +1452,7 @@ I: Successfully linked role ARN 'arn:aws:iam::2066:role/ManagedOpenShift-User.os
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-sts-creating-account-wide-sts-roles-and-policies_rosa-hcp-prepare-to-create-a-cluster">Creating the account-wide STS roles and policies</h4>
+<h4 id="rosa-sts-creating-account-wide-sts-roles-and-policies_rosa-hcp-prepare-to-create-a-cluster">Create the account-wide STS roles and policies</h4>
 <div class="paragraph _abstract">
 <p>Before you create a Red&#160;Hat OpenShift Services on AWS cluster, you must create the required account-wide Identity and Access Management (IAM) roles and policies by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1661,7 +1661,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::4540112244:oidc-provider/dvbwgdz
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-external-id_rosa-hcp-prepare-to-create-a-cluster">About external ID</h4>
+<h4 id="rosa-hcp-sts-external-id_rosa-hcp-prepare-to-create-a-cluster">External ID</h4>
 <div class="paragraph _abstract">
 <p>An external ID functions as a unique, separate, identifier embedded within your Red&#160;Hat OpenShift Services on AWS account-wide roles, blocking unauthorized third-party access.</p>
 </div>
@@ -1741,7 +1741,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::4540112244:oidc-provider/dvbwgdz
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-operator-config_rosa-hcp-prepare-to-create-a-cluster">Creating Operator roles and policies</h4>
+<h4 id="rosa-operator-config_rosa-hcp-prepare-to-create-a-cluster">Create Operator roles and policies</h4>
 <div class="paragraph _abstract">
 <p>When you deploy a Red&#160;Hat OpenShift Services on AWS cluster, you must create the Operator Identity and Access Management (IAM) roles. The cluster Operators use the Operator roles and policies to obtain temporary permissions to perform cluster operations, such as managing storage and external access.</p>
 </div>
@@ -1892,7 +1892,7 @@ ROLE NAME                                                         ROLE ARN      
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h4>
+<h4 id="rosa-hcp-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h4>
 <div class="paragraph _abstract">
 <p>You must have a Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </div>
@@ -1928,7 +1928,7 @@ ROLE NAME                                                         ROLE ARN      
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h4>
+<h4 id="rosa-hcp-quickstart-creating-vpc_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS clusters</h4>
 <div class="paragraph _abstract">
 <p>You must have an AWS Virtual Private Cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster. You can create a VPC by using the <code>rosa</code> CLI, or you can manually create the VPC resources in the AWS console.</p>
 </div>
@@ -1992,7 +1992,7 @@ ROLE NAME                                                         ROLE ARN      
 </table>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-create-network_rosa-hcp-prepare-to-create-a-cluster">Creating an AWS VPC using the ROSA CLI</h4>
+<h4 id="rosa-hcp-create-network_rosa-hcp-prepare-to-create-a-cluster">Create an AWS VPC using the ROSA CLI</h4>
 <div class="paragraph _abstract">
 <p>The <code>rosa create network</code> command is available in v.1.2.48 or later of the ROSA command-line interface (CLI) (<code>rosa</code>). The command uses AWS CloudFormation to create a virtual private cloud (VPC) and associated networking components necessary to install a Red&#160;Hat OpenShift Services on AWS cluster. CloudFormation is a native AWS infrastructure-as-code tool and is compatible with the AWS CLI.</p>
 </div>
@@ -2175,7 +2175,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud using Terraform</h4>
+<h4 id="rosa-hcp-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud using Terraform</h4>
 <div class="paragraph _abstract">
 <p>Terraform is a tool that allows you to create various resources using an established template. You can use Terraform with default options to create a virtual private cloud (VPC) for your Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </div>
@@ -2271,7 +2271,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-vpc-subnet-tagging_rosa-hcp-prepare-to-create-a-cluster">Tagging your subnets</h4>
+<h4 id="rosa-hcp-vpc-subnet-tagging_rosa-hcp-prepare-to-create-a-cluster">Tag your subnets</h4>
 <div class="paragraph _abstract">
 <p>If you created your own virtual private cloud (VPC) to create a Red&#160;Hat OpenShift Services on AWS cluster, you must tag your VPC subnets. Automated service preflight checks verify that these resources are tagged correctly before you can use these resources for a cluster.</p>
 </div>
@@ -2433,7 +2433,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="troubleshooting_shared-vpc-hcp_vpc-creation_rosa-hcp-prepare-to-create-a-cluster">Troubleshooting cluster creation</h4>
+<h4 id="troubleshooting_shared-vpc-hcp_vpc-creation_rosa-hcp-prepare-to-create-a-cluster">Troubleshoot cluster creation</h4>
 <div class="paragraph _abstract">
 <p>If your cluster fails to install, common virtual private cloud (VPC) configuration issues might be the cause.</p>
 </div>
@@ -2449,7 +2449,7 @@ TAGS    kubernetes.io/role/elb  &lt;subnet-id&gt;        subnet  1</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sharing-vpc-creation-and-sharing_rosa-hcp-prepare-to-create-a-cluster">Step One - VPC Owner: Configuring a VPC to share within your AWS organization</h4>
+<h4 id="rosa-hcp-sharing-vpc-creation-and-sharing_rosa-hcp-prepare-to-create-a-cluster">Step One - VPC Owner: Configure a VPC to share within your AWS organization</h4>
 <div class="paragraph _abstract">
 <p>You can share subnets within a virtual private cloud (VPC) with another AWS account in your AWS organization.</p>
 </div>
@@ -2583,7 +2583,7 @@ EOF</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sharing-vpc-dns-and-roles_rosa-hcp-prepare-to-create-a-cluster">Step Two - Cluster Creator: Reserving your DNS entries and creating cluster Operator roles</h4>
+<h4 id="rosa-hcp-sharing-vpc-dns-and-roles_rosa-hcp-prepare-to-create-a-cluster">Step Two - Cluster Creator: Reserve your DNS entries and create cluster Operator roles</h4>
 <div class="paragraph _abstract">
 <p>After the <strong>VPC Owner</strong> creates a VPC, subnets, and an Identity and Access Management (IAM) role, reserve an <code>openshiftapps.com</code> DNS domain and create Operator roles.</p>
 </div>
@@ -2777,7 +2777,7 @@ Take note of the Support role ARN and Worker role ARN, since you will use them i
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sharing-vpc-hosted-zones_rosa-hcp-prepare-to-create-a-cluster">Step Three - VPC Owner: Updating the shared VPC role and creating hosted zones</h4>
+<h4 id="rosa-hcp-sharing-vpc-hosted-zones_rosa-hcp-prepare-to-create-a-cluster">Step Three - VPC Owner: Update the shared VPC role and create hosted zones</h4>
 <div class="paragraph _abstract">
 <p>After the <strong>Cluster Creator</strong> provides the DNS domain and Identity and Access Management (IAM) roles, create two hosted zones and update the trust policy on the shared virtual private cloud (VPC) IAM roles.</p>
 </div>
@@ -2916,7 +2916,7 @@ Take note of the Support role ARN and Worker role ARN, since you will use them i
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sharing-vpc-cluster-creation_rosa-hcp-prepare-to-create-a-cluster">Step Four - Cluster Creator: Creating your cluster in a shared VPC</h4>
+<h4 id="rosa-hcp-sharing-vpc-cluster-creation_rosa-hcp-prepare-to-create-a-cluster">Step Four - Cluster Creator: Create your cluster in a shared VPC</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster in a shared VPC by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -2974,7 +2974,7 @@ Take note of the Support role ARN and Worker role ARN, since you will use them i
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-config-spot-instance-overview_rosa-hcp-prepare-to-create-a-cluster">Overview of Spot instances on Red&#160;Hat OpenShift Services on AWS</h4>
+<h4 id="rosa-hcp-config-spot-instance-overview_rosa-hcp-prepare-to-create-a-cluster">Spot instances on Red&#160;Hat OpenShift Services on AWS</h4>
 <div class="paragraph _abstract">
 <p>AWS Spot instances allow you to use spare EC2 capacity at significantly reduced costs compared to on-demand instances. Red&#160;Hat OpenShift Services on AWS supports Spot instances for worker node machine pools, enabling cost optimization for fault-tolerant and stateless workloads.</p>
 </div>
@@ -3822,7 +3822,7 @@ variable "nodepool_management_role_arn" {
 </div>
 </div>
 <div class="sect3">
-<h4 id="creating-cluster-with-aws-kms-key_rosa-hcp-prepare-to-create-a-cluster">Creating a Red&#160;Hat OpenShift Services on AWS cluster using a custom AWS KMS key</h4>
+<h4 id="creating-cluster-with-aws-kms-key_rosa-hcp-prepare-to-create-a-cluster">Create a Red&#160;Hat OpenShift Services on AWS cluster using a custom AWS KMS key</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster with a customer-provided Key Management Service (KMS) key that is used to encrypt either node root volumes, the etcd database, or both. A different KMS key ARN can be provided for each option.</p>
 </div>
@@ -4131,7 +4131,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </table>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-egress-zero-set-environment-variables_rosa-hcp-prepare-to-create-a-cluster">Setting environment variables for cluster creation</h4>
+<h4 id="rosa-hcp-egress-zero-set-environment-variables_rosa-hcp-prepare-to-create-a-cluster">Set environment variables for cluster creation</h4>
 <div class="paragraph _abstract">
 <p>You can set environment variables to streamline resource creation for your Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </div>
@@ -4202,7 +4202,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-egress-zero-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Creating a Virtual Private Cloud using Terraform</h4>
+<h4 id="rosa-hcp-egress-zero-vpc-terraform_rosa-hcp-prepare-to-create-a-cluster">Create a Virtual Private Cloud using Terraform</h4>
 <div class="paragraph _abstract">
 <p>Terraform is a tool that allows you to create various resources using an established template. You can use Terraform with default options to create a Virtual Private Cloud for your Red&#160;Hat OpenShift Services on AWS cluster.</p>
 </div>
@@ -4311,7 +4311,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-sts-creating-account-wide-sts-roles-and-policies-egress-lockdown_rosa-hcp-prepare-to-create-a-cluster">Creating the account-wide STS roles and policies</h4>
+<h4 id="rosa-sts-creating-account-wide-sts-roles-and-policies-egress-lockdown_rosa-hcp-prepare-to-create-a-cluster">Create the account-wide STS roles and policies</h4>
 <div class="paragraph _abstract">
 <p>Before you create a Red&#160;Hat OpenShift Services on AWS cluster, you must create the required account-wide IAM roles and policies by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -4429,7 +4429,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-sts-creating-a-cluster-egress-lockdown-cli_rosa-hcp-prepare-to-create-a-cluster">Creating Red&#160;Hat OpenShift Services on AWS clusters with egress zero using the CLI</h4>
+<h4 id="rosa-hcp-sts-creating-a-cluster-egress-lockdown-cli_rosa-hcp-prepare-to-create-a-cluster">Create Red&#160;Hat OpenShift Services on AWS clusters with egress zero using the CLI</h4>
 <div class="paragraph _abstract">
 <p>You can create a Red&#160;Hat OpenShift Services on AWS cluster with egress zero by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -4616,7 +4616,7 @@ A cluster in a disconnected environment does not have access to Red&#160;Hat pub
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 12:47:35 -0400
+Last updated 2026-10-12 19:01:29 -0400
 </div>
 </div>
 </body>

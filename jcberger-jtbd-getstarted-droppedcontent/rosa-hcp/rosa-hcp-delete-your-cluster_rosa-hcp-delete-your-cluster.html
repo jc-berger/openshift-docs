@@ -741,7 +741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-deleting-cluster_rosa-hcp-delete-your-cluster">Deleting a Red Hat OpenShift Services on AWS cluster and the cluster-specific IAM resources</a></li><li class="level-4"><a href="#rosa-deleting-sts-resources-account-wide_rosa-hcp-delete-your-cluster">Deleting the account-wide IAM resources</a></li><li class="level-4"><a href="#rosa-deleting-account-wide-iam-roles-and-policies_rosa-hcp-delete-your-cluster">Deleting the account-wide IAM roles and policies</a></li><li class="level-4"><a href="#rosa-unlinking-and-deleting-ocm-and-user-iam-roles_rosa-hcp-delete-your-cluster">Unlinking and deleting the OpenShift Cluster Manager and user IAM roles</a></li><li class="level-4"><a href="#rosa-getting-started-revoking-admin-privileges-and-user-access_rosa-hcp-delete-your-cluster">Revoking administrator privileges and user access</a></li><li class="level-4"><a href="#rosa-getting-started-revoke-admin-privileges_rosa-hcp-delete-your-cluster">Revoke administrator privileges from a user</a></li><li class="level-4"><a href="#rosa-getting-started-revoke-user-access_rosa-hcp-delete-your-cluster">Revoke user access to a cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-deleting-cluster_rosa-hcp-delete-your-cluster">Delete a Red Hat OpenShift Services on AWS cluster and the cluster-specific IAM resources</a></li><li class="level-4"><a href="#rosa-deleting-sts-resources-account-wide_rosa-hcp-delete-your-cluster">Delete the account-wide IAM resources</a></li><li class="level-4"><a href="#rosa-deleting-account-wide-iam-roles-and-policies_rosa-hcp-delete-your-cluster">Delete the account-wide IAM roles and policies</a></li><li class="level-4"><a href="#rosa-unlinking-and-deleting-ocm-and-user-iam-roles_rosa-hcp-delete-your-cluster">Unlink and delete the OpenShift Cluster Manager and user IAM roles</a></li><li class="level-4"><a href="#rosa-getting-started-revoking-admin-privileges-and-user-access_rosa-hcp-delete-your-cluster">Revoke administrator privileges and user access</a></li><li class="level-4"><a href="#rosa-getting-started-revoke-admin-privileges_rosa-hcp-delete-your-cluster">Revoke administrator privileges from a user</a></li><li class="level-4"><a href="#rosa-getting-started-revoke-user-access_rosa-hcp-delete-your-cluster">Revoke user access to a cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-delete-your-cluster_rosa-hcp-delete-your-cluster">Delete your cluster</h3>
@@ -749,7 +749,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Delete a Red&#160;Hat OpenShift Services on AWS cluster by using either Red Hat OpenShift Cluster Manager or the ROSA command-line interface (CLI) (<code>rosa</code>), then clean up the AWS Identity and Access Management (IAM) resources the cluster used.</p>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-deleting-cluster_rosa-hcp-delete-your-cluster">Deleting a Red&#160;Hat OpenShift Services on AWS cluster and the cluster-specific IAM resources</h4>
+<h4 id="rosa-hcp-deleting-cluster_rosa-hcp-delete-your-cluster">Delete a Red&#160;Hat OpenShift Services on AWS cluster and the cluster-specific IAM resources</h4>
 <div class="paragraph _abstract">
 <p>If you no longer need a Red&#160;Hat OpenShift Services on AWS cluster, you can delete it to stop incurring costs. After deleting the cluster, you must also remove the cluster-specific Operator roles and OpenID Connect (OIDC) provider to avoid leaving unused IAM resources in your AWS account.</p>
 </div>
@@ -988,7 +988,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-deleting-sts-resources-account-wide_rosa-hcp-delete-your-cluster">Deleting the account-wide IAM resources</h4>
+<h4 id="rosa-deleting-sts-resources-account-wide_rosa-hcp-delete-your-cluster">Delete the account-wide IAM resources</h4>
 <div class="paragraph _abstract">
 <p>You can delete the account-wide AWS Identity and Access Management (IAM) resources. First, delete all Red&#160;Hat OpenShift Services on AWS clusters that depend on these resources.</p>
 </div>
@@ -1014,7 +1014,7 @@ External Authentication:    Disabled</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-deleting-account-wide-iam-roles-and-policies_rosa-hcp-delete-your-cluster">Deleting the account-wide IAM roles and policies</h4>
+<h4 id="rosa-deleting-account-wide-iam-roles-and-policies_rosa-hcp-delete-your-cluster">Delete the account-wide IAM roles and policies</h4>
 <div class="paragraph _abstract">
 <p>You can delete the account-wide IAM roles and policies that you created for Red&#160;Hat OpenShift Services on AWS deployments, along with the account-wide Operator policies. You can delete the account-wide IAM roles and policies only after deleting all Red&#160;Hat OpenShift Services on AWS clusters that depend on them.</p>
 </div>
@@ -1173,7 +1173,7 @@ I: Successfully deleted the hosted CP account roles</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-unlinking-and-deleting-ocm-and-user-iam-roles_rosa-hcp-delete-your-cluster">Unlinking and deleting the OpenShift Cluster Manager and user IAM roles</h4>
+<h4 id="rosa-unlinking-and-deleting-ocm-and-user-iam-roles_rosa-hcp-delete-your-cluster">Unlink and delete the OpenShift Cluster Manager and user IAM roles</h4>
 <div class="paragraph _abstract">
 <p>When you install a Red&#160;Hat OpenShift Services on AWS cluster by using Red Hat OpenShift Cluster Manager, you also create OpenShift Cluster Manager and user Identity and Access Management (IAM) roles linked to your Red&#160;Hat organization. After deleting your cluster, you can unlink and delete the roles by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1198,7 +1198,7 @@ I: Successfully deleted the hosted CP account roles</code></pre>
 <p>You created OpenShift Cluster Manager and user IAM roles and linked them to your Red&#160;Hat organization.</p>
 </li>
 <li>
-<p>You have installed and configured the latest ROSA CLI (<code>rosa</code>) on your installation host.</p>
+<p>You have installed and configured the latest <code>rosa</code> CLI on your installation host.</p>
 </li>
 <li>
 <p>You have organization administrator privileges in your Red&#160;Hat organization.</p>
@@ -1265,7 +1265,7 @@ I: Successfully deleted the OCM role</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>OCM role deletion mode</code> field specifies the deletion mode. You can use <code>auto</code> mode to automatically delete the OpenShift Cluster Manager IAM role and policies. In <code>manual</code> mode, the ROSA CLI generates the <code>aws</code> commands needed to delete the role and policies. <code>manual</code> mode enables you to review the details before running the <code>aws</code> commands manually.</p>
+<p>The <code>OCM role deletion mode</code> field specifies the deletion mode. You can use <code>auto</code> mode to automatically delete the OpenShift Cluster Manager IAM role and policies. In <code>manual</code> mode, the <code>rosa</code> CLI generates the <code>aws</code> commands needed to delete the role and policies. <code>manual</code> mode enables you to review the details before running the <code>aws</code> commands manually.</p>
 </div>
 </li>
 </ol>
@@ -1328,7 +1328,7 @@ I: Successfully deleted the user role</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>User role deletion mode</code> field specifies the deletion mode. You can use <code>auto</code> mode to automatically delete the user IAM role. In <code>manual</code> mode, the ROSA CLI generates the <code>aws</code> command needed to delete the role. <code>manual</code> mode enables you to review the details before running the <code>aws</code> command manually.</p>
+<p>The <code>User role deletion mode</code> field specifies the deletion mode. You can use <code>auto</code> mode to automatically delete the user IAM role. In <code>manual</code> mode, the <code>rosa</code> CLI generates the <code>aws</code> command needed to delete the role. <code>manual</code> mode enables you to review the details before running the <code>aws</code> command manually.</p>
 </div>
 </li>
 </ol>
@@ -1338,7 +1338,7 @@ I: Successfully deleted the user role</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-getting-started-revoking-admin-privileges-and-user-access_rosa-hcp-delete-your-cluster">Revoking administrator privileges and user access</h4>
+<h4 id="rosa-getting-started-revoking-admin-privileges-and-user-access_rosa-hcp-delete-your-cluster">Revoke administrator privileges and user access</h4>
 <div class="paragraph _abstract">
 <p>You can revoke <code>cluster-admin</code> or <code>dedicated-admin</code> privileges from a user by using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
 </div>
@@ -1505,7 +1505,7 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 12:47:35 -0400
+Last updated 2026-10-12 19:01:29 -0400
 </div>
 </div>
 </body>
