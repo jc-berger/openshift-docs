@@ -674,6 +674,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="provision-compute-capacity-automatically-based-on-workload-demand-intro_rosa-hcp-provision-compute-capacity-automatically-based-on-workload-demand.html">Provision compute capacity automatically based on workload demand</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
@@ -682,6 +684,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-hcp-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
 </li>
 <li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
+</li>
+<li><a href="rosa-node-tuning-autonode_rosa-hcp-apply-node-tuning-to-automatically-provisioned-nodes.html">Apply node tuning to automatically provisioned nodes</a>
 </li>
 <li><a href="keep-workloads-running-smoothly-during-spot-interruptions-intro_rosa-hcp-keep-workloads-running-smoothly-during-spot-interruptions.html">Keep workloads running smoothly during spot interruptions</a>
 </li>
@@ -708,6 +712,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-amazon-cloudfront.html">Tutorial: Protect application workloads by using AWS WAF and Amazon CloudFront</a>
 </li>
 <li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs.html">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a>
+</li>
+<li><a href="about-custom-component-routes-rosa-hcp_rosa-hcp-configure-custom-component-routes.html">Custom component routes on Red&#160;Hat OpenShift Service on AWS</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
 </li>
 </ul>
 </li>
@@ -736,7 +744,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can quickly create a Red&#160;Hat OpenShift Service on AWS cluster by using the default installation options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 23. Default Red&#160;Hat OpenShift Service on AWS cluster specifications</caption>
+<caption class="title">Table 24. Default Red&#160;Hat OpenShift Service on AWS cluster specifications</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1425,7 +1433,7 @@ $ oc version</code></pre>
 <p>If you do not specify a template, CloudFormation uses a default template that creates resources with the following parameters:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 24. Default VPC parameters</caption>
+<caption class="title">Table 25. Default VPC parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -1704,7 +1712,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>Your VPC must meet the requirements shown in the following table.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 25. Requirements for your VPC</caption>
+<caption class="title">Table 26. Requirements for your VPC</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1761,7 +1769,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>If you created your own virtual private cloud (VPC) to create a Red&#160;Hat OpenShift Service on AWS cluster, you must tag your VPC subnets. Automated service preflight checks verify that these resources are tagged correctly before you can use these resources for a cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 26. Required subnet tags</caption>
+<caption class="title">Table 27. Required subnet tags</caption>
 <colgroup>
 <col style="width: 15.7894%;">
 <col style="width: 42.1052%;">
@@ -3422,7 +3430,7 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 <p>You can quickly create a Red&#160;Hat OpenShift Service on AWS cluster by using the default installation options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 27. Default Red&#160;Hat OpenShift Service on AWS cluster specifications</caption>
+<caption class="title">Table 28. Default Red&#160;Hat OpenShift Service on AWS cluster specifications</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3753,7 +3761,7 @@ I: Revoked role 'dedicated-admins' from user '&lt;idp_user_name&gt;' on cluster 
 <p>If you do not specify a template, CloudFormation uses a default template that creates resources with the following parameters:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 28. Default VPC parameters</caption>
+<caption class="title">Table 29. Default VPC parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -4032,7 +4040,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>Your VPC must meet the requirements shown in the following table.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 29. Requirements for your VPC</caption>
+<caption class="title">Table 30. Requirements for your VPC</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4089,7 +4097,7 @@ INFO[0140] Stack rosa-network-stack-5555 created</code></pre>
 <p>If you created your own virtual private cloud (VPC) to create a Red&#160;Hat OpenShift Service on AWS cluster, you must tag your VPC subnets. Automated service preflight checks verify that these resources are tagged correctly before you can use these resources for a cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 30. Required subnet tags</caption>
+<caption class="title">Table 31. Required subnet tags</caption>
 <colgroup>
 <col style="width: 15.7894%;">
 <col style="width: 42.1052%;">
@@ -6252,7 +6260,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>To learn more about the about the cloud service offering requirements that Red&#160;Hat OpenShift Service on AWS has already completed for you, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 31. Cloud service offering requirement</caption>
+<caption class="title">Table 32. Cloud service offering requirement</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -6292,7 +6300,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>In addition to the requirements, you have the option for enhanced capabilities based on your specific needs. To learn more, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 32. Enhanced capabilities</caption>
+<caption class="title">Table 33. Enhanced capabilities</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -6386,7 +6394,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 33. Actions and benefits for account provisioning and access setup</caption>
+<caption class="title">Table 34. Actions and benefits for account provisioning and access setup</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -6513,7 +6521,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>For guidance on operating your top level administrative accounts, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 34. Guidance on operating administrative and privileged accounts</caption>
+<caption class="title">Table 35. Guidance on operating administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -6589,7 +6597,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>For guidance on decommissioning your top level administrative accounts, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 35. Guidance on decommissioning your administrative and privileged accounts</caption>
+<caption class="title">Table 36. Guidance on decommissioning your administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -6671,7 +6679,7 @@ $ TENANT_ID=zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</code></pre>
 <p>For guidance on security related settings, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 36. Guidance on setting security for your administrative and privileged accounts</caption>
+<caption class="title">Table 37. Guidance on setting security for your administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -6986,7 +6994,7 @@ For more information, see <a href="https://aws.amazon.com/marketplace/pp/prodvie
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 20:33:12 -0400
+Last updated 2026-10-20 12:35:32 -0400
 </div>
 </div>
 </body>

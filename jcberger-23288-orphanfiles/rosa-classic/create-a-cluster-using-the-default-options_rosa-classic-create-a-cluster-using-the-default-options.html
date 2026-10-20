@@ -656,12 +656,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -692,6 +696,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
 </li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
@@ -2742,7 +2748,7 @@ $ oc version</code></pre>
 <p>You can quickly create a Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster by using the default installation options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 21. Default Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster specifications</caption>
+<caption class="title">Table 22. Default Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster specifications</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4381,7 +4387,7 @@ nodejs-5d9c6c7d9c-kghq2   1/1     Running     0          2m</code></pre>
 <p>You can quickly create a Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster by using the default installation options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 22. Default Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster specifications</caption>
+<caption class="title">Table 23. Default Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster specifications</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9989,7 +9995,7 @@ OIDC Endpoint URL:          https://oidc.op1.openshiftapps.com/&lt;cluster_id&gt
 <p>For AWS PrivateLink clusters, internet gateways, NAT gateways, and public subnets are not required, but the private subnets must have internet connectivity provided to install required components. At least one single private subnet is required for Single-AZ clusters and at least 3 private subnets are required for Multi-AZ clusters. The following table shows the AWS resources that are required for a successful installation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 23. Required AWS resources</caption>
+<caption class="title">Table 24. Required AWS resources</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -10997,7 +11003,7 @@ I: To view all DNS domains, run 'rosa list dns-domains'</code></pre>
 <p>The following tables describe the interactive OpenShift Cluster Manager role creation mode options:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 24. <code>--interactive</code> OpenShift Cluster Manager role creation mode options</caption>
+<caption class="title">Table 25. <code>--interactive</code> OpenShift Cluster Manager role creation mode options</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -11106,7 +11112,7 @@ I: To view all DNS domains, run 'rosa list dns-domains'</code></pre>
 <p>The following tables describe the interactive user role creation mode options:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 25. <code>--interactive</code> user role creation mode options</caption>
+<caption class="title">Table 26. <code>--interactive</code> user role creation mode options</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -11208,7 +11214,7 @@ I: To view all DNS domains, run 'rosa list dns-domains'</code></pre>
 <p>The following table describes the interactive cluster creation mode options:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 26. <code>--interactive</code> cluster creation mode options</caption>
+<caption class="title">Table 27. <code>--interactive</code> cluster creation mode options</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -13090,7 +13096,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 <p>Ensure that the ports required for cluster installation and operation are open on your network and configured to allow access between hosts. The requirements for the default security groups are listed in <a href="#required-secgroup-ports_rosa-classic-review-aws-prerequisites-for-non-sts-paths">Required ports for default security groups</a>.</p>
 </div>
 <table id="required-secgroup-ports_rosa-classic-review-aws-prerequisites-for-non-sts-paths" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 27. Required ports for default security groups</caption>
+<caption class="title">Table 28. Required ports for default security groups</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -13375,7 +13381,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 28. Domains for installation packages and tools</caption>
+<caption class="title">Table 29. Domains for installation packages and tools</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -13502,7 +13508,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 29. Domains for telemetry</caption>
+<caption class="title">Table 30. Domains for telemetry</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -13572,7 +13578,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 <p>Managed clusters require enabling telemetry to allow Red&#160;Hat to react more quickly to problems, better support the customers, and better understand how product upgrades impact clusters. For more information about how remote health monitoring data is used by Red&#160;Hat, see <em>About remote health monitoring</em> in the <em>Additional resources</em>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 30. Domains for Amazon Web Services (AWS) APIs</caption>
+<caption class="title">Table 31. Domains for Amazon Web Services (AWS) APIs</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -13663,7 +13669,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 31. Domains for OpenShift</caption>
+<caption class="title">Table 32. Domains for OpenShift</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -13690,7 +13696,7 @@ For more information, see the <a href="https://aws.amazon.com/elasticloadbalanci
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 32. Domains for your Site Reliability Engineering (SRE) and management</caption>
+<caption class="title">Table 33. Domains for your Site Reliability Engineering (SRE) and management</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -13824,7 +13830,7 @@ to provide for cluster creation, availability, and upgrades. The default maximum
 <p>If you need to modify or increase a specific AWS quota, see Amazon&#8217;s documentation on <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">requesting a quota increase</a>. Large quota requests are submitted to Amazon Support for review, and can take some time to be approved. If your quota request is urgent, contact AWS Support.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 33. Red&#160;Hat OpenShift Service on AWS (classic architecture)-required service quota</caption>
+<caption class="title">Table 34. Red&#160;Hat OpenShift Service on AWS (classic architecture)-required service quota</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -13909,7 +13915,7 @@ of storage is the required minimum for optimal performance.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 34. General AWS service quotas</caption>
+<caption class="title">Table 35. General AWS service quotas</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -16511,7 +16517,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 <p>To learn more about the about the cloud service offering requirements that Red&#160;Hat OpenShift Service on AWS (classic architecture) has already completed for you, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 35. Cloud service offering requirement</caption>
+<caption class="title">Table 36. Cloud service offering requirement</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -16551,7 +16557,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 <p>In addition to the requirements, you have the option for enhanced capabilities based on your specific needs. To learn more, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 36. Enhanced capabilities</caption>
+<caption class="title">Table 37. Enhanced capabilities</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -16645,7 +16651,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 37. Actions and benefits for account provisioning and access setup</caption>
+<caption class="title">Table 38. Actions and benefits for account provisioning and access setup</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -16772,7 +16778,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 <p>For guidance on operating your top level administrative accounts, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 38. Guidance on operating administrative and privileged accounts</caption>
+<caption class="title">Table 39. Guidance on operating administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -16848,7 +16854,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 <p>For guidance on decommissioning your top level administrative accounts, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 39. Guidance on decommissioning your administrative and privileged accounts</caption>
+<caption class="title">Table 40. Guidance on decommissioning your administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -16930,7 +16936,7 @@ router-default  LoadBalancer  172.30.237.88  a234gsr3242rsfsfs-1342r624.us-east-
 <p>For guidance on security related settings, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 40. Guidance on setting security for your administrative and privileged accounts</caption>
+<caption class="title">Table 41. Guidance on setting security for your administrative and privileged accounts</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -17062,7 +17068,7 @@ This overview walks through the actions it offers and the information on each cl
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 20:33:13 -0400
+Last updated 2026-10-20 12:35:34 -0400
 </div>
 </div>
 </body>

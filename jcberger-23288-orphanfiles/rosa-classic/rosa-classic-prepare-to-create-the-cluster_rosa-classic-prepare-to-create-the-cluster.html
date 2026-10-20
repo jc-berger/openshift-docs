@@ -656,12 +656,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -692,6 +696,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
 </li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
@@ -1654,7 +1660,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 41. Domains for installation packages and tools</caption>
+<caption class="title">Table 42. Domains for installation packages and tools</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1781,7 +1787,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 42. Domains for telemetry</caption>
+<caption class="title">Table 43. Domains for telemetry</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1851,7 +1857,7 @@ For more information about how remote health monitoring data is used by Red&#160
 <p>Managed clusters require enabling telemetry to allow Red&#160;Hat to react more quickly to problems, better support the customers, and better understand how product upgrades impact clusters. For more information about how remote health monitoring data is used by Red&#160;Hat, see <em>About remote health monitoring</em> in the <em>Additional resources</em>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 43. Domains for Amazon Web Services (AWS) APIs</caption>
+<caption class="title">Table 44. Domains for Amazon Web Services (AWS) APIs</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1942,7 +1948,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 44. Domains for OpenShift</caption>
+<caption class="title">Table 45. Domains for OpenShift</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1969,7 +1975,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 45. Domains for your Site Reliability Engineering (SRE) and management</caption>
+<caption class="title">Table 46. Domains for your Site Reliability Engineering (SRE) and management</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -2071,7 +2077,7 @@ For more information about how remote health monitoring data is used by Red&#160
 <p>If you created your own virtual private cloud (VPC) to create a Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster, you must tag your VPC subnets. Automated service preflight checks verify that these resources are tagged correctly before you can use these resources for a cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 46. Required subnet tags</caption>
+<caption class="title">Table 47. Required subnet tags</caption>
 <colgroup>
 <col style="width: 15.7894%;">
 <col style="width: 42.1052%;">
@@ -3580,7 +3586,7 @@ EOF</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 20:33:13 -0400
+Last updated 2026-10-20 12:35:34 -0400
 </div>
 </div>
 </body>
