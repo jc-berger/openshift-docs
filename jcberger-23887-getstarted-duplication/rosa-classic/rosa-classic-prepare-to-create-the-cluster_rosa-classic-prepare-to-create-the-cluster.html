@@ -645,7 +645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a>
+<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Cluster notifications</a>
 </li>
 </ul>
 </li>
@@ -656,12 +656,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -693,6 +697,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
 </li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
 </ul>
@@ -709,7 +715,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mos-checklist-cli-requirements_rosa-classic-prepare-to-create-the-cluster">CLI requirements</a></li><li class="level-4"><a href="#mos-checklist-aws-cli_rosa-classic-prepare-to-create-the-cluster">AWS CLI (aws)</a></li><li class="level-4"><a href="#mos-checklist-_rosa-classic-prepare-to-create-the-cluster">ROSA command-line interface (CLI) (rosa)</a></li><li class="level-4"><a href="#mos-checklist-oc-cli_rosa-classic-prepare-to-create-the-cluster">OpenShift CLI (oc)</a></li><li class="level-4"><a href="#mos-checklist-aws-infra-prereqs_rosa-classic-prepare-to-create-the-cluster">AWS infrastructure prerequisites</a></li><li class="level-4"><a href="#mos-checklist-scp-prereqs_rosa-classic-prepare-to-create-the-cluster">Service Control Policy (SCP) prerequisites</a></li><li class="level-4"><a href="#rosa-sts-setting-up-environment_rosa-classic-prepare-to-create-the-cluster">Set up the environment for STS</a></li><li class="level-4"><a href="#mos-checklist-vpc-privatelink_rosa-classic-prepare-to-create-the-cluster">VPC requirements for PrivateLink clusters</a></li><li class="level-4"><a href="#rosa-firewall-prerequisites_rosa-classic-prepare-to-create-the-cluster">Firewall prerequisites for Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#_domains_for_installation_packages_and_tools_2">Domains for installation packages and tools</a></li><li class="level-5"><a href="#_domains_for_telemetry_2">Domains for telemetry</a></li><li class="level-5"><a href="#_domains_for_amazon_web_services_aws_apis_2">Domains for Amazon Web Services (AWS) APIs</a></li><li class="level-5"><a href="#_domains_for_your_workload_2">Domains for your workload</a></li><li class="level-5"><a href="#_optional_domains_to_enable_third_party_content_2">Optional domains to enable third-party content</a></li><li class="level-5"><a href="#firewall-cli-bastion_rosa-classic-prepare-to-create-the-cluster">Outbound firewall rules for the rosa CLI for clusters with egress zero</a></li><li class="level-5"><a href="#firewall-hcm-bastion_rosa-classic-prepare-to-create-the-cluster">Outbound firewall rules from Red Hat Hybrid Cloud Console for clusters with egress zero</a></li><li class="level-4"><a href="#rosa-classic-firewall-prerequisites_rosa-classic-prepare-to-create-the-cluster">Firewall allowlist requirements for Red Hat OpenShift Service on AWS (classic architecture) clusters using STS</a></li><li class="level-4"><a href="#mos-checklist-add-custom-sgs_rosa-classic-prepare-to-create-the-cluster">Additional custom security groups</a></li><li class="level-4"><a href="#mos-checklist-custom-dns-domains_rosa-classic-prepare-to-create-the-cluster">Custom DNS and domains</a></li><li class="level-4"><a href="#rosa-hcp-vpc-subnet-tagging_rosa-classic-prepare-to-create-the-cluster">Tag your subnets</a></li><li class="level-4"><a href="#rosa-sharing-vpc-creation-and-sharing_rosa-classic-prepare-to-create-the-cluster">Step One - VPC Owner: Configure a VPC to share within your AWS organization</a></li><li class="level-4"><a href="#rosa-sharing-vpc-dns-and-roles_rosa-classic-prepare-to-create-the-cluster">Step Two - Cluster Creator: Reserve your DNS and create cluster operator roles</a></li><li class="level-4"><a href="#rosa-sharing-vpc-hosted-zones_rosa-classic-prepare-to-create-the-cluster">Step Three - VPC Owner: Update the shared VPC role and create hosted zones</a></li><li class="level-4"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-classic-prepare-to-create-the-cluster">Create an ocm-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-user-role-iam-basic-role_rosa-classic-prepare-to-create-the-cluster">Create a user-role IAM role</a></li><li class="level-4"><a href="#rosa-associating-account_rosa-classic-prepare-to-create-the-cluster">Associate your AWS account with IAM roles</a></li><li class="level-4"><a href="#rosa-associating-multiple-account_rosa-classic-prepare-to-create-the-cluster">Associate multiple AWS accounts with your Red Hat organization</a></li><li class="level-4"><a href="#rosa-sts-aws-requirements-attaching-boundary-policy_rosa-classic-prepare-to-create-the-cluster">Permission boundaries for the installer role</a></li><li class="level-5"><a href="#_examples_of_permission_boundary_policy_files_2">Examples of permission boundary policy files</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc_rosa-classic-prepare-to-create-the-cluster">Create an OpenID Connect configuration</a></li><li class="level-4"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-classic-prepare-to-create-the-cluster">Create an OIDC provider using the rosa CLI</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc-options_rosa-classic-prepare-to-create-the-cluster">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-raw-files_rosa-classic-prepare-to-create-the-cluster">raw-files</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-mode_rosa-classic-prepare-to-create-the-cluster">mode</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-managed_rosa-classic-prepare-to-create-the-cluster">managed</a></li><li class="level-4"><a href="#aws-encryption-key_rosa-classic-prepare-to-create-the-cluster">Create an AWS KMS encryption key</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mos-checklist-cli-requirements_rosa-classic-prepare-to-create-the-cluster">CLI requirements</a></li><li class="level-4"><a href="#mos-checklist-aws-cli_rosa-classic-prepare-to-create-the-cluster">AWS CLI (aws)</a></li><li class="level-4"><a href="#mos-checklist-_rosa-classic-prepare-to-create-the-cluster">ROSA command-line interface (CLI) (rosa)</a></li><li class="level-4"><a href="#mos-checklist-oc-cli_rosa-classic-prepare-to-create-the-cluster">OpenShift CLI (oc)</a></li><li class="level-4"><a href="#mos-checklist-aws-infra-prereqs_rosa-classic-prepare-to-create-the-cluster">AWS infrastructure prerequisites</a></li><li class="level-4"><a href="#mos-checklist-scp-prereqs_rosa-classic-prepare-to-create-the-cluster">Service Control Policy (SCP) prerequisites</a></li><li class="level-4"><a href="#rosa-sts-setting-up-environment_rosa-classic-prepare-to-create-the-cluster">Set up the environment for STS</a></li><li class="level-4"><a href="#mos-checklist-vpc-privatelink_rosa-classic-prepare-to-create-the-cluster">VPC requirements for PrivateLink clusters</a></li><li class="level-4"><a href="#rosa-firewall-prerequisites_rosa-classic-prepare-to-create-the-cluster">Firewall prerequisites for Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#_domains_for_installation_packages_and_tools_2">Domains for installation packages and tools</a></li><li class="level-5"><a href="#_domains_for_telemetry_2">Domains for telemetry</a></li><li class="level-5"><a href="#_domains_for_amazon_web_services_aws_apis_2">Domains for Amazon Web Services (AWS) APIs</a></li><li class="level-5"><a href="#_domains_for_your_workload_2">Domains for your workload</a></li><li class="level-5"><a href="#_optional_domains_to_enable_third_party_content_2">Optional domains to enable third-party content</a></li><li class="level-5"><a href="#firewall-cli-bastion_rosa-classic-prepare-to-create-the-cluster">Outbound firewall rules for the rosa CLI for clusters with egress zero</a></li><li class="level-5"><a href="#firewall-hcm-bastion_rosa-classic-prepare-to-create-the-cluster">Outbound firewall rules from Red Hat Hybrid Cloud Console for clusters with egress zero</a></li><li class="level-4"><a href="#rosa-classic-firewall-prerequisites_rosa-classic-prepare-to-create-the-cluster">Firewall allowlist requirements for Red Hat OpenShift Service on AWS (classic architecture) clusters using STS</a></li><li class="level-4"><a href="#mos-checklist-add-custom-sgs_rosa-classic-prepare-to-create-the-cluster">Additional custom security groups</a></li><li class="level-4"><a href="#mos-checklist-custom-dns-domains_rosa-classic-prepare-to-create-the-cluster">Custom DNS and domains</a></li><li class="level-4"><a href="#rosa-hcp-vpc-subnet-tagging_rosa-classic-prepare-to-create-the-cluster">Tag your subnets</a></li><li class="level-4"><a href="#rosa-sharing-vpc-creation-and-sharing_rosa-classic-prepare-to-create-the-cluster">Step One - VPC Owner: Configure a VPC to share within your AWS organization</a></li><li class="level-4"><a href="#rosa-sharing-vpc-dns-and-roles_rosa-classic-prepare-to-create-the-cluster">Step Two - Cluster Creator: Reserve your DNS entries and create cluster Operator roles</a></li><li class="level-4"><a href="#rosa-sharing-vpc-hosted-zones_rosa-classic-prepare-to-create-the-cluster">Step Three - VPC Owner: Update the shared VPC role and create hosted zones</a></li><li class="level-4"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-classic-prepare-to-create-the-cluster">Create an ocm-role IAM role</a></li><li class="level-4"><a href="#rosa-sts-user-role-iam-basic-role_rosa-classic-prepare-to-create-the-cluster">Create a user-role IAM role</a></li><li class="level-4"><a href="#rosa-associating-account_rosa-classic-prepare-to-create-the-cluster">Associate your AWS account with IAM roles</a></li><li class="level-4"><a href="#rosa-associating-multiple-account_rosa-classic-prepare-to-create-the-cluster">Associate multiple AWS accounts with your Red Hat organization</a></li><li class="level-4"><a href="#rosa-sts-aws-requirements-attaching-boundary-policy_rosa-classic-prepare-to-create-the-cluster">Permission boundaries for the installer role</a></li><li class="level-5"><a href="#_examples_of_permission_boundary_policy_files_2">Examples of permission boundary policy files</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc_rosa-classic-prepare-to-create-the-cluster">Create an OpenID Connect configuration</a></li><li class="level-4"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-classic-prepare-to-create-the-cluster">Create an OIDC provider using the rosa CLI</a></li><li class="level-4"><a href="#rosa-sts-byo-oidc-options_rosa-classic-prepare-to-create-the-cluster">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-raw-files_rosa-classic-prepare-to-create-the-cluster">raw-files</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-mode_rosa-classic-prepare-to-create-the-cluster">mode</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-managed_rosa-classic-prepare-to-create-the-cluster">managed</a></li><li class="level-4"><a href="#aws-encryption-key_rosa-classic-prepare-to-create-the-cluster">Create an AWS KMS encryption key</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-classic-prepare-to-create-the-cluster_rosa-classic-prepare-to-create-the-cluster">Prepare to create the cluster</h3>
@@ -1654,7 +1660,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 30. Domains for installation packages and tools</caption>
+<caption class="title">Table 31. Domains for installation packages and tools</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1781,7 +1787,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 31. Domains for telemetry</caption>
+<caption class="title">Table 32. Domains for telemetry</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1851,7 +1857,7 @@ For more information about how remote health monitoring data is used by Red&#160
 <p>Managed clusters require enabling telemetry to allow Red&#160;Hat to react more quickly to problems, better support the customers, and better understand how product upgrades impact clusters. For more information about how remote health monitoring data is used by Red&#160;Hat, see <em>About remote health monitoring</em> in the <em>Additional resources</em>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 32. Domains for Amazon Web Services (AWS) APIs</caption>
+<caption class="title">Table 33. Domains for Amazon Web Services (AWS) APIs</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1942,7 +1948,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 33. Domains for OpenShift</caption>
+<caption class="title">Table 34. Domains for OpenShift</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -1969,7 +1975,7 @@ For more information about how remote health monitoring data is used by Red&#160
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 34. Domains for your Site Reliability Engineering (SRE) and management</caption>
+<caption class="title">Table 35. Domains for your Site Reliability Engineering (SRE) and management</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -2071,7 +2077,7 @@ For more information about how remote health monitoring data is used by Red&#160
 <p>If you created your own virtual private cloud (VPC) to create a Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster, you must tag your VPC subnets. Automated service preflight checks verify that these resources are tagged correctly before you can use these resources for a cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 35. Required subnet tags</caption>
+<caption class="title">Table 36. Required subnet tags</caption>
 <colgroup>
 <col style="width: 15.7894%;">
 <col style="width: 42.1052%;">
@@ -2353,7 +2359,7 @@ EOF</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rosa-sharing-vpc-dns-and-roles_rosa-classic-prepare-to-create-the-cluster">Step Two - Cluster Creator: Reserve your DNS and create cluster operator roles</h4>
+<h4 id="rosa-sharing-vpc-dns-and-roles_rosa-classic-prepare-to-create-the-cluster">Step Two - Cluster Creator: Reserve your DNS entries and create cluster Operator roles</h4>
 <div class="paragraph _abstract">
 <p>After the <strong>VPC Owner</strong> creates a virtual private cloud, subnets, and an IAM role for sharing the VPC resources, reserve an <code>openshiftapps.com</code> DNS domain and create Operator roles to communicate back to the <strong>VPC Owner</strong>.</p>
 </div>
@@ -3580,7 +3586,7 @@ EOF</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:36 -0400
+Last updated 2026-10-20 11:25:15 -0400
 </div>
 </div>
 </body>

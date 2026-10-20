@@ -646,7 +646,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a>
+<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Cluster notifications</a>
 </li>
 </ul>
 </li>
@@ -656,12 +656,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html"><span class="toc-current">Manage compute capacity for your cluster</span></a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -693,6 +697,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
 </li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
 </ul>
@@ -709,7 +715,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understand-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster">Understand compute capacity</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_rosa-classic-manage-compute-capacity-for-your-cluster">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_rosa-classic-manage-compute-capacity-for-your-cluster">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pools</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-multi-zone_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pools in multiple zone clusters</a></li><li class="level-4"><a href="#add-compute-capacity-intro_rosa-classic-add-compute-capacity">Add compute capacity</a></li><li class="level-5"><a href="#creating_machine_pools_ocm_rosa-classic-add-compute-capacity">Create a machine pool using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#creating_machine_pools_cli_rosa-classic-add-compute-capacity">Create a machine pool using the rosa CLI</a></li><li class="level-5"><a href="#creating_machine_pools_cli_autoscaling_rosa-classic-add-compute-capacity">Create an autoscaling machine pool using the rosa CLI</a></li><li class="level-5"><a href="#rosa-nodes-machine-pools-local-zones_rosa-classic-add-compute-capacity">Configure machine pools in Local Zones</a></li><li class="level-5"><a href="#rosa-adding-tags-cli_rosa-classic-add-compute-capacity">Add tags to a machine pool by using the rosa CLI</a></li><li class="level-4"><a href="#scale-compute-capacity-intro_rosa-classic-scale-compute-capacity">Scale compute capacity</a></li><li class="level-5"><a href="#rosa-scaling-worker-nodes_rosa-classic-scale-compute-capacity">Scale compute nodes manually</a></li><li class="level-5"><a href="#ocm-enabling-autoscaling_rosa-classic-scale-compute-capacity">Enable autoscaling nodes in an existing cluster using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#ocm-disabling-autoscaling_rosa-classic-scale-compute-capacity">Disable autoscaling nodes in an existing cluster using OpenShift Cluster Manager</a></li><li class="level-4"><a href="#control-workload-placement-on-nodes-intro_rosa-classic-control-workload-placement-on-nodes">Control workload placement on nodes</a></li><li class="level-5"><a href="#rosa-adding-node-labels_rosa-classic-control-workload-placement-on-nodes">Add node labels to control scheduling</a></li><li class="level-5"><a href="#add-node-taints-to-restrict-workloads-intro_rosa-classic-control-workload-placement-on-nodes">Add node taints to restrict workloads</a></li><li class="level-6"><a href="#rosa-adding-taints-ocm_rosa-classic-control-workload-placement-on-nodes">Add taints to a machine pool using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#rosa-adding-taints-cli_rosa-classic-control-workload-placement-on-nodes">Add taints to a machine pool using the rosa CLI</a></li><li class="level-4"><a href="#configuring-machine-pool-disk-volume_rosa-classic-adjust-node-storage-capacity">Adjust node storage capacity</a></li><li class="level-5"><a href="#configuring-machine-pool-disk-volume-ocm_rosa-classic-adjust-node-storage-capacity">Configure machine pool disk volume using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#configuring-machine-pool-disk-volume-cli_rosa-classic-adjust-node-storage-capacity">Configure machine pool disk volume using the ROSA CLI</a></li><li class="level-4"><a href="#remove-compute-capacity-intro_rosa-classic-remove-compute-capacity">Remove compute capacity</a></li><li class="level-5"><a href="#deleting-machine-pools-ocm_rosa-classic-remove-compute-capacity">Delete a machine pool using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#deleting-machine-pools-cli_rosa-classic-remove-compute-capacity">Delete a machine pool using the rosa CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understand-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster">Understand compute capacity</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_rosa-classic-manage-compute-capacity-for-your-cluster">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_rosa-classic-manage-compute-capacity-for-your-cluster">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pools</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-multi-zone_rosa-classic-manage-compute-capacity-for-your-cluster">Machine pools in multiple zone clusters</a></li><li class="level-4"><a href="#add-compute-capacity-intro_rosa-classic-add-compute-capacity">Add compute capacity</a></li><li class="level-5"><a href="#creating_machine_pools_ocm_rosa-classic-add-compute-capacity">Create a machine pool using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#creating_machine_pools_cli_rosa-classic-add-compute-capacity">Create a machine pool using the rosa CLI</a></li><li class="level-5"><a href="#creating_machine_pools_cli_autoscaling_rosa-classic-add-compute-capacity">Create an autoscaling machine pool using the rosa CLI</a></li><li class="level-5"><a href="#rosa-nodes-machine-pools-local-zones_rosa-classic-add-compute-capacity">Configure machine pools in Local Zones</a></li><li class="level-5"><a href="#rosa-adding-tags-cli_rosa-classic-add-compute-capacity">Add tags to a machine pool by using the rosa CLI</a></li><li class="level-4"><a href="#scale-compute-capacity-intro_rosa-classic-scale-compute-capacity">Scale compute capacity</a></li><li class="level-5"><a href="#rosa-scaling-worker-nodes_rosa-classic-scale-compute-capacity">Scale compute nodes manually</a></li><li class="level-5"><a href="#ocm-enabling-autoscaling_rosa-classic-scale-compute-capacity">Enable autoscaling nodes in an existing cluster using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#ocm-disabling-autoscaling_rosa-classic-scale-compute-capacity">Disable autoscaling nodes in an existing cluster using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#rosa-disabling-autoscaling_rosa-classic-scale-compute-capacity">Disabling autoscaling nodes in an existing cluster using the rosa CLI</a></li><li class="level-4"><a href="#control-workload-placement-on-nodes-intro_rosa-classic-control-workload-placement-on-nodes">Control workload placement on nodes</a></li><li class="level-5"><a href="#rosa-adding-node-labels_rosa-classic-control-workload-placement-on-nodes">Add node labels to control scheduling</a></li><li class="level-5"><a href="#add-node-taints-to-restrict-workloads-intro_rosa-classic-control-workload-placement-on-nodes">Add node taints to restrict workloads</a></li><li class="level-6"><a href="#rosa-adding-taints-ocm_rosa-classic-control-workload-placement-on-nodes">Add taints to a machine pool using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#rosa-adding-taints-cli_rosa-classic-control-workload-placement-on-nodes">Add taints to a machine pool using the rosa CLI</a></li><li class="level-4"><a href="#configuring-machine-pool-disk-volume_rosa-classic-adjust-node-storage-capacity">Adjust node storage capacity</a></li><li class="level-5"><a href="#configuring-machine-pool-disk-volume-ocm_rosa-classic-adjust-node-storage-capacity">Configure machine pool disk volume using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#configuring-machine-pool-disk-volume-cli_rosa-classic-adjust-node-storage-capacity">Configure machine pool disk volume using the ROSA CLI</a></li><li class="level-4"><a href="#remove-compute-capacity-intro_rosa-classic-remove-compute-capacity">Remove compute capacity</a></li><li class="level-5"><a href="#deleting-machine-pools-ocm_rosa-classic-remove-compute-capacity">Delete a machine pool using OpenShift Cluster Manager</a></li><li class="level-5"><a href="#deleting-machine-pools-cli_rosa-classic-remove-compute-capacity">Delete a machine pool using the rosa CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster">Manage compute capacity for your cluster</h3>
@@ -1790,6 +1796,33 @@ mp1       No            3           m7i.xlarge                         us-east-1
 </ol>
 </div>
 </div>
+<div class="sect4">
+<h5 id="rosa-disabling-autoscaling_rosa-classic-scale-compute-capacity">Disabling autoscaling nodes in an existing cluster using the <code>rosa</code> CLI</h5>
+<div class="paragraph _abstract">
+<p>Disable autoscaling for worker nodes in the machine pool definition using the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit machinepool --cluster=&lt;cluster_name&gt; &lt;machinepool_ID&gt; --enable-autoscaling=false --replicas=&lt;number&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example disables autoscaling on the <code>default</code> machine pool on a cluster named <code>mycluster</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa edit machinepool --cluster=mycluster default --enable-autoscaling=false --replicas=3</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="control-workload-placement-on-nodes-intro_rosa-classic-control-workload-placement-on-nodes">Control workload placement on nodes</h4>
@@ -2350,12 +2383,12 @@ Security Group IDs:</code></pre>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-classic-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Service on AWS (classic architecture)</a> | Next: <a href="_optimize.html">Optimize</a> →</p>
+<p>← Previous: <a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-classic-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Service on AWS (classic architecture)</a> | Next: <a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:36 -0400
+Last updated 2026-10-20 11:25:15 -0400
 </div>
 </div>
 </body>

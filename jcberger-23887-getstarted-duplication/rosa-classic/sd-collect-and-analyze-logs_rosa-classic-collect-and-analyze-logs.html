@@ -605,7 +605,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html"><span class="toc-current">Collect and analyze application and infrastructure logs</span></a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a>
+<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Cluster notifications</a>
 </li>
 </ul>
 </li>
@@ -616,12 +616,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -653,6 +657,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
 </li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
 </ul>
@@ -673,16 +679,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs">Collect and analyze application and infrastructure logs</h3>
 <div class="paragraph _abstract">
-<p>You can deploy logging on your Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster to collect and aggregate node system audit logs, application container logs, and infrastructure logs. For detailed information, see the <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_logging">Red&#160;Hat OpenShift Logging</a> documentation.</p>
+<p>You can deploy logging on your Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster to collect and aggregate node system audit logs, application container logs, and infrastructure logs.</p>
+</div>
+<div class="paragraph">
+<p>You can use logging to perform the following tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Forward logs to your chosen log outputs, including on-cluster, Red&#160;Hat managed log storage.</p>
+</li>
+<li>
+<p>Visualize your log data in the Red&#160;Hat OpenShift Service on AWS (classic architecture) web console.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because logging releases on a different cadence from Red&#160;Hat OpenShift Service on AWS (classic architecture), the logging documentation is available as a separate documentation set at <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_logging/">Red&#160;Hat OpenShift Logging</a>.</p>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Service on AWS (classic architecture)</a> | Next: <a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a> →</p>
+<p>↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Service on AWS (classic architecture)</a> | Next: <a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Cluster notifications</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:36 -0400
+Last updated 2026-10-20 11:25:15 -0400
 </div>
 </div>
 </body>

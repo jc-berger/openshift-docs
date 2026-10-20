@@ -674,6 +674,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="provision-compute-capacity-automatically-based-on-workload-demand-intro_rosa-hcp-provision-compute-capacity-automatically-based-on-workload-demand.html">Provision compute capacity automatically based on workload demand</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
@@ -682,6 +684,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-hcp-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
 </li>
 <li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
+</li>
+<li><a href="rosa-node-tuning-autonode_rosa-hcp-apply-node-tuning-to-automatically-provisioned-nodes.html">Apply node tuning to automatically provisioned nodes</a>
 </li>
 <li><a href="keep-workloads-running-smoothly-during-spot-interruptions-intro_rosa-hcp-keep-workloads-running-smoothly-during-spot-interruptions.html">Keep workloads running smoothly during spot interruptions</a>
 </li>
@@ -709,6 +713,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs.html">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a>
 </li>
+<li><a href="about-custom-component-routes-rosa-hcp_rosa-hcp-configure-custom-component-routes.html">Custom component routes on Red&#160;Hat OpenShift Service on AWS</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
@@ -723,7 +731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-key-features_rosa-hcp-learn-about-benefits-and-use-cases">Key features of Red Hat OpenShift Service on AWS</a></li><li class="level-4"><a href="#rosa-sdpolicy-billing_rosa-hcp-learn-about-benefits-and-use-cases">Billing and pricing</a></li><li class="level-4"><a href="#rosa-getting-started-learn_rosa-hcp-learn-about-benefits-and-use-cases">Getting started with Red Hat OpenShift Service on AWS</a></li><li class="level-4"><a href="#architect_rosa-hcp-learn-about-benefits-and-use-cases">Architect</a></li><li class="level-4"><a href="#cluster-administrator_rosa-hcp-learn-about-benefits-and-use-cases">Cluster administrator</a></li><li class="level-4"><a href="#rosa-developer-topics_rosa-hcp-learn-about-benefits-and-use-cases">Developer</a></li><li class="level-4"><a href="#rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models">Architecture models</a></li><li class="level-5"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS architecture</a></li><li class="level-6"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS architecture on public and private networks</a></li><li class="level-5"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS</a></li><li class="level-6"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS on public and private networks</a></li><li class="level-5"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-6"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-5"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS with Local Zones</a></li><li class="level-4"><a href="#rosa-hcp-acquire-aws-sts-authentication_rosa-hcp-acquire-aws-sts-authentication">AWS STS authentication</a></li><li class="level-5"><a href="#rosa-hcp-sts-credential-method_rosa-hcp-acquire-aws-sts-authentication">AWS STS credential method</a></li><li class="level-5"><a href="#rosa-hcp-sts-security_rosa-hcp-acquire-aws-sts-authentication">AWS STS security</a></li><li class="level-5"><a href="#rosa-hcp-sts-components_rosa-hcp-acquire-aws-sts-authentication">Components of Red Hat OpenShift Service on AWS</a></li><li class="level-5"><a href="#rosa-hcp-sts-deploying-cluster_rosa-hcp-acquire-aws-sts-authentication">Deploy a Red Hat OpenShift Service on AWS cluster</a></li><li class="level-5"><a href="#rosa-hcp-sts-workflow_rosa-hcp-acquire-aws-sts-authentication">Red Hat OpenShift Service on AWS workflow</a></li><li class="level-4"><a href="#rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters">IAM resources for STS clusters</a></li><li class="level-5"><a href="#rosa-sts-understanding-ocm-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the OpenShift Cluster Manager role</a></li><li class="level-6"><a href="#rosa-sts-understanding-user-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the user role</a></li><li class="level-5"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an ocm-role IAM role</a></li><li class="level-5"><a href="#rosa-sts-account-wide-roles-and-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-roles-and-policies-creation-methods_rosa-hcp-explore-sts-resources-for-iam-clusters">Methods of account-wide role creation</a></li><li class="level-5"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy AWS CLI reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-manual-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using manual mode for account role creation</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-auto-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using auto mode for role creation</a></li><li class="level-5"><a href="#rosa-sts-operator-roles_rosa-hcp-explore-sts-resources-for-iam-clusters">Cluster-specific Operator IAM role reference</a></li><li class="level-5"><a href="#rosa-sts-operator-role-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Operator IAM role AWS CLI reference</a></li><li class="level-5"><a href="#rosa-sts-about-operator-role-prefixes_rosa-hcp-explore-sts-resources-for-iam-clusters">Custom Operator IAM role prefixes</a></li><li class="level-5"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OIDC provider using the rosa CLI</a></li><li class="level-5"><a href="#rosa-byo-odic-overview_rosa-hcp-explore-sts-resources-for-iam-clusters">OpenID Connect configuration overview</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-options_rosa-hcp-explore-sts-resources-for-iam-clusters">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-raw-files_rosa-hcp-explore-sts-resources-for-iam-clusters">raw-files</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">mode</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-managed_rosa-hcp-explore-sts-resources-for-iam-clusters">managed</a></li><li class="level-5"><a href="#rosa-minimum-scp_rosa-hcp-explore-sts-resources-for-iam-clusters">Minimum set of effective permissions for service control policies</a></li><li class="level-5"><a href="#rosa-aws-customer-managed-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Customer-managed policies</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-key-features_rosa-hcp-learn-about-benefits-and-use-cases">Key features of Red Hat OpenShift Service on AWS</a></li><li class="level-4"><a href="#sd-vs-ocp_rosa-hcp-learn-about-benefits-and-use-cases">Differences between Red Hat OpenShift Service on AWS and OpenShift Container Platform</a></li><li class="level-4"><a href="#rosa-sdpolicy-billing_rosa-hcp-learn-about-benefits-and-use-cases">Billing and pricing</a></li><li class="level-4"><a href="#rosa-getting-started-learn_rosa-hcp-learn-about-benefits-and-use-cases">Getting started with Red Hat OpenShift Service on AWS</a></li><li class="level-4"><a href="#architect_rosa-hcp-learn-about-benefits-and-use-cases">Architect</a></li><li class="level-4"><a href="#cluster-administrator_rosa-hcp-learn-about-benefits-and-use-cases">Cluster administrator</a></li><li class="level-4"><a href="#rosa-developer-topics_rosa-hcp-learn-about-benefits-and-use-cases">Developer</a></li><li class="level-4"><a href="#rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models">Architecture models</a></li><li class="level-5"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-5"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS architecture</a></li><li class="level-6"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS architecture on public and private networks</a></li><li class="level-5"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS</a></li><li class="level-6"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS on public and private networks</a></li><li class="level-5"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-6"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-5"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Service on AWS with Local Zones</a></li><li class="level-4"><a href="#rosa-hcp-acquire-aws-sts-authentication_rosa-hcp-acquire-aws-sts-authentication">AWS STS authentication</a></li><li class="level-5"><a href="#rosa-hcp-sts-credential-method_rosa-hcp-acquire-aws-sts-authentication">AWS STS credential method</a></li><li class="level-5"><a href="#rosa-hcp-sts-security_rosa-hcp-acquire-aws-sts-authentication">AWS STS security</a></li><li class="level-5"><a href="#rosa-hcp-sts-components_rosa-hcp-acquire-aws-sts-authentication">Components of Red Hat OpenShift Service on AWS</a></li><li class="level-5"><a href="#rosa-hcp-sts-deploying-cluster_rosa-hcp-acquire-aws-sts-authentication">Deploy a Red Hat OpenShift Service on AWS cluster</a></li><li class="level-5"><a href="#rosa-hcp-sts-workflow_rosa-hcp-acquire-aws-sts-authentication">Red Hat OpenShift Service on AWS workflow</a></li><li class="level-4"><a href="#rosa-hcp-explore-sts-resources-for-iam-clusters_rosa-hcp-explore-sts-resources-for-iam-clusters">IAM resources for STS clusters</a></li><li class="level-5"><a href="#rosa-sts-understanding-ocm-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the OpenShift Cluster Manager role</a></li><li class="level-6"><a href="#rosa-sts-understanding-user-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Understanding the user role</a></li><li class="level-5"><a href="#rosa-sts-ocm-roles-and-permissions-iam-basic-role_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an ocm-role IAM role</a></li><li class="level-5"><a href="#rosa-sts-account-wide-roles-and-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-roles-and-policies-creation-methods_rosa-hcp-explore-sts-resources-for-iam-clusters">Methods of account-wide role creation</a></li><li class="level-5"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Account-wide IAM role and policy AWS CLI reference</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-manual-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using manual mode for account role creation</a></li><li class="level-6"><a href="#rosa-sts-account-wide-role-and-policy-aws-cli-auto-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">Using auto mode for role creation</a></li><li class="level-5"><a href="#rosa-sts-operator-roles_rosa-hcp-explore-sts-resources-for-iam-clusters">Cluster-specific Operator IAM role reference</a></li><li class="level-5"><a href="#rosa-sts-operator-role-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Operator IAM role AWS CLI reference</a></li><li class="level-5"><a href="#rosa-sts-about-operator-role-prefixes_rosa-hcp-explore-sts-resources-for-iam-clusters">Custom Operator IAM role prefixes</a></li><li class="level-5"><a href="#rosa-sts-oidc-provider-for-operators-aws-cli_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OIDC provider using the rosa CLI</a></li><li class="level-5"><a href="#rosa-byo-odic-overview_rosa-hcp-explore-sts-resources-for-iam-clusters">OpenID Connect configuration overview</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc_rosa-hcp-explore-sts-resources-for-iam-clusters">Create an OpenID Connect configuration</a></li><li class="level-5"><a href="#rosa-sts-byo-oidc-options_rosa-hcp-explore-sts-resources-for-iam-clusters">Parameter options for creating your own OpenID Connect configuration</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-raw-files_rosa-hcp-explore-sts-resources-for-iam-clusters">raw-files</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-mode_rosa-hcp-explore-sts-resources-for-iam-clusters">mode</a></li><li class="level-6"><a href="#rosa-sts-byo-oidc-managed_rosa-hcp-explore-sts-resources-for-iam-clusters">managed</a></li><li class="level-5"><a href="#rosa-minimum-scp_rosa-hcp-explore-sts-resources-for-iam-clusters">Minimum set of effective permissions for service control policies</a></li><li class="level-5"><a href="#rosa-aws-customer-managed-policies_rosa-hcp-explore-sts-resources-for-iam-clusters">Customer-managed policies</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-learn-about-benefits-and-use-cases_rosa-hcp-learn-about-benefits-and-use-cases">Benefits and use cases</h3>
@@ -830,6 +838,60 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="sd-vs-ocp_rosa-hcp-learn-about-benefits-and-use-cases">Differences between Red&#160;Hat OpenShift Service on AWS and OpenShift Container Platform</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Service on AWS delivers the OpenShift Container Platform code base as an optimized, fully managed service that automates standard component configurations.</p>
+</div>
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Service on AWS uses the same code base as OpenShift Container Platform but is installed in an opinionated way to be optimized for performance, scalability, and security. Red&#160;Hat OpenShift Service on AWS is a fully managed service; therefore, many of the Red&#160;Hat OpenShift Service on AWS components and settings that you manually set up in OpenShift Container Platform are set up for you by default.</p>
+</div>
+<div class="paragraph">
+<p>Review the following differences between Red&#160;Hat OpenShift Service on AWS and a standard installation of OpenShift Container Platform on your own infrastructure:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">OpenShift Container Platform</th>
+<th class="tableblock halign-left valign-top">Red&#160;Hat OpenShift Service on AWS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The customer installs and configures OpenShift Container Platform.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Service on AWS is installed through Red Hat OpenShift Cluster Manager or the ROSA command-line interface (CLI) (<code>rosa</code>) and in a standardized way that is optimized for performance, scalability, and security.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customers can choose their computing resources.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Service on AWS is hosted and managed in a public cloud (Amazon Web Services) provided by the customer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customers have top-level administrative access to the infrastructure.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customers have a built-in administrator group (<code>dedicated-admin</code>), though the top-level administration access is available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customers can use all supported features and configuration settings available in OpenShift Container Platform.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some OpenShift Container Platform features and configuration settings might not be available or changeable in Red&#160;Hat OpenShift Service on AWS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You set up control plane components such as the API server and etcd on machines that get the <code>control</code> role. You can modify the control plane components, but are responsible for backing up, restoring, and making control plane data highly available.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat sets up the control plane and manages the control plane components for you. The control plane is highly available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You are responsible for updating the underlying infrastructure for the control plane and worker nodes. You can use the OpenShift web console to update OpenShift Container Platform versions.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat automatically notifies the customer when updates are available. You can manually or automatically schedule updates in OpenShift Cluster Manager.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Support is provided based on the terms of your Red Hat subscription or cloud provider.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engineered, operated, and supported by Red Hat with a 99.95% uptime SLA and 24x7 coverage. For details, see <a href="https://www.redhat.com/licenses/Appendix-4-Red-Hat-Online-Services-20230523.pdf">Red Hat Enterprise Agreement Appendix 4 (Online Subscription Services)</a>.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="rosa-sdpolicy-billing_rosa-hcp-learn-about-benefits-and-use-cases">Billing and pricing</h4>
@@ -3717,7 +3779,7 @@ I: Created OIDC provider with ARN 'arn:aws:iam::242819244:oidc-provider/dvbwgdzt
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:34 -0400
+Last updated 2026-10-20 11:25:13 -0400
 </div>
 </div>
 </body>

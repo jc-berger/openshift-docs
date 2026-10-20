@@ -646,7 +646,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Monitor cluster health</a>
+<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html">Cluster notifications</a>
 </li>
 </ul>
 </li>
@@ -657,12 +657,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -693,6 +697,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
 </li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
@@ -1020,7 +1026,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 <p>Running this command redirects you to the Red&#160;Hat single sign-on login. Log in with your Red&#160;Hat login or email.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 39. Optional arguments inherited from parent commands+</caption>
+<caption class="title">Table 40. Optional arguments inherited from parent commands+</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1080,7 +1086,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 <p>Running this command redirects you to the Red&#160;Hat SSO login and provides a login code.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 40. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 41. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1156,7 +1162,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 41. Arguments</caption>
+<caption class="title">Table 42. Arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1195,7 +1201,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 42. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 43. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1241,7 +1247,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 43. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 44. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1302,7 +1308,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 44. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 45. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1363,7 +1369,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 45. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 46. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1433,7 +1439,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 46. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 47. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1471,7 +1477,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 47. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 48. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1515,7 +1521,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 48. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 49. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1593,7 +1599,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 49. Arguments</caption>
+<caption class="title">Table 50. Arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1640,7 +1646,7 @@ To use service accounts for automation purposes, see the <a href="https://consol
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 50. Optional arguments inherited from parent commands</caption>
+<caption class="title">Table 51. Optional arguments inherited from parent commands</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1824,7 +1830,7 @@ Your <code>rosa</code> CLI is up to date.</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:36 -0400
+Last updated 2026-10-20 11:25:15 -0400
 </div>
 </div>
 </body>

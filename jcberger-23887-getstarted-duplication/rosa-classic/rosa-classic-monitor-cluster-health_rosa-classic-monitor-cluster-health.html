@@ -645,7 +645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="sd-collect-and-analyze-logs_rosa-classic-collect-and-analyze-logs.html">Collect and analyze application and infrastructure logs</a>
 </li>
-<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html"><span class="toc-current">Monitor cluster health</span></a>
+<li><a href="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health.html"><span class="toc-current">Cluster notifications</span></a>
 </li>
 </ul>
 </li>
@@ -656,12 +656,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
 
 <ul class="sectlevel2">
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
 </li>
 </ul>
 </li>
@@ -693,6 +697,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
 </li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 <li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
 </ul>
@@ -712,9 +718,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#managed-cluster-notification-view-hcc_rosa-classic-monitor-cluster-health">View cluster notifications using the Hybrid Cloud Console</a></li><li class="level-4"><a href="#add-notification-contact_rosa-classic-monitor-cluster-health">Add notification contacts to your cluster</a></li><li class="level-4"><a href="#rosa-troubleshooting-cluster-notifications_rosa-classic-monitor-cluster-health">Troubleshoot cluster notifications</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health">Monitor cluster health</h3>
+<h3 id="rosa-classic-monitor-cluster-health_rosa-classic-monitor-cluster-health">Cluster notifications</h3>
 <div class="paragraph _abstract">
-<p>Use the following resources and information to understand the cluster notifications that you receive for your Red&#160;Hat OpenShift Service on AWS (classic architecture) cluster, and to manage the recipients of cluster notification emails.</p>
+<p>As a cluster administrator, you need to stay informed about the health and status of your clusters so you can take action when issues arise or maintenance is required. Red&#160;Hat OpenShift Service on AWS (classic architecture) automatically sends email notifications to keep you and your team updated on cluster events, incidents, upgrades, and maintenance activities.</p>
+</div>
+<div class="paragraph">
+<p>You can configure who receives these alerts and understand what each notification means to ensure the right people respond at the right time.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../rosa_architecture/rosa_policy_service_definition/rosa-policy-responsibility-matrix.html#review-action-notifications_rosa-policy-responsibility-matrix">Customer responsibilities: Review and action cluster notifications</a></p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="managed-cluster-notification-view-hcc_rosa-classic-monitor-cluster-health">View cluster notifications using the Hybrid Cloud Console</h4>
@@ -837,7 +854,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:36 -0400
+Last updated 2026-10-20 11:25:15 -0400
 </div>
 </div>
 </body>

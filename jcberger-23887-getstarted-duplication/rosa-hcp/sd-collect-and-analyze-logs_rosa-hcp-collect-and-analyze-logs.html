@@ -634,6 +634,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="provision-compute-capacity-automatically-based-on-workload-demand-intro_rosa-hcp-provision-compute-capacity-automatically-based-on-workload-demand.html">Provision compute capacity automatically based on workload demand</a>
 </li>
+<li><a href="sd-olm-removing-catalogs_remove-custom-operator-catalogs.html">Removing custom catalogs</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
@@ -642,6 +644,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-hcp-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
 </li>
 <li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
+</li>
+<li><a href="rosa-node-tuning-autonode_rosa-hcp-apply-node-tuning-to-automatically-provisioned-nodes.html">Apply node tuning to automatically provisioned nodes</a>
 </li>
 <li><a href="keep-workloads-running-smoothly-during-spot-interruptions-intro_rosa-hcp-keep-workloads-running-smoothly-during-spot-interruptions.html">Keep workloads running smoothly during spot interruptions</a>
 </li>
@@ -669,6 +673,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs_rosa-hcp-protect-application-workloads-by-using-aws-waf-and-aws-albs.html">Tutorial: Protect application workloads by using AWS WAF and AWS ALBs</a>
 </li>
+<li><a href="about-custom-component-routes-rosa-hcp_rosa-hcp-configure-custom-component-routes.html">Custom component routes on Red&#160;Hat OpenShift Service on AWS</a>
+</li>
+<li><a href="efs-sts_configure-aws-efs-storage.html">Obtain an IAM role ARN for the AWS EFS CSI Driver Operator on STS clusters</a>
+</li>
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_reference.html">▶</button><a href="_reference.html">Reference</a>
@@ -687,7 +695,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="sd-collect-and-analyze-logs_rosa-hcp-collect-and-analyze-logs">Collect and analyze application and infrastructure logs</h3>
 <div class="paragraph _abstract">
-<p>You can deploy logging on your Red&#160;Hat OpenShift Service on AWS cluster to collect and aggregate node system audit logs, application container logs, and infrastructure logs. For detailed information, see the <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_logging">Red&#160;Hat OpenShift Logging</a> documentation.</p>
+<p>You can deploy logging on your Red&#160;Hat OpenShift Service on AWS cluster to collect and aggregate node system audit logs, application container logs, and infrastructure logs.</p>
+</div>
+<div class="paragraph">
+<p>You can use logging to perform the following tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Forward logs to your chosen log outputs, including on-cluster, Red&#160;Hat managed log storage.</p>
+</li>
+<li>
+<p>Visualize your log data in the Red&#160;Hat OpenShift Service on AWS web console.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because logging releases on a different cadence from Red&#160;Hat OpenShift Service on AWS, the logging documentation is available as a separate documentation set at <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_logging/">Red&#160;Hat OpenShift Logging</a>.</p>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -696,7 +720,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 12:15:34 -0400
+Last updated 2026-10-20 11:25:13 -0400
 </div>
 </div>
 </body>
